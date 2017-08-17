@@ -5,14 +5,17 @@
 
 ### Instructors
 
-* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: TIME, COL8.03
-* [Kenneth Benoit](k.r.benoit@lse.ac.uk), *Office hours*: By appointment
+* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Mondays 15:00–17:00, COL 8.03
+* [Kenneth Benoit](k.r.benoit@lse.ac.uk), *Office hours*: By appointment, COL 8.11
 * [Kohei Watanabe](K.Watanabe1@lse.ac.uk) (GTA), *Office hours*: TIME, BLDG
 
 ### Course Information
 
-* Lectures on Mondays 13:00-15:00 in KSW G.01
-* Classes on Tuesdays 15:00-16:30 in TW2 4.03
+* Lectures on Mondays 13:00–15:00 in KSW G.01
+* Classes on:
+  * Tuesdays 15:00–16:30 in TW2 4.03
+  * Thursdays 14:30–16:00 in STC S018
+  * Fridays 15:00–16:30 in STC S018
 
 No lectures or classes will take place during School Reading Week 6.
 
@@ -36,7 +39,7 @@ The course will use Python and R. We will use the Anaconda distribution to insta
 ### Materials
 
 The main course texts will be:
-*	Guttag, John V. *Introduction to Computation and Programming Using Python: With Application to Understanding Data*. Mit Press, 2016.
+*	Guttag, John V. *Introduction to Computation and Programming Using Python: With Application to Understanding Data*. MIT Press, 2016.
 *	Intermediate and advanced documentation at http://docs.python.org/3/.
 *	Grolemund, Garrett and Hadley Wickham. *R for Data Science*. O’Reilly, 2016. http://r4ds.had.co.nz
 *	Grolemund, Garrett. *Hands-On Programming with R*. O’Reilly, 2014.
@@ -71,7 +74,7 @@ In the next five weeks of the course, we will use Python to get familiar with th
 *Readings*:
 * Guttag. Chapters 2.3, 5.1-5.3, 5.5-5.6, pp.18-21, 65-73, 77-84.
 
-*Lab*: **Working with Lists in Python**
+*Lab*: **Working with Strings and Lists in Python**
 * Programing with simple statements, including `print()`, `len()`, `append()`, `extend()`, `pop()`, `remove()`, `split()`, `join()`, `sort()`, and `sorted()`
 
 ---
@@ -82,7 +85,7 @@ Control flow defines the order in which statements are evaluated and executed in
 *Readings*:
 * Guttag. Chapters 2.2, 2.4, 3.2, pp.15-18, 22-24, 27-30.
 
-*Lab*: **List Comprehensions in Python**
+*Lab*: **Control Flow and List Comprehensions in Python**
 * Control flow best practices and pitfalls
 * Nested dictionary and list comprehensions
 
@@ -99,7 +102,7 @@ Good programmers are not measured by the amount of code but by the amount of fun
 ---
 #### Week 5. Classes in Python
 
-Object-oriented programming is a programming paradigm that helps increase modularity, reduce complexity, and foster code reuse. Objects are a data abstraction consisting of (1) an internal representation i.e. object attributes and (2) an interface for interacting with the objects through methods and functions. Objects are instances of classes and classes determine the type of an object. In this week, we will discuss how to define classes in Python and how to create instances of a class. We will also touch open class inheritance and hierarchies.
+Object-oriented programming is a programming paradigm that helps increase modularity, reduce complexity, and foster code reuse. Objects are a data abstraction consisting of (1) an internal representation i.e. object attributes and (2) an interface for interacting with the objects through methods and functions. Objects are instances of classes and classes determine the type of an object. In this week, we will discuss how to define classes in Python and how to create instances of a class. We will also touch upon class inheritance and hierarchies.
 
 *Readings*:
 * Guttag. Chapter 8.1-8.2, pp.109-123.
@@ -133,7 +136,7 @@ In the next two weeks of the course, we will review the concepts learned until n
 ---
 #### Week 9. Functions and Debugging in R
 
-Continuing from the previous week, we will cover vectorised operations in R (including `lapply`, `mapply`, `tapply`, `split`), functions, and variable scoping.
+Continuing from the previous week, we will cover vectorized operations in R (including `lapply`, `mapply`, `tapply`, `split`), functions, and variable scoping.
 
 *Readings*:
 
@@ -143,7 +146,7 @@ Continuing from the previous week, we will cover vectorised operations in R (inc
 ---
 #### Week 10. Algorithms and Order of Growth
 
-Algorithms are recipes that consist of a sequence of simple steps, control flow, and stopping rule. To evaluate the scalability of algorithms and to compare their efficiency, we use the abstraction “order of growth”. Order of growth expresses how the maximum amount of time needed grows as the size of the input grows. We will discuss different complexity classes and ways to analyse the complexity of programs.
+Algorithms are recipes that consist of a sequence of simple steps, control flow, and stopping rule. To evaluate the scalability of algorithms and to compare their efficiency, we use the abstraction “order of growth”. Order of growth expresses how the maximum amount of time needed grows as the size of the input grows. We will discuss different complexity classes and ways to analyze the complexity of programs.
 
 *Readings*:
 * Guttag. Chapter 9, pp.135-149.
