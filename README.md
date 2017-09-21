@@ -57,8 +57,8 @@ In the first week, we will introduce the basic concepts in computer programming:
 
 *Readings*:
 
-* Guttag. Chapters 1-2.1, pp.1-15.
-* Wing, Jeannette M. (2006). [Computational thinking](http://tech-insider.org/academia/research/acrobat/0603.pdf). *Communications of the ACM*, 49(3), 33-35.
+* Guttag. Chapters 1-2.1, pp.1–15.
+* Wing, Jeannette M. (2006). [Computational thinking](http://tech-insider.org/academia/research/acrobat/0603.pdf). *Communications of the ACM*, 49(3), 33–35.
 
 *Lab*: **Anaconda, Jupyter, and GitHub**
 
@@ -72,7 +72,7 @@ In the first week, we will introduce the basic concepts in computer programming:
 In the next five weeks of the course, we will use Python to get familiar with the elements of programming languages. We will begin with scalar data types, operators, expressions, and value assignment to variables. We will also cover non-scalar, also known as compound or structured, data types (lists, tuples, sets, and dictionaries) and discuss the difference between mutable and immutable and ordered and unordered types. As lists are very commonly used, we will further overview the most common list operations, including indexing, slicing, appending, splitting, aliasing, and cloning.  
 
 *Readings*:
-* Guttag. Chapters 2.3, 5.1-5.3, 5.5-5.6, pp.18-21, 65-73, 77-84.
+* Guttag. Chapters 2.3, 5.1-5.3, 5.5-5.6, pp.18–21, 65–73, 77–84.
 
 *Lab*: **Working with Strings and Lists in Python**
 * Programing with simple statements, including `print()`, `len()`, `append()`, `extend()`, `pop()`, `remove()`, `split()`, `join()`, `sort()`, and `sorted()`
@@ -80,24 +80,24 @@ In the next five weeks of the course, we will use Python to get familiar with th
 ---
 #### Week 3. Control Flow in Python
 
-Control flow defines the order in which statements are evaluated and executed in a program. Please note that in Python, indentation plays a crucial role in determining the control flow. We will discuss branching and iteration and how to write these in Python using `if`-`else` statements, `while` loops, `for` loops, `range()`, `break`, and `continue`. We will also introduce the extremely useful concept of list comprehensions.
+Control flow defines the order in which statements are evaluated and executed in a program. In Python, indentation plays a crucial role in determining the control flow. In this week, we will discuss branching and iteration and how to write these in Python using `if`-`else` statements, `while` loops, `for` loops, `range()`, `break`, and `continue`. We will also introduce the extremely useful concept of list comprehensions.
 
 *Readings*:
-* Guttag. Chapters 2.2, 2.4, 3.2, pp.15-18, 22-24, 27-30.
+* Guttag. Chapters 2.2, 2.4–3.2, pp.15–18, 22–30.
 
-*Lab*: **Control Flow and List Comprehensions in Python**
+*Lab*: **For Loops and List Comprehensions in Python**
 * Control flow best practices and pitfalls
 * Nested dictionary and list comprehensions
 
 ---
 #### Week 4. Functions in Python
 
-Good programmers are not measured by the amount of code but by the amount of functionality. Good programming relies on abstraction and decomposition. Abstraction helps hide details while decomposition creates structure. Abstraction and decomposition can be achieved with functions and classes and in this week, we will introduce functions. We will discuss function arguments and variable scope and by means of an example, we will introduce the concept of recursion.
+Good programmers are not measured by the amount of code they write but by the amount of functionality in their code. Good programming relies on abstraction and decomposition. Decomposition creates structure while abstraction helps hide details. Decomposition and abstraction can be achieved with functions and classes and in this week, we will introduce functions. We will discuss function arguments and variable scope and by means of an example, we will introduce the concept of recursion.
 
 *Readings*:
-* Guttag. Chapter 4, pp.39-62.
+* Guttag. Chapter 4, pp.39–63.
 
-*Lab*: **Writing Functions in Python**
+*Lab*: **Writing and Calling Functions in Python**
 
 ---
 #### Week 5. Classes in Python
@@ -105,7 +105,7 @@ Good programmers are not measured by the amount of code but by the amount of fun
 Object-oriented programming is a programming paradigm that helps increase modularity, reduce complexity, and foster code reuse. Objects are a data abstraction consisting of (1) an internal representation i.e. object attributes and (2) an interface for interacting with the objects through methods and functions. Objects are instances of classes and classes determine the type of an object. In this week, we will discuss how to define classes in Python and how to create instances of a class. We will also touch upon class inheritance and hierarchies.
 
 *Readings*:
-* Guttag. Chapter 8.1-8.2, pp.109-123.
+* Guttag. Chapter 8, pp.109–134.
 
 *Lab*: **Programming in Teams**
 * Programming in teams
@@ -117,7 +117,7 @@ Object-oriented programming is a programming paradigm that helps increase modula
 Writing computer programs is easy but making them work properly is hard. We test programs to check if they work as intended and we debug them when we find out that they don’t. In this lecture, we will discuss different ways to test and debug programs. We will cover common error messages and how to catch them with `try`, `except`, `raise`, and `assert`.
 
 *Readings*:
-* Guttag. Chapters 6-7, pp.85-108.
+* Guttag. Chapters 6–7, pp.85–108.
 
 *Lab*: **Exceptions and Assertions in Python**
 
@@ -149,7 +149,7 @@ Continuing from the previous week, we will cover vectorized operations in R (inc
 Algorithms are recipes that consist of a sequence of simple steps, control flow, and stopping rule. To evaluate the scalability of algorithms and to compare their efficiency, we use the abstraction “order of growth”. Order of growth expresses how the maximum amount of time needed grows as the size of the input grows. We will discuss different complexity classes and ways to analyze the complexity of programs.
 
 *Readings*:
-* Guttag. Chapter 9, pp.135-149.
+* Guttag. Chapter 9, pp.135–149.
 
 *Lab*: **Order of Growth**
 * Reading and evaluating order of growth of programs written in Python and R
@@ -160,7 +160,7 @@ Algorithms are recipes that consist of a sequence of simple steps, control flow,
 We will use the concepts and approaches introduced in the previous lecture to look at the complexity of several classic algorithms on searching and sorting. The goal is to get a better intuition of how to approach problems of efficiency. We will use examples written in both Python and R. The lecture will end with an overview of Python modules and R packages that are useful for data manipulation, analysis, and visualization.  
 
 *Readings*:
-* Guttag. Chapter 10.1-10.2, pp.151-164.
+* Guttag. Chapter 10.1–10.2, pp.151–164.
 
 *Lab*: **Course Summary**
 * Writing programs in Python and R
