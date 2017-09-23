@@ -43,7 +43,7 @@ The main course texts will be:
 *	Intermediate and advanced documentation at http://docs.python.org/3/.
 *	Grolemund, Garrett and Hadley Wickham. *R for Data Science*. O’Reilly, 2016. http://r4ds.had.co.nz
 *	Grolemund, Garrett. *Hands-On Programming with R*. O’Reilly, 2014.
-* Eric Matthes, *Python Crash Course*, Cheet Sheet at https://ehmatthes.github.io/pcc/cheatsheets/README.html.
+* Matthes, Eric, *Python Crash Course*, Cheet Sheet at https://ehmatthes.github.io/pcc/cheatsheets/README.html.
 
 ### Assessment
 
