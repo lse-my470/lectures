@@ -7,7 +7,7 @@
 
 * [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Mondays 15:00–17:00, COL 8.03
 * [Kenneth Benoit](k.r.benoit@lse.ac.uk), *Office hours*: By appointment, COL 8.11
-* [Kohei Watanabe](K.Watanabe1@lse.ac.uk) (GTA), *Office hours*: TIME, BLDG
+* [Kohei Watanabe](k.watanabe1@lse.ac.uk) (TA), *Office hours*: TBC
 
 ### Course Information
 
@@ -43,6 +43,7 @@ The main course texts will be:
 *	Intermediate and advanced documentation at http://docs.python.org/3/.
 *	Grolemund, Garrett and Hadley Wickham. *R for Data Science*. O’Reilly, 2016. http://r4ds.had.co.nz
 *	Grolemund, Garrett. *Hands-On Programming with R*. O’Reilly, 2014.
+* Eric Matthes, *Python Crash Course*, Cheet Sheet at https://ehmatthes.github.io/pcc/cheatsheets/README.html.
 
 ### Assessment
 
