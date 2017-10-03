@@ -7,7 +7,7 @@
 
 * [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Mondays 15:00–17:00, COL 8.03
 * [Kenneth Benoit](k.r.benoit@lse.ac.uk), *Office hours*: By appointment, COL 8.11
-* [Kohei Watanabe](k.watanabe1@lse.ac.uk) (TA), *Office hours*: TBC
+* [Kohei Watanabe](k.watanabe1@lse.ac.uk) (TA), *Office hours*: Thursdays 10:00-12:00, COL 7.04
 
 ### Course Information
 
@@ -15,7 +15,6 @@
 * Classes on:
   * Tuesdays 15:00–16:30 in TW2 4.03
   * Thursdays 14:30–16:00 in STC S018
-  * Fridays 15:00–16:30 in STC S018
 
 No lectures or classes will take place during School Reading Week 6.
 
