@@ -14,14 +14,14 @@
 * Lectures on Mondays 13:00–15:00 in KSW G.01
 * Classes on:
   * Tuesdays 15:00–16:30 in TW2 4.03
-  * Thursdays 14:30–16:00 in STC S018
+  * Thursdays 14:30–16:00 in STC S018 (Weeks 1-5, 7, 11) and STC S08 (Weeks 8-10)
 
 No lectures or classes will take place during School Reading Week 6.
 
 
 ### Course Description
 
-This course introduces students to the fundamentals of computer programming as students design, write, and debug computer programs using the programing languages Python and R. The course will also cover the foundations of computer languages, algorithms, functions, variables, object orientation, scoping, and assignment.
+This course introduces students to the fundamentals of computer programming as students design, write, and debug computer programs using the programming languages Python and R. The course will also cover the foundations of computer languages, algorithms, functions, variables, object orientation, scoping, and assignment.
 
 ### Organization
 
@@ -42,11 +42,15 @@ The main course texts will be:
 *	Intermediate and advanced documentation at http://docs.python.org/3/.
 *	Grolemund, Garrett and Hadley Wickham. *R for Data Science*. O’Reilly, 2016. http://r4ds.had.co.nz
 *	Grolemund, Garrett. *Hands-On Programming with R*. O’Reilly, 2014.
-* Matthes, Eric, *Python Crash Course*, Cheet Sheet at https://ehmatthes.github.io/pcc/cheatsheets/README.html.
+* Matthes, Eric, *Python Crash Course*, Cheat Sheet at https://ehmatthes.github.io/pcc/cheatsheets/README.html.
 
 ### Assessment
 
 Take home exam (50%) and in-class assessment (50%). Students will be expected to produce 10 problem sets in the MT. Student problem sets will be marked each week, and will provide 50% of the mark.
+
+Problem sets will be distributed on Tuesdays and due at 12:00 noon on Mondays.
+
+The take home exam will be distributed on Tuesday, December 12, 2017 and due at 12:00 noon on Monday, January 8, 2018.
 
 ### Schedule
 
@@ -80,10 +84,10 @@ In the next five weeks of the course, we will use Python to get familiar with th
 ---
 #### Week 3. Control Flow in Python
 
-Control flow defines the order in which statements are evaluated and executed in a program. In Python, indentation plays a crucial role in determining the control flow. In this week, we will discuss branching and iteration and how to write these in Python using `if`-`else` statements, `while` loops, `for` loops, `range()`, `break`, and `continue`. We will also introduce the extremely useful concept of list comprehensions.
+Control flow defines the order in which statements are evaluated and executed in a program. In Python, indentation plays a crucial role in determining the control flow. In this week, we will discuss branching and iteration and how to write these in Python using `if`-`else` statements, `while` loops, `for` loops, `range()`, `break`, and `continue`. We will also introduce the extremely useful concept of list comprehensions. To exemplify the use of conditional statements and iteration, we will go over several simple numerical search and approximation algorithms.
 
 *Readings*:
-* Guttag. Chapters 2.2, 2.4–3.2, pp.15–18, 22–30.
+* Guttag. Chapters 2.2, 2.4–3, pp.15–18, 22–38.
 
 *Lab*: **For Loops and List Comprehensions in Python**
 * Control flow best practices and pitfalls
@@ -98,6 +102,9 @@ Good programmers are not measured by the amount of code they write but by the am
 * Guttag. Chapter 4, pp.39–63.
 
 *Lab*: **Writing and Calling Functions in Python**
+* Functions with multiple inputs and outputs
+* Function specification
+* What are functions good for?
 
 ---
 #### Week 5. Classes in Python
