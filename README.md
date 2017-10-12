@@ -65,7 +65,6 @@ In the first week, we will introduce the basic concepts in computer programming:
 * Wing, Jeannette M. (2006). [Computational thinking](http://tech-insider.org/academia/research/acrobat/0603.pdf). *Communications of the ACM*, 49(3), 33–35.
 
 *Lab*: **Anaconda, Jupyter, and GitHub**
-
 * Installing Python with Anaconda
 * Introduction to Jupyter and other IDEs
 * Submitting assignments on GitHub
@@ -102,21 +101,19 @@ Good programmers are not measured by the amount of code they write but by the am
 * Guttag. Chapter 4, pp.39–63.
 
 *Lab*: **Writing and Calling Functions in Python**
-* Functions with multiple inputs and outputs
 * Function specification
 * What are functions good for?
 
 ---
 #### Week 5. Classes in Python
 
-Object-oriented programming is a programming paradigm that helps increase modularity, reduce complexity, and foster code reuse. Objects are a data abstraction consisting of (1) an internal representation i.e. object attributes and (2) an interface for interacting with the objects through methods and functions. Objects are instances of classes and classes determine the type of an object. In this week, we will discuss how to define classes in Python and how to create instances of a class. We will also touch upon class inheritance and hierarchies.
+Object-oriented programming is a programming paradigm that helps increase modularity, reduce complexity, and foster code reuse. Objects are a data abstraction consisting of (1) an internal representation i.e. object attributes and (2) an interface for interacting with the objects through methods and functions. Objects are instances of classes and classes determine the type of an object. In this week, we will discuss how to define classes in Python and how to create instances of a class. We will also touch upon class inheritance and hierarchies, as well as generators.
 
 *Readings*:
 * Guttag. Chapter 8, pp.109–134.
 
 *Lab*: **Programming in Teams**
-* Programming in teams
-* Commenting code
+* Using GitHub as a collaboration tool
 
 ---
 #### Week 7. Testing and Debugging in Python
