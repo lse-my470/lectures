@@ -52,6 +52,8 @@ Problem sets will be distributed on Tuesdays and due at 12:00 noon on Mondays.
 
 The take home exam will be distributed on Tuesday, December 12, 2017 and due at 12:00 noon on Monday, January 8, 2018.
 
+**The deadlines are final. Late submissions will not be considered, except in the case of a valid documented legal or medical excuse.**
+
 ### Schedule
 
 ---
