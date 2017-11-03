@@ -125,7 +125,9 @@ Writing computer programs is easy but making them work properly is hard. We test
 *Readings*:
 * Guttag. Chapters 6–7, pp.85–108.
 
-*Lab*: **Exceptions and Assertions in Python**
+*Lab*: **Unit Testing, Exceptions, and Assertions in Python**
+* Using .py files to structure programs and conduct testing
+* Defensive programming with `try`, `except`, and `assert`
 
 ---
 #### Week 8. Data Types and Control Flow in R
