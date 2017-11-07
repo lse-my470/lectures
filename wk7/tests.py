@@ -8,31 +8,31 @@ class TestRunningSum(unittest.TestCase):
 
     def test_running_sum_empty(self):
         '''Test an empty list.'''
-        argument = []
-        expected = []
-        tools.running_sum(argument)
-        self.assertEqual(expected, argument, "The list is empty.")
+        input = []
+        output_expected = []
+        output = tools.running_sum(input)
+        self.assertEqual(output_expected, output, "The list is empty.")
 
     def test_running_sum_one(self):
         '''Test a one-item list.'''
-        argument = [2]
-        expected = [2]
-        tools.running_sum(argument)
-        self.assertEqual(expected, argument, "The list contains one item.")
+        input = [2]
+        output_expected = [2]
+        output = tools.running_sum(input)
+        self.assertEqual(output_expected, output, "The list contains one item.")
 
     def test_running_sum_two(self):
         '''Test a two-item list.'''
-        argument = [2, 5]
-        expected = [2, 7]
-        tools.running_sum(argument)
-        self.assertEqual(expected, argument, "The list contains two items.")
+        input = [2, 5]
+        output_expected = [2, 7]
+        output = tools.running_sum(input)
+        self.assertEqual(output_expected, output, "The list contains two items.")
 
     def test_running_sum_multi_neg(self):
         '''Test a list of negative values.'''
-        argument = [-1, -5, -3, -4]
-        expected = [-1, -6, -9, -13]
-        tools.running_sum(argument)
-        self.assertEqual(expected, argument, "The list contains only negative values.")
+        input = [-1, -5, -3, -4]
+        output_expected = [-1, -6, -9, -13]
+        output = tools.running_sum(input)
+        self.assertEqual(output_expected, output, "The list contains only negative values.")
 
     def test_running_sum_multi_zeros(self):
         '''Test a list of zeros.'''
