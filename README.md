@@ -135,11 +135,13 @@ Writing computer programs is easy but making them work properly is hard. We test
 In the next two weeks of the course, we will review the concepts learned until now by learning how they are implemented in the R programming language. We will start with basic data types in R (vectors, lists, matrices, factors, data frames) and control flow (if-else statements, for and while loops, repeat, next, break).
 
 *Readings*:
+* Venables, W. N. et. al.  2017.  [_An Introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf).  Chapters 1-6. 
+* (optional, but recommended) Zuur, A., Ieno, E. N., & Meesters, E. (2009). _A Beginner's Guide to R_. Springer Science & Business Media.
 
 *Lab*: **Introduction to R**
-* Installing R with Anaconda
+* Installing R and RStudio
 * Introduction to RStudio and workflow
-* Practicing simple statements and control flow
+* Working with R objects
 
 ---
 #### Week 9. Functions and Debugging in R
@@ -147,7 +149,7 @@ In the next two weeks of the course, we will review the concepts learned until n
 Continuing from the previous week, we will cover vectorized operations in R (including `lapply`, `mapply`, `tapply`, `split`), functions, and variable scoping.
 
 *Readings*:
-
+* Venables et. al., Chs. 9-10.
 
 *Lab*: **Writing Functions in R**
 
