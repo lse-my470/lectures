@@ -134,6 +134,10 @@ Writing computer programs is easy but making them work properly is hard. We test
 
 In the next two weeks of the course, we will review the concepts learned until now by learning how they are implemented in the R programming language. We will start with basic data types in R (vectors, lists, matrices, factors, data frames) and object classes.
 
+*Lecture Notes*:
+* as [html slides](wk8/MY470_wk8_lecture.html)
+* as [pdf slides](wk8/MY470_wk8_lecture.pdf)
+
 *Readings*:
 * Venables, W. N. et. al.  2017.  [_An Introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf).  Chapters 1-6. 
 * (optional, but recommended) Zuur, A., Ieno, E. N., & Meesters, E. (2009). _A Beginner's Guide to R_. Springer Science & Business Media.
