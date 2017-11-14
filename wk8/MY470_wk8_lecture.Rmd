@@ -267,6 +267,8 @@ It is **critical** to understand because these are the objects you will manipula
 * logical
 * complex
 
+----
+
 | Example | Type |
 | ------- | ---- |
 | "a", "swc" | character |
