@@ -2,17 +2,90 @@
 title: "Programming in the R Language"
 subtitle: "MY 470, Week 9: Advanced R Programming"
 author: "Kenneth Benoit"
-date: "2017-11-13"
+date: "2017-11-20"
 output: 
   ioslides_presentation:
     widescreen: true
 ---
+
+# (More) Advanced R Programming
     
+## `matrix`
+
+A matrix is just a specially attributed vector.
+
+- a vector with dimension attributes, where all elements are of the same type
+
+```{r}
+my_matrix <- matrix(data = 1:100, nrow = 10, ncol = 10)
+my_matrix
+```
+
+## `data.frame`
+
+- A `data.frame` is a matrix-like R object in which the columns can be of different types.  It is actually a special form of a **list**.
+
+```{r}
+char_vec <- c("apple", "pear", "plumb", "pineapple", "strawberry")
+logical_vec <- c(TRUE, FALSE, FALSE, TRUE, FALSE)
+
+my_data_frame <- data.frame(numbers = c(5, 4, 2, 100, 7.65),
+                            fruits = char_vec, 
+                            logical = logical_vec)
+my_data_frame
+```
+
+## `matrix` and `data.frame` subsetting
+
+To subset a `matrix` or `data.frame`, you need to specify both rows and columns:
+
+```{r}
+my_matrix[1:3, 1:3]
+
+my_data_frame[1, ]
+```
+
+## `matrix` and `data.frame` subsetting
+
+We can also subset to remove rows or columns that we do not want to see by using the `-` operator applied to the `c` function:
+
+```{r}
+my_matrix[-c(1:3), -c(1:3)]
+```
+
+In the code, `1:3` creates a vector of the integers 1, 2 and 3, and the `-` operator negates these. We wrap the vector in the `c` function so that `-` applies to each element, and not just the first element.
+
+## Index addressing for vector and list elements can be done in different ways
+
+- by integer index value, e.g. `x[2]`, `x[5:10]`
+- by the `TRUE` elements in a logical vector, e.g. `x[c(TRUE, FALSE, TRUE)]`
+- generalizes to matrix-like objects, through row and column names
+- by character name, e.g. `x["city"]
+
+## `list`
+
+A `list` is a collection of any set of object types
+
+```{r}
+my_list <- list(something = my_data_frame$num_vec, 
+                another_thing = my_matrix[1:3,1:3], 
+                something_else = "ken")
+my_list
+```
+
+
+## How to index list elements in R
+
+- Using `$`
+- Using `[`
+- Using `[[`
+
+
 ## `functions`
 
 R makes extensive use of functions, which all have the same basic structure.
 
-```{r, eval = F}
+```{r, eval = FALSE}
 function_name(argument_one, argument_two, ...)
 ```
 
@@ -20,114 +93,108 @@ Where
 
 - `function_name` is the name of the function
 - `argument_one` is the first argument passed to the function
-- `argument_two` is the seccond argument passed to the function
+- `argument_two` is the second argument passed to the function
 
+## using function arguments
+
+>- when a function is not assigned a _default value_, then it is mandatory
+>- when a function has a default, this is used but can be overridden
+>- it is not necessary to specify the names of the arguments, although it is best to do so except for the first or possibly second arguments
 
 ## `function` example
 
 Let's consider the `mean()` function. This function takes two main arguments:
 
-```{r, eval = F}
+```{r, eval = FALSE}
 mean(x, na.rm = FALSE)
 ```
 
 Where `x` is a numeric vector, and `na.rm` is a logical value that indicates whether we'd like to remove missing values (`NA`).
 
-```{r, eval = T}
-vec <- c(1,2,3,4,5)
+```{r, eval = TRUE}
+vec <- c(1, 2, 3, 4, 5)
 mean(x = vec, na.rm = FALSE)
 ```
 
-```{r, eval = T}
-vec <- c(1,2,3,NA,5)
+```{r, eval = TRUE}
+vec <- c(1, 2, 3, NA, 5)
 mean(x = vec, na.rm = TRUE)
 ```
 
 ## `function` example
 
 We can also perform calculations on the output of a function:
-    ```{r, echo=F}
-vec <- c(1,2,3,4,5)
-```
-
-```{r, eval = T}
+```{r, eval = TRUE}
+vec <- 1:5
 mean(vec) * 3
 ```
 
 Which means that we can also have nested functions:
-    ```{r, eval = T}
+```{r, eval = TRUE}
 sqrt(mean(vec))
 ```
 
 We can also assign the output of any function to a new object for use later:
-    ```{r, eval = T}
+```{r, eval = TRUE}
 sqrt_mean_of_vec <- sqrt(mean(vec))
-
 ```
 
 ## User defined `functions`
 
 Functions are also objects, and we can create our own. We define a function as follows:
     
-    ```{r}
-my_addition_function <- function(a, b){
+```{r}
+my_addition_function <- function(a = 10, b){
     return(a + b)
 }
 
-my_addition_result <- my_addition_function(a = 5, b = 50)
-print(my_addition_result)
+my_addition_function(a = 5, b = 50)
+my_addition_function(3, 4)
+my_addition_function(b = 100)
 ```
 
-Note that the function itself, and the result returned by the function are both objects! 
+## Help!
     
-    ## Help!
-    
-    R has an inbuilt help facility which provides more information about any function:
-    
-    ```{r}
+R has an in-built help facility which provides more information about any (package) function:
+
+```{r}
 help(summary)
 ?summary
 ```
 
-The quality of the help varies *hugely* as some packages are well-maintained and others less so.
+The quality of the help varies (to put it mildly), but every function is documented.
 
 Alternative sources of help:
     
-    ```www.stackoverflow.com```
+- https://stackoverflow.com/questions/tagged/r
 
-```www.google.com```
-
-# Exercise One
-
-# Data manipulation and exploration
+# Reading data into R
 
 ## Reading data into R (.csv)
 
-```{r, eval = F}
-
+```{r, eval = FALSE}
 my_data <- read.csv(file = "my_file.csv")
-
 ```
-
+    
 - `my_data` is an R data.frame object (you could call this anything)
 - `my_file.csv` is a .csv file with your data
 - `<-` is the assignment operator
 - In order for R to access `my_file.csv`, it will have to be saved in your current working directory
-- Use `get_wd()` to check your current working directory
-- Use `set_wd()` to change your current working directory
+  - Use `get_wd()` to check your current working directory
+  - Use `set_wd()` to change your current working directory
+- Might need to use the `stringsAsFactors = FALSE` argument
 
 ## Reading data into R (.dta)
 
-```{r, eval = F}
+```{r, eval = FALSE}
 install.packages("foreign") ## install the "foreign" package
 library(foreign) ## Loads an additional package that deals with STATA files
 my_data <- read.dta(file = "my_file.dta") 
 
 ```
 
-```{r, eval = T, echo = F}
+```{r, eval = T, echo = FALSE}
 n <- 1000
-
 x <- rnorm(n)
 z <- runif(n)
 g <- sample(letters[1:6], n, replace = T)
@@ -138,92 +205,29 @@ alpha <- 0.3
 eps <- rnorm(n,sd = 1)
 y <- alpha + beta*x + beta2*z + beta3 *(x*z) + eps
 y_bin <- as.numeric(y > median(y))
-
 my_data <- data.frame(x = x, y = y, z = z, g = g)
-
 ```
-
+    
 - The `foreign` package is not automatically installed in R so we need to do that ourselves
 - `my_data` is still an R data.frame object (you could still call this anything)
 - `my_file.dta` is a .dta file with your data
 - `<-` is still an assignment operator
 
-## Descriptive statistics functions
-
-R includes a number of helpful functions for exploring your data
-
-```{r, eval = F}
-View(my_data) # View data in spreadsheet-style
-names(my_data) # Names of the variables in your data
-head(my_data) # First six rows of the data
-tail(my_data) # Last six rows of the data
-str(my_data) # "Structure" of any R object
-summary(my_data) # Summary statistics for each of the columns in the data
-dim(my_data) # Dimensions of a matrix
-range(my_data$my_variable) # Range of a numeric vector
-quantile(my_data$my_variable) # Quantiles of a numeric vector
-```
-
-## `head`
-```{r}
-head(my_data) 
-```
-
-## `str`
-```{r}
-str(my_data) 
-```
-
-## `summary`
-```{r}
-summary(my_data) 
-```
-
-## `pairs`
-
-```{r}
-pairs(my_data)
-```
-
-
-## `range`
-
-Suppose you would like to find the range of a variable in your `data.frame`. The following will not work:
-    
-    ```{r, error=T}
-range(my_data) 
-```
-
-Right, we cannot take the range of the entire data! Some of the variables are not numeric, and therefore do not have a range...
-
-## `range`
-
-Instead, we need to access one variable. There are two ways to do this. 
-
-- We can subset using square parenthesis, or
-- We can use the `$` operator and access the variable of interest by name
-
-```{r}
-range(my_data[,1])
-range(my_data$x) 
-
-```
 
 # Plots and graphs
 
 ## Introduction
 
-- Plots are one of the great strenghts f R.
+- Plots are one of the great strength f R.
 - There are two main frameworks for plotting
 - Base R graphics
 - `ggplot`
 - Which should you use? It is a matter of preference!
     
-    ## Base R plots
+## Base R plots
     
-    The basic plotting syntax is very simple. `plot(x_var, y_var)` will give you a scatter plot:
-    
-    ```{r, fig.align="center"}
+The basic plotting syntax is very simple. `plot(x_var, y_var)` will give you a scatter plot:
+```{r, fig.align = "center", fig.width = 6}
 plot(my_data$x, my_data$y)
 ```
 
@@ -235,13 +239,13 @@ The plot function takes a number of arguments (`?plot` for a full list). The few
 
 ```{r, eval=FALSE}
 plot(x = my_data$x, y = my_data$y, 
-xlab = "X variable", 
-ylab = "Y variable", 
-main = "Awesome plot title",
-pch = 19, # Solid points
-cex = 0.5, # Smaller points
-bty = "n", # Remove surrounding box
-col = as.factor(my_data$g) # Colour by grouping variable
+     xlab = "X variable",         # x axis label
+     ylab = "Y variable",         # y axis label 
+     main = "Awesome plot title", # main title
+     pch = 19,                    # solid points
+     cex = 0.5,                   # smaller points
+     bty = "n",                   # remove surrounding box
+     col = as.factor(my_data$g)   # colour by grouping variable
 )
 ```
 
@@ -249,13 +253,13 @@ col = as.factor(my_data$g) # Colour by grouping variable
 
 ```{r, echo=FALSE, fig.align="center"}
 plot(my_data$x, my_data$y, 
-xlab = "X variable", 
-ylab = "Y variable", 
-main = "Awesome plot title",
-pch = 19, # Solid points
-cex = 0.5, # Smaller points
-bty = "n", # Remove surrounding box
-col = as.factor(my_data$g) # Convert grouping variable to factor, colour by this
+     xlab = "X variable", 
+     ylab = "Y variable", 
+     main = "Awesome plot title",
+     pch = 19, # Solid points
+     cex = 0.5, # Smaller points
+     bty = "n", # Remove surrounding box
+     col = as.factor(my_data$g) # Convert grouping variable to factor, colour by this
 )
 ```
 
@@ -273,20 +277,20 @@ plot(x = my_data$g, y = my_data$x)
 plot(x = my_data$g, y = my_data$x)
 ```
 
-## `ggplot`
+## ggplot
 
-Also popular is the `ggplot2` library. This is a separate package (i.e. it is not a part of the base R environment) but is very widely used. But not by me.
+Also popular is the **ggplot2** library. This is a separate package (i.e. it is not a part of the base R environment) but is very widely used.
 
-- Based on the Grammar of Graphics data visualisation scheme
+- Based on the "Grammar of Graphics"" data visualisation scheme
 - Graphs are broken into scales and layers
 - Has slightly idiosyncratic language style!
 
-## `ggplot`
+## ggplot
 
 Let's recreate the previous scatter plot using `ggplot`:
     
-    ```{r, eval=FALSE, fig.align="center"}
-library(ggplot2)
+```{r, eval=FALSE, fig.align="center"}
+library("ggplot2"")
 ggplot(data = my_data, aes(x= x, y= y, col = g)) + 
     geom_point() +
     xlab("X variable")+
@@ -295,10 +299,10 @@ ggplot(data = my_data, aes(x= x, y= y, col = g)) +
     theme(panel.background = element_rect("white"))
 ```
 
-## `ggplot`
+## ggplot
 
 ```{r, echo=FALSE, fig.align="center"}
-library(ggplot2)
+library("ggplot2")
 ggplot(data = my_data, aes(x= x, y= y, col = g)) + 
     geom_point() +
     xlab("X variable")+
@@ -307,12 +311,12 @@ ggplot(data = my_data, aes(x= x, y= y, col = g)) +
     theme(panel.background = element_rect("white"))
 ```
 
-## `ggplot`
+## ggplot
 
 One nice feature of `ggplot` is that it is very easy to create facet plots:
     
-    ```{r, eval=FALSE, fig.align="center"}
-library(ggplot2)
+```{r, eval=FALSE, fig.align="center"}
+library("ggplot2")
 ggplot(data = my_data, aes(x= x, y= y, col = g)) + 
     geom_point() +
     xlab("X variable")+
@@ -322,10 +326,10 @@ ggplot(data = my_data, aes(x= x, y= y, col = g)) +
     facet_wrap(~ g)
 ```
 
-## `ggplot`
+## ggplot
 
 ```{r, echo=FALSE, fig.align="center"}
-library(ggplot2)
+library("ggplot2")
 ggplot(data = my_data, aes(x= x, y= y, col = g)) + 
     geom_point() +
     xlab("X variable")+
@@ -353,13 +357,9 @@ img <- readPNG("figs/PartyLeaderSatisfaction.png")
 grid.raster(img)
 ```
 
-# Exercise Two
+## Linear Regression Models
 
-# Linear Regression Models
-
-## `lm`
-
-Linear regression models in R are implemented using the `lm` function.
+Linear regression models in R are implemented using the `lm()` function.
 
 ```{r}
 my_lm <- lm(formula = y ~ x, data = my_data)
@@ -375,33 +375,33 @@ print(my_lm)
 
 We can specify multivariate models:
     
-    ```{r}
+```{r}
 my_lm_multi <- lm(formula = y ~ x + z, data = my_data)
 ```
 
 Interaction models:
     
-    ```{r}
+```{r}
 my_lm_interact <- lm(formula = y ~ x * z, data = my_data)
 ```
 
 Fixed-effect models:
     
-    ```{r}
+```{r}
 my_lm_fe <- lm(formula = y ~ x + g, data = my_data)
 ```
 
 And many more!
     
-    ## `lm`
+## `lm`
     
-    The output of the `lm` function is a long list of interesting output. 
+The output of the `lm` function is a long list of interesting output. 
 
 When we call `print(saved_model)`, we are presented with the estimated coefficients, and nothing else.
 
 For some more information of the estimated model, use `summary(saved_model)`:
     
-    ```{r, eval = F}
+```{r, eval = FALSE}
 my_lm_summary <- summary(my_lm)
 print(my_lm_summary)
 ```
@@ -419,13 +419,13 @@ cat(paste0(capture.output(my_lm_summary)[-c(1:4)], collapse = "\n"))
 
 As with any other function, `summary(saved_model)` returns an object. Here, it is a list. What is saved as the output of this function?
     
-    ```{r}
+```{r}
 names(my_lm_summary)
 ```
 
 If we want to extract other information of interest from the fitted model object, we can use the `$` operator to do so:
     
-    ```{r}
+```{r}
 print(my_lm_summary$r.squared)
 ```
 
@@ -433,7 +433,7 @@ print(my_lm_summary$r.squared)
 
 Accessing elements from saved models can be very helpful in making comparisons across models:
     
-    ```{r}
+```{r}
 my_lm_r2 <- summary(my_lm)$r.squared
 my_lm_multi_r2 <- summary(my_lm_multi)$r.squared
 my_lm_interact_r2 <- summary(my_lm_interact)$r.squared
@@ -443,20 +443,18 @@ r2.compare <- data.frame(
     r.squared = c(my_lm_r2, 
                   my_lm_multi_r2, 
                   my_lm_interact_r2))
-
 ```
 
 ## `lm`
 
 We can print the values:
     
-    ```{r}
+```{r}
 print(r2.compare)
-
 ```
 
 Or we can plot them:
-    ```{r, eval = F}
+```{r, eval = FALSE}
 ggplot(r2.compare, aes(x = model, y = r.squared))+
     geom_point(size = 4)+
     ggtitle("R^2 Comparison")
@@ -475,7 +473,7 @@ ggplot(r2.compare, aes(x = model, y = r.squared))+
 
 There are a number of functions that are helpful in producing model diagnostics:
     
-    - `residuals(saved_model)` extracts the residuals from a fitted model
+- `residuals(saved_model)` extracts the residuals from a fitted model
 - `coefficients(saved_model)` extracts coefficients
 - `fitted(saved_model)` extracts fitted values
 - `plot(saved_model)` is a convenience function for producing a number of useful diagnostics plots
@@ -484,28 +482,23 @@ There are a number of functions that are helpful in producing model diagnostics:
 
 We can easily plot the residuals from a fitted model against an explanatory variable of interest:
     
-    ```{r, eval=F}
-
+```{r, eval = FALSE}
 par(mfrow = c(1,2)) # Divide the plotting region into 1 row and 2 cols
 plot(x = my_data$x, y = residuals(my_lm_multi), 
-     xlab = "x", ylab = "residuals",
-     pch = 19, # Filled circles
-     col="grey", # Change colour
-     cex = 0.5) # Make point size smaller
-abline(h = 0) # Add a horizontal line with y-intercept of 0
+     xlab = "x", ylab = "residuals",  # axis labels
+     pch = 19,                        # filled circles
+     col="grey",                      # mhange colour
+     cex = 0.5)                       # make point size smaller
+abline(h = 0)                         # add a horizontal line with y-intercept of 0
 plot(x = my_data$z, y = residuals(my_lm_multi), 
      xlab = "z", ylab = "residuals",
-     pch = 19, # Filled circles
-     col="grey", # Change colour
-     cex = 0.5) # Make point size smaller
-abline(h = 0) # Add a horizontal line with y-intercept of 0
-
+     pch = 19, col = "grey", cex = 0.5) 
+abline(h = 0)                         
 ```
 
 ## `lm` residual plot
 
 ```{r, echo=F, fig.align="center"}
-
 par(mfrow = c(1,2)) # Divide the plotting region into 1 row and 2 cols
 plot(my_data$x, residuals(my_lm_multi), 
      xlab = "x", ylab = "residuals",
@@ -513,7 +506,6 @@ plot(my_data$x, residuals(my_lm_multi),
 plot(my_data$z, residuals(my_lm_multi), 
      xlab = "z", ylab = "residuals",
      pch = 19, col = "grey", cex = 0.5)
-
 ```
 
 # Non-Linear Regression Models
@@ -524,7 +516,7 @@ To estimate a range of non-linear models, the `glm` function is particularly hel
 
 First, let us transform our outcome variable from a continuous measure to a binary measure:
     
-    ```{r, eval = T}
+```{r, eval = TRUE}
 my_data$y_bin <- as.numeric(my_data$y > median(my_data$y))
 table(my_data$y_bin)
 ```
@@ -533,24 +525,24 @@ table(my_data$y_bin)
 
 Now we can estimate our model:
     
-    ```{r}
+```{r}
 my_logit <- glm(formula = y_bin ~ x + z, data = my_data, family = "binomial")
 ```
 
 Where:
     
-    - `formula` is the model specification
+- `formula` is the model specification
 - `data` is the data
 - `family` is a description of the error distribution and link function to be used
 - `binomial`, `poisson`, `gaussian` etc...
 
 ## `glm`
 
-```{r, eval = F}
+```{r, eval = FALSE}
 summary(my_logit)
 ```
 
-```{r, echo = F}
+```{r, echo = FALSE}
 cat(paste0(capture.output(summary(my_logit))[-c(1:4)], collapse = "\n"))
 ```
 
@@ -558,7 +550,7 @@ cat(paste0(capture.output(summary(my_logit))[-c(1:4)], collapse = "\n"))
 
 OK, but no-one actually thinks in terms of log-odds, so let's translate that into something more meaningful.
 
-```{r, message=F}
+```{r, message=FALSE}
 my_logit_OR <- exp(cbind(OR = coef(my_logit), confint(my_logit)))
 ```
 
@@ -567,7 +559,7 @@ my_logit_OR <- exp(cbind(OR = coef(my_logit), confint(my_logit)))
 - `cbind` binds the vectors together as separate *c*olumns
 - `exp` exponentiates the log-odds ratios
 
-```{r, message=F, echo=T}
+```{r, message=F, echo=TRUE}
 round(my_logit_OR, digits = 4)
 ```
 
@@ -596,7 +588,7 @@ There are a number of external packages that can make fitting other model types 
 
 To use a package that is not a part of the base R installation, use:
 
-```{r, eval=F}
+```{r, eval = FALSE}
 install.packages("survival")
 library(survival)
 ```
@@ -606,11 +598,9 @@ library(survival)
 We can retreive the fitted values from the model using `fitted()`, but we may be interested in calculating predicted values for arbitrary levels of our covariates.
 
 ```{r}
-
 sim_data <- data.frame(x = c(0, 1))
 y_hat <- predict(object = my_lm, newdata = sim_data)
 y_hat
-
 ```
 
 Here, I am creating a `data.frame` with two observations of one variable (`x`).
@@ -635,13 +625,12 @@ y_hat
 ## `predict`
 
 This can be especially useful when trying to visualise interactive models:
-```{r, eval = T}
+```{r, eval = TRUE}
 
 sim_data_z0 <- data.frame(x = seq(from = -2, to = 2, by = 0.01), z = 0)
 sim_data_z1 <- data.frame(x = seq(from = -2, to = 2, by = 0.01), z = 1)
 y_hat_z0 <- predict(my_lm_interact, newdata = sim_data_z0)
 y_hat_z1 <- predict(my_lm_interact, newdata = sim_data_z1)
-
 ```
 
 - `seq` generates a regular sequences `from` one value `to` another value `by` given increments
@@ -649,7 +638,7 @@ y_hat_z1 <- predict(my_lm_interact, newdata = sim_data_z1)
 
 ## `predict`
 
-```{r, eval = F}
+```{r, eval = FALSE}
 # Create a plot of the data
 plot(my_data$x, my_data$y, cex = 0.5, pch = 19, 
 col = "gray", bty = "n",
@@ -669,7 +658,6 @@ legend("bottomright", legend = c("z = 0", "z = 1"), col = c("black", "red"), lty
 ## `predict`
 
 ```{r, echo = F, fig.align="center"}
-
 par(mfrow = c(1,1))
 plot(my_data$x, my_data$y, cex = 0.5, pch = 19, 
 col = "gray", bty = "n",
@@ -684,11 +672,10 @@ legend("bottomright", legend = c("z = 0", "z = 1"), col = c("black", "red"), lty
 
 Yes! Thomas Leeper has created a nice port of STATA's `margins` command:
     
-    ```{r, eval=FALSE}
+```{r, eval=FALSE}
 library(margins)
 
 cplot(my_lm_interact, x = "x", dx = "z", what = "effect")
-
 ```
 
 `cplot` is equivalent to `marginsplot` in STATA. 
@@ -704,29 +691,24 @@ cplot(my_lm_interact, x = "x", dx = "z", what = "effect")
 
 ```
 
-# Thank you!
-
-# Any questions?
-
 ## Other helpful functions
 
-```{r, echo = T, eval = F}
-objects() & ls() # Which objects are currently loaded in my working environment?
-rm() # Remove objects from my current environment
-save() # Save R object(s) to disk
-is.na() # Is this object a missing value? Or, which elements in this vector are missing?
-rnorm() # Generate random numbers from a normal distribution
-runif() # Generate random numbers from a uniform distribution
+```{r, echo = T, eval = FALSE}
+objects() / ls() # Which objects are currently loaded in my working environment?
+rm()             # Remove objects from my current environment
+save()           # Save R object(s) to disk
+is.na()          # Is this object a missing value? Or, which elements in this vector are missing?
+rnorm()          # Generate random numbers from a normal distribution
+runif()          # Generate random numbers from a uniform distribution
 ```
 
 ## Other helpful packages
 
-```{r, echo = T, eval = F}
+```{r, echo = T, eval = FALSE}
 library(data.table)
 library(dplyr)
 library(plyr)
 library(zoo)
 library(reshape2)
 library(shiny)
-
 ```
