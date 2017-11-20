@@ -149,14 +149,19 @@ In the next two weeks of the course, we will review the concepts learned until n
 * Working with R objects
 
 ---
-#### Week 9. Functions and Debugging in R
+#### Week 9. (More) Advanced R
 
-Continuing from the previous week, we will cover control flow (if-else statements, for and while loops, repeat, next, break), and vectorized operations in R (including `lapply`, `mapply`, `tapply`, `split`), functions, and variable scoping.
+Continuing from the previous week, we will cover control flow (if-else statements, for and while loops, repeat, next, break), and vectorized operations in R, functions, and variable scoping.
 
 *Readings*:
 * Venables et. al., Chs. 9-10.
+* (optional) Patrick Burns.  2011.  _The R Inferno_.  http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 
-*Lab*: **Writing Functions in R**
+*Lecture Notes*:
+* as [html slides](wk9/MY470_wk9_lecture.html)
+* as [pdf slides](wk9/MY470_wk9_lecture.pdf)
+
+*Lab*: **Working with lists and functions in R.**
 
 ---
 #### Week 10. Algorithms and Order of Growth

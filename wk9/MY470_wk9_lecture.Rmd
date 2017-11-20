@@ -23,7 +23,7 @@ my_matrix
 
 ## `data.frame`
 
-- A `data.frame` is a matrix-like R object in which the columns can be of different types.  It is actually a special form of a **list**.
+A `data.frame` is a matrix-like R object in which the columns can be of different types.  It is actually a special form of a **list**.
 
 ```{r}
 char_vec <- c("apple", "pear", "plumb", "pineapple", "strawberry")
@@ -34,6 +34,23 @@ my_data_frame <- data.frame(numbers = c(5, 4, 2, 100, 7.65),
                             logical = logical_vec)
 my_data_frame
 ```
+
+## Beware: `stringsAsFactors = TRUE` by default
+
+```{r}
+str(my_data_frame)
+```
+
+## How to correct this:
+
+```{r}
+my_data_frame <- data.frame(numbers = c(5, 4, 2, 100, 7.65),
+                            fruits = char_vec, 
+                            logical = logical_vec,
+                            stringsAsFactors = FALSE)
+str(my_data_frame)
+```
+
 
 ## `matrix` and `data.frame` subsetting
 
@@ -56,11 +73,53 @@ my_matrix[-c(1:3), -c(1:3)]
 In the code, `1:3` creates a vector of the integers 1, 2 and 3, and the `-` operator negates these. We wrap the vector in the `c` function so that `-` applies to each element, and not just the first element.
 
 ## Index addressing for vector and list elements can be done in different ways
+```{r}
+x <- c(city = "London", university = "LSE", module = "my470")
+```
 
-- by integer index value, e.g. `x[2]`, `x[5:10]`
-- by the `TRUE` elements in a logical vector, e.g. `x[c(TRUE, FALSE, TRUE)]`
-- generalizes to matrix-like objects, through row and column names
-- by character name, e.g. `x["city"]
+### by integer index value, e.g.
+```{r}
+x[2]
+x[c(1, 3)]
+```
+
+----
+
+```{r}
+x <- c(city = "London", university = "LSE", module = "my470")
+```
+
+### by the `TRUE` elements in a logical vector, e.g. `x[c(TRUE, FALSE, TRUE)]`
+```{r}
+x[c(TRUE, FALSE, TRUE)]
+```
+
+----
+
+```{r}
+x <- c(city = "London", university = "LSE", module = "my470")
+```
+
+### by character name, e.g. `x["city"]`
+```{r}
+x["city"]
+```
+
+## generalizes to matrix-like objects, through row and column names
+
+```{r}
+x <- matrix(1:6, nrow = 2, 
+            dimnames = list(c("one", "two"), c("a", "b", "c")))
+x
+x[, 2]     # all rows, second column
+```
+
+----
+```{r}
+x[1, 2:3]  # first row, cols 2 through 3
+x[c("one"), c("b", "c")]  # same
+```
+
 
 ## `list`
 
@@ -76,10 +135,28 @@ my_list
 
 ## How to index list elements in R
 
-- Using `$`
-- Using `[`
-- Using `[[`
+### Using `[`
+```{r}
+my_list["something_else"]
+my_list[3]
+```
 
+----
+
+### Using `[[`
+```{r}
+my_list[["something"]]
+my_list[[1]]
+```
+
+----
+
+### Using `$`
+```{r}
+my_list$another_thing
+```
+
+(Does not allow multiple elements to be indexed in one command)
 
 ## `functions`
 
@@ -144,8 +221,8 @@ sqrt_mean_of_vec <- sqrt(mean(vec))
 Functions are also objects, and we can create our own. We define a function as follows:
     
 ```{r}
-my_addition_function <- function(a = 10, b){
-    return(a + b)
+my_addition_function <- function(a = 10, b) {
+    a + b
 }
 
 my_addition_function(a = 5, b = 50)
@@ -153,20 +230,19 @@ my_addition_function(3, 4)
 my_addition_function(b = 100)
 ```
 
-## Help!
-    
-R has an in-built help facility which provides more information about any (package) function:
+## Variables in functions have local scope
 
 ```{r}
-help(summary)
-?summary
+my_demo_function <- function(a = 10) {
+    a <- a * 2
+    a
+}
+
+a <- 1
+my_demo_function(a = 20)
+a
 ```
 
-The quality of the help varies (to put it mildly), but every function is documented.
-
-Alternative sources of help:
-    
-- https://stackoverflow.com/questions/tagged/r
 
 # Reading data into R
 
@@ -184,16 +260,9 @@ my_data <- read.csv(file = "my_file.csv")
   - Use `set_wd()` to change your current working directory
 - Might need to use the `stringsAsFactors = FALSE` argument
 
-## Reading data into R (.dta)
 
-```{r, eval = FALSE}
-install.packages("foreign") ## install the "foreign" package
-library(foreign) ## Loads an additional package that deals with STATA files
-my_data <- read.dta(file = "my_file.dta") 
-
-```
-
-```{r, eval = T, echo = FALSE}
+## (creating some fake data)
+```{r, eval = TRUE}
 n <- 1000
 x <- rnorm(n)
 z <- runif(n)
@@ -208,11 +277,6 @@ y_bin <- as.numeric(y > median(y))
 my_data <- data.frame(x = x, y = y, z = z, g = g)
 ```
     
-- The `foreign` package is not automatically installed in R so we need to do that ourselves
-- `my_data` is still an R data.frame object (you could still call this anything)
-- `my_file.dta` is a .dta file with your data
-- `<-` is still an assignment operator
-
 
 # Plots and graphs
 
@@ -221,9 +285,8 @@ my_data <- data.frame(x = x, y = y, z = z, g = g)
 - Plots are one of the great strength f R.
 - There are two main frameworks for plotting
 - Base R graphics
-- `ggplot`
-- Which should you use? It is a matter of preference!
-    
+- **ggplot**
+
 ## Base R plots
     
 The basic plotting syntax is very simple. `plot(x_var, y_var)` will give you a scatter plot:
@@ -231,7 +294,7 @@ The basic plotting syntax is very simple. `plot(x_var, y_var)` will give you a s
 plot(my_data$x, my_data$y)
 ```
 
-Hmm, let's work on that.
+This can be substantially improved!
 
 ## Base R plots
 
@@ -239,13 +302,13 @@ The plot function takes a number of arguments (`?plot` for a full list). The few
 
 ```{r, eval=FALSE}
 plot(x = my_data$x, y = my_data$y, 
-     xlab = "X variable",         # x axis label
-     ylab = "Y variable",         # y axis label 
-     main = "Awesome plot title", # main title
-     pch = 19,                    # solid points
-     cex = 0.5,                   # smaller points
-     bty = "n",                   # remove surrounding box
-     col = as.factor(my_data$g)   # colour by grouping variable
+     xlab = "X variable",            # x axis label
+     ylab = "Y variable",            # y axis label 
+     main = "My spilled bubble gum", # main title
+     pch = 19,                       # solid points
+     cex = 0.5,                      # smaller points
+     bty = "n",                      # remove surrounding box
+     col = as.factor(my_data$g)      # colour by grouping variable
 )
 ```
 
@@ -255,7 +318,7 @@ plot(x = my_data$x, y = my_data$y,
 plot(my_data$x, my_data$y, 
      xlab = "X variable", 
      ylab = "Y variable", 
-     main = "Awesome plot title",
+     main = "My spilled bubble gum",
      pch = 19, # Solid points
      cex = 0.5, # Smaller points
      bty = "n", # Remove surrounding box
