@@ -2,3 +2,8 @@
 .ipynb_checkpoints/
 answers-to-assignments/
 __pycache__/
+.Rproj.user
+lectures.Rproj
+*.Rhistory
+*/.RData
+.RData

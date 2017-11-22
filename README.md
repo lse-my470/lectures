@@ -130,26 +130,38 @@ Writing computer programs is easy but making them work properly is hard. We test
 * Defensive programming with `try`, `except`, and `assert`
 
 ---
-#### Week 8. Data Types and Control Flow in R
+#### Week 8. The R Programming Language
 
-In the next two weeks of the course, we will review the concepts learned until now by learning how they are implemented in the R programming language. We will start with basic data types in R (vectors, lists, matrices, factors, data frames) and control flow (if-else statements, for and while loops, repeat, next, break).
+In the next two weeks of the course, we will review the concepts learned until now by learning how they are implemented in the R programming language. We will start with basic data types in R (vectors, lists, matrices, factors, data frames) and object classes.
+
+*Lecture Notes*:
+* as [html slides](wk8/MY470_wk8_lecture.html)
+* as [pdf slides](wk8/MY470_wk8_lecture.pdf)
 
 *Readings*:
+* Venables, W. N. et. al.  2017.  [_An Introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf).  Chapters 1-6. 
+* (optional, but recommended) Zuur, A., Ieno, E. N., & Meesters, E. (2009). _A Beginner's Guide to R_. Springer Science & Business Media.
+* The [Introduction to R handout](wk8/Introductory_R.pdf).
 
 *Lab*: **Introduction to R**
-* Installing R with Anaconda
+* Installing R and RStudio
 * Introduction to RStudio and workflow
-* Practicing simple statements and control flow
+* Working with R objects
 
 ---
-#### Week 9. Functions and Debugging in R
+#### Week 9. (More) Advanced R
 
-Continuing from the previous week, we will cover vectorized operations in R (including `lapply`, `mapply`, `tapply`, `split`), functions, and variable scoping.
+Continuing from the previous week, we will cover control flow (if-else statements, for and while loops, repeat, next, break), and vectorized operations in R, functions, and variable scoping.
 
 *Readings*:
+* Venables et. al., Chs. 9-10.
+* (optional) Patrick Burns.  2011.  _The R Inferno_.  http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 
+*Lecture Notes*:
+* as [html slides](wk9/MY470_wk9_lecture.html)
+* as [pdf slides](wk9/MY470_wk9_lecture.pdf)
 
-*Lab*: **Writing Functions in R**
+*Lab*: **Working with lists and functions in R.**
 
 ---
 #### Week 10. Algorithms and Order of Growth
