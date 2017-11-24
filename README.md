@@ -39,6 +39,7 @@ The course will use Python and R. We will use the Anaconda distribution to insta
 
 The main course texts will be:
 *	Guttag, John V. *Introduction to Computation and Programming Using Python: With Application to Understanding Data*. MIT Press, 2016.
+* Miller, Bradley N. and David L. Ranum. *Problem Solving with Algorithms and Data Structures Using Python*. Available online at http://interactivepython.org/runestone/static/pythonds/index.html.
 *	Intermediate and advanced documentation at http://docs.python.org/3/.
 *	Grolemund, Garrett and Hadley Wickham. *R for Data Science*. O’Reilly, 2016. http://r4ds.had.co.nz
 *	Grolemund, Garrett. *Hands-On Programming with R*. O’Reilly, 2014.
@@ -139,7 +140,7 @@ In the next two weeks of the course, we will review the concepts learned until n
 * as [pdf slides](wk8/MY470_wk8_lecture.pdf)
 
 *Readings*:
-* Venables, W. N. et. al.  2017.  [_An Introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf).  Chapters 1-6. 
+* Venables, W. N. et. al.  2017.  [_An Introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf).  Chapters 1-6.
 * (optional, but recommended) Zuur, A., Ieno, E. N., & Meesters, E. (2009). _A Beginner's Guide to R_. Springer Science & Business Media.
 * The [Introduction to R handout](wk8/Introductory_R.pdf).
 
@@ -170,17 +171,19 @@ Algorithms are recipes that consist of a sequence of simple steps, control flow,
 
 *Readings*:
 * Guttag. Chapter 9, pp.135–149.
+* Bradley and Ranum. [Chapter 2](http://interactivepython.org/runestone/static/pythonds/AlgorithmAnalysis/toctree.html).
 
 *Lab*: **Order of Growth**
-* Reading and evaluating order of growth of programs written in Python and R
+* Reading programs written in Python and R and evaluating their time complexity
 
 ---
 #### Week 11. Searching and Sorting Algorithms
 
-We will use the concepts and approaches introduced in the previous lecture to look at the complexity of several classic algorithms on searching and sorting. The goal is to get a better intuition of how to approach problems of efficiency. We will use examples written in both Python and R. The lecture will end with an overview of Python modules and R packages that are useful for data manipulation, analysis, and visualization.  
+We will use the concepts and approaches introduced in the previous lecture to look at the complexity of several classic algorithms on searching and sorting. The goal is to get a better intuition of how to approach problems of efficiency. We will use examples written in both Python and R. The lecture will end with an overview of what we have learned in the course and possible steps you can take to further develop your programming skills.  
 
 *Readings*:
 * Guttag. Chapter 10.1–10.2, pp.151–164.
+* Bradley and Ranum. [Chapter 5](http://interactivepython.org/runestone/static/pythonds/SortSearch/toctree.html).
 
 *Lab*: **Course Summary**
 * Writing programs in Python and R
