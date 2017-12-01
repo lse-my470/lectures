@@ -162,7 +162,7 @@ Continuing from the previous week, we will cover control flow (if-else statement
 * as [html slides](wk9/MY470_wk9_lecture.html)
 * as [pdf slides](wk9/MY470_wk9_lecture.pdf)
 
-*Lab*: **Working with lists and functions in R.**
+*Lab*: **Working with lists and functions in R**
 
 ---
 #### Week 10. Algorithms and Order of Growth
@@ -173,7 +173,7 @@ Algorithms are recipes that consist of a sequence of simple steps, control flow,
 * Guttag. Chapter 9, pp.135–149.
 * Bradley and Ranum. [Chapter 2](http://interactivepython.org/runestone/static/pythonds/AlgorithmAnalysis/toctree.html).
 
-*Lab*: **Order of Growth**
+*Lab*: **Order of growth**
 * Reading programs written in Python and R and evaluating their time complexity
 
 ---
@@ -185,6 +185,6 @@ We will use the concepts and approaches introduced in the previous lecture to lo
 * Guttag. Chapter 10.1–10.2, pp.151–164.
 * Bradley and Ranum. [Chapter 5](http://interactivepython.org/runestone/static/pythonds/SortSearch/toctree.html).
 
-*Lab*: **Course Summary**
-* Writing programs in Python and R
-* Useful libraries for data science
+*Lab*: **Preparation for the final assignment**
+* Getting familiar with the data
+* Understanding temporal motifs
