@@ -65,11 +65,11 @@ Please note that the deadlines are final. Late submissions will automatically re
 ## Assessment Criteria
 Your code will be evaluated both on whether it completes the task and on the extent to which it is written using the concepts, paradigms, and best practices covered in the course.
 
-| Mark   |Criteria   |
-|------------|:--------|
-| Pass (50-59) | The code runs and does what it is expected to |
-| Merit (60-69) | The code runs, does what it is expected to, and is modular and legible |
-| Distinction (70-100) |The code runs, does what it is expected to, and is modular, legible, and suitably optimized |
+|**Mark**         |**Criteria**   |
+|:----------------|:--------------|
+|Pass (50-59)     |The code runs and does what it is expected to |
+|Merit (60-69)    |The code runs, does what it is expected to, and is modular and legible |
+|Distinction (70-100) |The code runs, does what it is expected to, and is modular, legible, and suitably optimized |
 
 ## Schedule
 
