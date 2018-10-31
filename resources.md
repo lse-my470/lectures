@@ -16,7 +16,7 @@
 
 * [Composing Programs](http://composingprograms.com/) - The online textbook to UC Berkeley's [Intro to Programming](https://inst.eecs.berkeley.edu/~cs61a/sp18/) course.
 
-* [Python Data Science Handbook] (https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks) - A whole texbook available for free as a collection of Jupyter Notebooks.
+* [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks) - A whole texbook available for free as a collection of Jupyter Notebooks.
 
 ## Algorithms
 
