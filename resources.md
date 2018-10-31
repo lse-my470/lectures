@@ -8,10 +8,15 @@
 * [How to Think Like a Computer Scientist: Interactive Edition](http://interactivepython.org/runestone/static/thinkcspy/index.html)
 * [Python Exercises, Practice, Solution](https://www.w3resource.com/python-exercises/)
 * [CodingBat](https://codingbat.com/python)
+* [HackerRank](https://www.hackerrank.com/dashboard) Has lots of Python exercises for all levels, and is often used by recruiters!
 
 ## Online courses
 
 * [Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/index.htm) – The MIT course that MY470 is very closely based on
+
+* [Composing Programs](http://composingprograms.com/) - The online textbook to UC Berkeley's [Intro to Programming](https://inst.eecs.berkeley.edu/~cs61a/sp18/) course.
+
+* [Python Data Science Handbook] (https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks) - A whole texbook available for free as a collection of Jupyter Notebooks.
 
 ## Algorithms
 
