@@ -1,29 +1,20 @@
 ---
 title: "Programming in the R Language"
-subtitle: "MY 470, Week 9: Advanced R Programming"
-author: "Kenneth Benoit"
-date: "2017-11-20"
-output: 
+author: "Pablo Barbera"
+date: '2018-11-26'
+output:
+  beamer_presentation: default
   ioslides_presentation:
-    widescreen: true
+    widescreen: yes
+  slidy_presentation: default
+subtitle: 'MY 470, Week 9: Advanced R Programming'
 ---
 
 # (More) Advanced R Programming
     
-## `matrix`
+## Revisiting data frames
 
-A matrix is just a specially attributed vector.
-
-- a vector with dimension attributes, where all elements are of the same type
-
-```{r}
-my_matrix <- matrix(data = 1:100, nrow = 10, ncol = 10)
-my_matrix
-```
-
-## `data.frame`
-
-A `data.frame` is a matrix-like R object in which the columns can be of different types.  It is actually a special form of a **list**.
+A `data.frame` is a matrix-like R object in which the columns can be of different types.
 
 ```{r}
 char_vec <- c("apple", "pear", "plumb", "pineapple", "strawberry")
@@ -51,83 +42,13 @@ my_data_frame <- data.frame(numbers = c(5, 4, 2, 100, 7.65),
 str(my_data_frame)
 ```
 
-
-## `matrix` and `data.frame` subsetting
-
-To subset a `matrix` or `data.frame`, you need to specify both rows and columns:
-
-```{r}
-my_matrix[1:3, 1:3]
-
-my_data_frame[1, ]
-```
-
-## `matrix` and `data.frame` subsetting
-
-We can also subset to remove rows or columns that we do not want to see by using the `-` operator applied to the `c` function:
-
-```{r}
-my_matrix[-c(1:3), -c(1:3)]
-```
-
-In the code, `1:3` creates a vector of the integers 1, 2 and 3, and the `-` operator negates these. We wrap the vector in the `c` function so that `-` applies to each element, and not just the first element.
-
-## Index addressing for vector and list elements can be done in different ways
-```{r}
-x <- c(city = "London", university = "LSE", module = "my470")
-```
-
-### by integer index value, e.g.
-```{r}
-x[2]
-x[c(1, 3)]
-```
-
-----
-
-```{r}
-x <- c(city = "London", university = "LSE", module = "my470")
-```
-
-### by the `TRUE` elements in a logical vector, e.g. `x[c(TRUE, FALSE, TRUE)]`
-```{r}
-x[c(TRUE, FALSE, TRUE)]
-```
-
-----
-
-```{r}
-x <- c(city = "London", university = "LSE", module = "my470")
-```
-
-### by character name, e.g. `x["city"]`
-```{r}
-x["city"]
-```
-
-## generalizes to matrix-like objects, through row and column names
-
-```{r}
-x <- matrix(1:6, nrow = 2, 
-            dimnames = list(c("one", "two"), c("a", "b", "c")))
-x
-x[, 2]     # all rows, second column
-```
-
-----
-```{r}
-x[1, 2:3]  # first row, cols 2 through 3
-x[c("one"), c("b", "c")]  # same
-```
-
-
 ## `list`
 
 A `list` is a collection of any set of object types
 
 ```{r}
 my_list <- list(something = my_data_frame$num_vec, 
-                another_thing = my_matrix[1:3,1:3], 
+                another_thing = matrix(1:6, nrow=2), 
                 something_else = "ken")
 my_list
 ```
@@ -259,9 +180,11 @@ my_data <- read.csv(file = "my_file.csv")
   - Use `get_wd()` to check your current working directory
   - Use `set_wd()` to change your current working directory
 - Might need to use the `stringsAsFactors = FALSE` argument
+- For large datasets, functions `read_csv` in `readr` package
 
 
 ## (creating some fake data)
+
 ```{r, eval = TRUE}
 n <- 1000
 x <- rnorm(n)
@@ -282,10 +205,10 @@ my_data <- data.frame(x = x, y = y, z = z, g = g)
 
 ## Introduction
 
-- Plots are one of the great strength f R.
-- There are two main frameworks for plotting
-- Base R graphics
-- **ggplot**
+- Plots are one of the great strengths of R.
+- There are two main frameworks for plotting:
+    1. Base R graphics
+    2. **ggplot**
 
 ## Base R plots
     
@@ -344,7 +267,7 @@ plot(x = my_data$g, y = my_data$x)
 
 Also popular is the **ggplot2** library. This is a separate package (i.e. it is not a part of the base R environment) but is very widely used.
 
-- Based on the "Grammar of Graphics"" data visualisation scheme
+- Based on the "Grammar of Graphics" data visualisation scheme
 - Graphs are broken into scales and layers
 - Has slightly idiosyncratic language style!
 
@@ -406,7 +329,7 @@ ggplot(data = my_data, aes(x= x, y= y, col = g)) +
 ```{r fig.width=10, fig.height=5,echo=FALSE}
 library(png)
 library(grid)
-img <- readPNG("figs/spark_plot_new_trans.png")
+img <- readPNG("figs/ggridges.png")
 grid.raster(img)
 ```
 
@@ -416,9 +339,28 @@ grid.raster(img)
 ```{r fig.width=10, fig.height=5,echo=FALSE}
 library(png)
 library(grid)
-img <- readPNG("figs/PartyLeaderSatisfaction.png")
+img <- readPNG("figs/reg_coef_final.png")
 grid.raster(img)
 ```
+
+## Other examples of pretty R graphics
+
+```{r fig.width=10, fig.height=5,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("figs/network_plot_final.png")
+grid.raster(img)
+```
+
+## Other examples of pretty R graphics
+
+```{r fig.width=10, fig.height=5,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("figs/euro_lang_final.png")
+grid.raster(img)
+```
+
 
 ## Linear Regression Models
 
@@ -658,7 +600,7 @@ library(survival)
 
 ## `predict`
 
-We can retreive the fitted values from the model using `fitted()`, but we may be interested in calculating predicted values for arbitrary levels of our covariates.
+We can retrieve the fitted values from the model using `fitted()`, but we may be interested in calculating predicted values for arbitrary levels of our covariates.
 
 ```{r}
 sim_data <- data.frame(x = c(0, 1))
@@ -731,29 +673,6 @@ lines(x = sim_data_z1$x, y = y_hat_z1, lwd = 2, col = "red")
 legend("bottomright", legend = c("z = 0", "z = 1"), col = c("black", "red"), lty = 1)
 ```
 
-## Can we just use `margins`?
-
-Yes! Thomas Leeper has created a nice port of STATA's `margins` command:
-    
-```{r, eval=FALSE}
-library(margins)
-
-cplot(my_lm_interact, x = "x", dx = "z", what = "effect")
-```
-
-`cplot` is equivalent to `marginsplot` in STATA. 
-
-The specification above tell `R` that we want to plot the marginal effect of `z` on `y` across the range of `x`.
-
-## Can we just use `margins`?
-
-```{r, eval=TRUE, echo=FALSE, fig.align="center"}
-library(margins)
-
-cplot(my_lm_interact, x = "x", dx = "z", what = "effect")
-
-```
-
 ## Other helpful functions
 
 ```{r, echo = T, eval = FALSE}
@@ -768,10 +687,12 @@ runif()          # Generate random numbers from a uniform distribution
 ## Other helpful packages
 
 ```{r, echo = T, eval = FALSE}
-library(data.table)
 library(dplyr)
-library(plyr)
 library(zoo)
-library(reshape2)
 library(shiny)
+library(streamR)
+library(DBI)
+library(quanteda)
 ```
+
+
