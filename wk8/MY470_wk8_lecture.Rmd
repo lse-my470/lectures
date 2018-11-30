@@ -1,12 +1,28 @@
 ---
 title: "The R Language"
-subtitle: "MY 470, Week 8: Introduction and Data Structures"
-author: "Kenneth Benoit"
-date: "2017-11-13"
-output: 
+author: "Pablo Barberá"
+date: '2018-11-19'
+output:
+  beamer_presentation: default
   ioslides_presentation:
-    widescreen: true
+    widescreen: yes
+  slidy_presentation: default
+subtitle: 'MY 470, Week 8: Introduction and Data Structures'
 ---
+
+## About me
+
+* Assistant Professor of Computational Social Science at LSE Methodology
+    - Previously Prof. at University of Southern California
+    - PhD in Politics, New York University
+    - Data Science Fellow at NYU, 2015-2016
+* My research:
+    - Social media and politics, comparative electoral behavior
+    - Text as data methods, social network analysis
+    - Author of R packages to analyze data from social media
+* Contact: P.Barbera@lse.ac.uk
+    - Office hours: Fridays 12.30-14.30
+
 
 # Introduction to R
 
@@ -17,7 +33,7 @@ R is a versatile, open source programming/scripting language that's useful both 
 * Open source software under [GPL][].
 * Superior (if not just comparable) to commercial alternatives. R has over 10,000 user contributed packages (CRAN) and many more elsewhere. 
 * Available on all platforms.
-* Not just for statistics, but also general purpose programming.
+* Not just for statistics, but also general purpose programming, graphics, network analysis, machine learning, web scraping...
 * Is object oriented and functional.
 * Large and growing community of peers.
 
@@ -55,7 +71,7 @@ knitr::include_graphics("figs/RJupyter.png")
 
 ### Terminal {.smaller}
 
-```{r, out.width = "100%", echo = FALSE}
+```{r, out.width = "80%", echo = FALSE}
 knitr::include_graphics("figs/RTerminal.png")
 ```
 
@@ -74,7 +90,7 @@ You can also script inline using `Rscript -e`.
 
 ### R GUI Console {.smaller}
 
-```{r, out.width = "100%", echo = FALSE}
+```{r, out.width = "80%", echo = FALSE}
 knitr::include_graphics("figs/RGUI.png")
 ```
 
@@ -82,112 +98,9 @@ knitr::include_graphics("figs/RGUI.png")
 
 ### RStudio {.smaller}
 
-```{r, out.width = "100%", echo = FALSE}
+```{r, out.width = "80%", echo = FALSE}
 knitr::include_graphics("figs/RStudio.png")
 ```
-
-
-## Viewing objects in your global environment and how to clean them up
-
-List objects in your current environment
-
-```{r, eval = FALSE}
-ls()
-```
-
-remove objects from your current environment
-
-```{r, eval = TRUE, echo = TRUE}
-x <- 5
-ls()
-rm(x)
-ls()
-```
-
-remove all objects from your current environment
-
-```{r, eval = FALSE}
-rm(list = ls())
-```
-
-- Notice that we have nested one function inside another.
-
-- Use `#` signs to comment. Comment liberally in your R scripts. Anything to the right of a `#` is ignored by R. 
-
--  Assignment operator
-    
-    `<-` is the assignment operator. Assigns values on the right to objects on the left. Mostly similar to `=` but not always. Learn to use `<-` as it is good programming practice. Using `=` in place of `<-` can lead to issues down the line.
-
-## Package management
-
-* `install.packages("package-name")` will download a package from one of the CRAN mirrors assuming that a binary is available for your operating system. If you have not set a preferred CRAN mirror in your `options()`, then a menu will pop up asking you to choose a location.
-
-* Use `old.packages()` to list all your locally installed packages that are now out of date. 
-`update.packages()` - will update all packages in the known libraries interactively. This can take a while if you haven't done it recently. To update everything without any user intervention, use the `ask = FALSE` argument.  
-
-```{r, eval = FALSE}
-update.packages(ask = FALSE)
-```
-
-
-
-## Quitting R
-
-type in `quit()` or `q()` and answer `y` to quit.
-
-
-# R versus Python
-
-## Data Types {.smaller}
-
-| **Python class** | **Immutable** | **Description**                   |  **R class** |
-|:-----------------|:-------------:|:----------------------------------|:------------:|
-| bool             |      Yes      | Boolean value                     |    logical   |
-| int              |      Yes      | integer number                    |    integer   |
-| float            |      Yes      | floating-point number             |    numeric   |
-| list             |       No      | mutable sequence of objects       |     list     |
-| tuple            |      Yes      | immutable sequence of objects     |       -      |
-| str              |      Yes      | character string                  |   character  |
-| set              |       No      | unordered set of distinct objects |       -      |
-| frozenset        |      Yes      | immutable form of set class       |       -      |
-| dict             |       No      | dictionary                        | (named) list |
-
-
-## Indexing {.build}
-
-### R indexes from 1 (not 0)
-
-   - where an index begins counting, when addressing elements of a data object
-   - [most languages index from 0](https://en.wikipedia.org/wiki/Comparison_of_programming_languages_%28array%29#Array_system_cross-reference_list)
-   - human ages - do they index from 0?
-   
-### R indexes include the ending index
-
-- so `myvector[1:3]` includes the first, second, and third elements in R
-- whereas in Python, `[1:3]` is up to, but not including, the ending element index
-
-### R does not index individual character elements of a string
-
-
-## Python
-
-```{python}
-letters = "abcdefghijklmnopqrztuv"
-print letters[0:4]
-```
-
-## R
-
-```{r}
-letters[1:5]
-```
-
-```{r}
-firstletters <- "abcdefg"
-firstletters[1:3]
-```
-
-Why did this happen?
 
 
 # R Operators
@@ -244,6 +157,110 @@ my_other_object <- 4
 print(my_object - my_other_object)
 ```
 
+## Viewing objects in your global environment and how to clean them up
+
+List objects in your current environment
+
+```{r, eval = FALSE}
+ls()
+```
+
+remove objects from your current environment
+
+```{r, eval = TRUE, echo = TRUE}
+x <- 5
+ls()
+rm(x)
+ls()
+```
+
+remove all objects from your current environment
+
+```{r, eval = FALSE}
+rm(list = ls())
+```
+
+- Notice that we have nested one function inside another.
+
+- Use `#` signs to comment. Comment liberally in your R scripts. Anything to the right of a `#` is ignored by R. 
+
+-  Assignment operator
+    
+    `<-` is the assignment operator. Assigns values on the right to objects on the left. Mostly similar to `=` but not always. Learn to use `<-` as it is good programming practice. Using `=` in place of `<-` can lead to issues down the line.
+
+## Package management
+
+* `install.packages("package-name")` will download a package from one of the CRAN mirrors assuming that a binary is available for your operating system. If you have not set a preferred CRAN mirror in your `options()`, then a menu will pop up asking you to choose a location.
+
+* Use `old.packages()` to list all your locally installed packages that are now out of date. 
+`update.packages()` - will update all packages in the known libraries interactively. This can take a while if you haven't done it recently. To update everything without any user intervention, use the `ask = FALSE` argument.  
+
+```{r, eval = FALSE}
+update.packages(ask = FALSE)
+```
+
+
+## Quitting R
+
+type in `quit()` or `q()` and answer `y` to quit.
+
+
+# R versus Python
+
+## Data Types {.smaller}
+
+| **Python class** | **Immutable** | **Description**                   |  **R class** |
+|:-----------------|:-------------:|:----------------------------------|:------------:|
+| bool             |      Yes      | Boolean value                     |    logical   |
+| int              |      Yes      | integer number                    |    integer   |
+| float            |      Yes      | floating-point number             |    numeric   |
+| list             |       No      | mutable sequence of objects       |     list     |
+| tuple            |      Yes      | immutable sequence of objects     |       -      |
+| str              |      Yes      | character string                  |   character  |
+| set              |       No      | unordered set of distinct objects |       -      |
+| frozenset        |      Yes      | immutable form of set class       |       -      |
+| dict             |       No      | dictionary                        | (named) list |
+
+
+## Indexing {.build}
+
+### R indexes from 1 (not 0)
+
+   - where an index begins counting, when addressing elements of a data object
+   - [most languages index from 0](https://en.wikipedia.org/wiki/Comparison_of_programming_languages_%28array%29#Array_system_cross-reference_list)
+   - human ages - do they index from 0? what about months of the year?
+   - buildings in Europe vs the US
+   
+### R indexes include the ending index
+
+- so `myvector[1:3]` includes the first, second, and third elements in R
+- whereas in Python, `[1:3]` is up to, but not including, the ending element index
+
+### R does not index individual character elements of a string
+
+
+## Python
+
+```{python}
+letters = "abcdefghijklmnopqrztuv"
+print letters[0:4]
+```
+
+## R
+
+```{r}
+letters[1:5]
+```
+
+```{r}
+firstletters <- "abcdefg"
+firstletters[1:3]
+```
+
+Why did this happen?
+
+
+
 # Data Structures
 
 ## The Importance of Understanding Object Types 
@@ -259,7 +276,7 @@ It is **critical** to understand because these are the objects you will manipula
 
 ## Atomic Classes
 
-`R` has 6 (excluding the `raw` class for this workshop) atomic classes.
+`R` has 6 (excluding the `raw` class for this lecture) atomic classes.
 
 * character
 * numeric (real or decimal)
@@ -273,7 +290,7 @@ It is **critical** to understand because these are the objects you will manipula
 | ------- | ---- |
 | "a", "swc" | character |
 | 2, 15.5 | numeric | 
-| 2 (Must add a `L` at end to denote integer) | integer |
+| 2L (Must add a `L` at end to denote integer) | integer |
 | `TRUE`, `FALSE` | logical |
 | 1+4i | complex | 
 
@@ -288,7 +305,7 @@ R has many data structures. These include:
 * matrix
 * data frame
 * factors
-* tables
+
 
 
 ## `vector` - the basic building block of R
@@ -367,7 +384,7 @@ y <- c(TRUE, TRUE, FALSE, FALSE)
 Finally you can have character vectors:
 
 ```{r, eval = TRUE}
-z <- c("Ken", "Milena", "Kohei", "Christian")
+z <- c("Pablo", "Milena", "Tom", "Jon")
 z
 ```
 
@@ -380,8 +397,6 @@ length(z)
 class(z)
 str(z)
 ```
-
-Question: Do you see a property that is common to all these vectors above?
 
 
 ## Adding elements
@@ -464,6 +479,7 @@ A `matrix` object in R is simply a vector with row and column attributes.
 m <- matrix(1:6, nrow = 2)
 m
 attributes(m)
+length(m)
 ```
 
 ## Example
@@ -486,23 +502,6 @@ attributes(y)
 z <- c(1L, 2L, 3L)
 typeof(z)
 ```
-
-## Brief introduction to class methods in R {.build}
-
-```{r}
-mychar <- "Hello World"
-methods(class = class(mychar))
-```
-
-
-### Equivalent in Python: {.small}
-
-```{python tidy = TRUE, tidy.opts=list(width.cutoff=60)}
-mystring = "Hello World"
-
-print dir(mystring)
-```
-
 
 ## Factors: Vectors with labels
 
@@ -627,6 +626,15 @@ To subset a `matrix` or `data.frame`, you need to specify both rows and columns:
 my_matrix[1:3, 1:3]
 
 my_data_frame[1, ]
+```
+
+## `matrix` and `data.frame` subsetting
+
+You can filter data frames using variables' names:
+
+```{r}
+my_data_frame$numbers
+my_data_frame$numbers[1:3]
 ```
 
 ## `matrix` and `data.frame` subsetting
