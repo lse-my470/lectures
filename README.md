@@ -58,7 +58,7 @@ Doctoral students registered for MY570 have the option to work on a substantive 
 
 Problem sets will be distributed on Monday evening and due at 12:00 noon the following Monday.
 
-The take home exam will be distributed on Monday, December 10, 2018 and due at 12:00 noon on Monday, January 14, 2019.
+The take home exam will be distributed on Monday, December 17, 2018 and due at 12:00 noon on Monday, January 14, 2019.
 
 Please note that the deadlines are final. Late submissions will automatically receive score 0, except in the case of a valid documented legal or medical excuse.
 
