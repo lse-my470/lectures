@@ -16,12 +16,16 @@
 
 * [Composing Programs](http://composingprograms.com/) - The online textbook to UC Berkeley's [Intro to Programming](https://inst.eecs.berkeley.edu/~cs61a/sp18/) course.
 
-* [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks) - A whole texbook available for free as a collection of Jupyter Notebooks.
+* [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks) - A whole textbook available for free as a collection of Jupyter Notebooks.
 
 ## Algorithms
 
 * [IDEA](https://idea-instructions.com/) – An ongoing series of nonverbal algorithm assembly instructions
 * [VISUALGO](https://visualgo.net/en) – Visualising data structures and algorithms through animation
+
+## Advanced optimization
+
+* [Performance tips](https://wiki.python.org/moin/PythonSpeed/PerformanceTips) – Performance tips from the Python wiki
 
 ## Packages
 
