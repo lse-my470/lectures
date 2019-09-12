@@ -1,28 +1,30 @@
 # MY470 Computer Programming
 
 
-## Michaelmas Term 2018
+## Michaelmas Term 2019
 
 ## Instructors
 
-* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Wednesdays 10:00–12:00, COL 8.03
-* [Pablo Barbera](p.barbera@lse.ac.uk), *Office hours*: Fridays 12:30–14:30, COL 7.10
-* [Tom Paskhalis](t.g.paskhalis@lse.ac.uk) (GTA)
+* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 10:00–12:00, COL 8.03
+* [Blake Miller](b.a.miller@lse.ac.uk), *Office hours*: TBA, COL 7.14
+* [Christian Mueller](c.mueller@lse.ac.uk) (GTA), *Office hours*: TBA
+* Altaf Ali (GTA)
+* Ji Eun Kim (GTA)
 
 ## Course Information
 
-* Lectures on Mondays 13:00–15:00 in KSW G.01
+* Lectures on Mondays 13:00–15:00 in CBG 1.01
 * Classes on:
-  * Mondays 15:00–16:30 in TW2 4.02
-  * Tuesdays 10:00–11:30 in STC S08
-  * Tuesdays 15:00–16:30 in TW2 4.03
+  * Mondays 15:00–16:30 in CBG 1.09
+  * Tuesdays 10:00–11:30 in CBG 1.02
+  * Tuesdays 15:00–16:30 in CBG 1.02
 
 No lectures or classes will take place during School Reading Week 6.
 
 
 ## Course Description
 
-This course introduces students to the fundamentals of computer programming as students design, write, and debug computer programs using the programming languages Python and R. The course will also cover the foundations of computer languages, algorithms, functions, variables, object orientation, scoping, and assignment.
+This course introduces students to the fundamentals of computer programming as students design, write, and debug computer programs using the programming languages Python and R. The course will also cover the foundations of computer languages, algorithms, functions, variables, object orientation, scoping, and assignment. The course will rely on practical examples from computational social science and social data science.
 
 ## Organization
 
@@ -54,22 +56,22 @@ Additional resources include:
 
 Take home exam (50%) and in-class assessment (50%). Students will be expected to produce 10 problem sets in the MT. Student problem sets will be marked each week, and will provide 50% of the mark.
 
-Doctoral students registered for MY570 have the option to work on a substantive project of their own choice in place  of the take home exam. The project should be approved by the instructors, so please get in touch with us well in advance.
+Doctoral students registered for MY570 will be required to complete a substantive project of their own choice in place of the take home exam. You will be required to develop software that addresses a sufficiently complex computational social science task. Examples of possible projects include a software package that collects and analyses online data, an experimental game, or an agent-based model. The project should be approved by the instructors, so please get in touch with us well in advance.
 
 Problem sets will be distributed on Monday evening and due at 12:00 noon the following Monday.
 
-The take home exam will be distributed on Monday, December 17, 2018 and due at 12:00 noon on Monday, January 14, 2019.
+The take home exam will be distributed on Monday, December 16, 2019 and due at 12:00 noon on Monday, January 13, 2019.
 
-Please note that the deadlines are final. Late submissions will automatically receive score 0, except in the case of a valid documented legal or medical excuse.
+Please note that the deadlines are final. Late submissions for the weekly problem sets will automatically receive score 0, except in the case of a valid documented legal or medical excuse. Late submissions for the final take home exam will be penalized according to LSE's standard assessment rules. More information can be found [here](https://info.lse.ac.uk/current-students/services/assessment-and-results/exceptional-circumstances/extension-policy).
 
 ## Assessment Criteria
-Your code will be evaluated both on whether it completes the task and on the extent to which it is written using the concepts, paradigms, and best practices covered in the course.
+Your code will be evaluated both on whether it completes the task and on the extent to which it is written using the concepts, paradigms, and best practices covered in the course, most notably, legibility, modularity, and optimization.
 
 |**Mark**         |**Criteria**   |
 |:----------------|:--------------|
 |Pass (50-59)     |The code runs and does what it is expected to |
 |Merit (60-69)    |The code runs, does what it is expected to, and is modular and legible |
-|Distinction (70-100) |The code runs, does what it is expected to, and is modular, legible, and suitably optimized |
+|Distinction (70-100) |The code runs, does what it is expected to, and is modular, legible, and optimized |
 
 ## Schedule
 
