@@ -60,7 +60,7 @@ Doctoral students registered for MY570 will be required to complete a substantiv
 
 Problem sets will be distributed on Monday evening and due at 12:00 noon the following Monday.
 
-The take home exam will be distributed on Monday, December 16, 2019 and due at 12:00 noon on Monday, January 13, 2019.
+The take home exam will be distributed on Monday, December 16, 2019 and due at 12:00 noon on Monday, January 13, 2020.
 
 Please note that the deadlines are final. Late submissions for the weekly problem sets will automatically receive score 0, except in the case of a valid documented legal or medical excuse. Late submissions for the final take home exam will be penalized according to LSE's standard assessment rules. More information can be found [here](https://info.lse.ac.uk/current-students/services/assessment-and-results/exceptional-circumstances/extension-policy).
 
@@ -99,7 +99,7 @@ In the next five weeks of the course, we will use Python to get familiar with th
 * Guttag. Chapters 2.3, 5.1-5.3, 5.5-5.6, pp.18–21, 65–73, 77–84.
 
 *Lab*: **Working with Strings and Lists in Python**
-* Programing with simple statements, including `print()`, `len()`, `append()`, `extend()`, `pop()`, `remove()`, `split()`, `join()`, `sort()`, and `sorted()`
+* Programming with simple statements, including `print()`, `len()`, `append()`, `extend()`, `pop()`, `remove()`, `split()`, `join()`, `sort()`, and `sorted()`
 
 ---
 ### Week 3. Control Flow in Python
