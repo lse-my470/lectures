@@ -60,7 +60,7 @@ Doctoral students registered for MY570 will be required to complete a substantiv
 
 Problem sets will be distributed on Monday evening and due at 12:00 noon the following Monday.
 
-The take home exam will be distributed on Monday, December 16, 2019 and due at 12:00 noon on Monday, January 13, 2020.
+The take home exam will be distributed on Monday, December 16, 2019 and due at 12:00 noon on Monday, January 20, 2020.
 
 Please note that the deadlines are final. Late submissions for the weekly problem sets will automatically receive score 0, except in the case of a valid documented legal or medical excuse. Late submissions for the final take home exam will be penalized according to LSE's standard assessment rules. More information can be found [here](https://info.lse.ac.uk/current-students/services/assessment-and-results/exceptional-circumstances/extension-policy).
 
