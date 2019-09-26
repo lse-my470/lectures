@@ -6,8 +6,8 @@
 ## Instructors
 
 * [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 10:00–12:00, COL 8.03
-* [Blake Miller](b.a.miller@lse.ac.uk), *Office hours*: TBA, COL 7.14
-* [Christian Mueller](c.mueller@lse.ac.uk) (GTA), *Office hours*: TBA
+* [Ken Benoit](k.r.benoit@lse.ac.uk), *Office hours*: Tuesdays 15:30–17:00 and Wednesdays 10:00–11:00, COL 8.11
+* Christian Mueller (GTA)
 * Altaf Ali (GTA)
 * Ji Eun Kim (GTA)
 
