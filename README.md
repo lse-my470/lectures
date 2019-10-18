@@ -88,6 +88,8 @@ Weekly assignments and the final take home exam are individual unless we instruc
 * Use general online resources such as Stack Overflow or Python documentation for general queries (e.g. "how to unpack a tuple"). However, if you borrow substantive blocks of code or specific solutions from online forums or blogs, you need to cite your source in the comments.
 * Use the forum "Clarifying Questions about Assignments" on the course Moodle site to ask and answer questions about the instructions in the assignments.
 
+Violation of the plagiarism policy for the course will be dealt with in accordance with the [LSE Regulations on Assessment Offences](https://info.lse.ac.uk/Staff/Divisions/Academic-Registrars-Division/Teaching-Quality-Assurance-and-Review-Office/Assets/Documents/Calendar/RegulationsAssessmentOffences-Plagiarism.pdf).
+
 ## Schedule
 
 ---
