@@ -3,9 +3,9 @@ title: "The R Language"
 author: "Kenneth Benoit"
 date: "2019-11-18"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     widescreen: yes
+  beamer_presentation: default
   slidy_presentation: default
 subtitle: "MY 470, Week 8: Introduction and Data Structures"
 ---
