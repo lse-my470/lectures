@@ -1,27 +1,24 @@
 ---
 title: "The R Language"
-author: "Pablo Barberá"
-date: '2018-11-19'
+author: "Kenneth Benoit"
+date: "2019-11-18"
 output:
   beamer_presentation: default
   ioslides_presentation:
     widescreen: yes
   slidy_presentation: default
-subtitle: 'MY 470, Week 8: Introduction and Data Structures'
+subtitle: "MY 470, Week 8: Introduction and Data Structures"
 ---
 
 ## About me
 
-* Assistant Professor of Computational Social Science at LSE Methodology
-    - Previously Prof. at University of Southern California
-    - PhD in Politics, New York University
-    - Data Science Fellow at NYU, 2015-2016
-* My research:
-    - Social media and politics, comparative electoral behavior
-    - Text as data methods, social network analysis
-    - Author of R packages to analyze data from social media
-* Contact: P.Barbera@lse.ac.uk
-    - Office hours: Fridays 12.30-14.30
+* Professor of Computational Social Science. Dept. of Methodology
+* My research
+    - Political communication, party competition
+    - Text as data methods, natural language processing
+    - Author of R packages to analyze text (incl. **quanteda**)
+* Contact: K.R.Benoit@lse.ac.uk
+    - Office hours: Tuesdays 15:30-17.00, Wednesdays 10-11:00
 
 
 # Introduction to R
@@ -110,8 +107,8 @@ knitr::include_graphics("figs/RStudio.png")
 ```{r}
 1 + 1
 5 - 3
-6/2
-4*4
+6 / 2
+4 * 4
 ```
 
 ## Basic operations in R
@@ -402,7 +399,7 @@ str(z)
 ## Adding elements
 
 ```{r, eval = TRUE}
-z <- c(z, "Annette")
+z <- c(z, "Anett")
 z
 ```
 
@@ -429,15 +426,15 @@ seq(1, 10, by = 0.1)
 `Inf` is infinity. You can have either positive or negative infinity.
 
 ```{r, eval = TRUE}
-1/0
-1/Inf
+1 / 0
+1 / Inf
 ```
 
 
 `NaN` means Not a number. It's an undefined value.
 
 ```{r, eval = TRUE}
-0/0
+0 / 0
 ```
 
 # Object Attributes and Classes
@@ -580,7 +577,7 @@ x * c(1, 0)    # turns the even numbers to 0
 
 x * c(0, 0, 1) # turns non-multiples of 3 to 0
 
-x < ((1:4)^2)  # recycling c(1, 4, 9, 16)
+x < ((1:4) ^ 2)  # recycling c(1, 4, 9, 16)
 ```
 
 ## `vector` operations
@@ -658,6 +655,13 @@ my_list <- list(something = num_vec,
 my_list
 ```
 
+# Style Guide
+
+## Formatting code nicely in R
+
+- The [_Tidyverse Style Guide_](https://style.tidyverse.org/)  
+- The [**lintr** package](https://github.com/jimhester/lintr)  
+- Works great from RStudio
+
 
 # Exercise Week 8 Preview
-
