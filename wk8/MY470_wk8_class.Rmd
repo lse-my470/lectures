@@ -1,13 +1,12 @@
 ---
 title: "MY470 - Class Week 8 - Programming"
-author: "Pablo Barberá"
 ---
 
 ### Getting Started: Installing R and RStudio
 
 Try knitting the [`TestRMarkdown.Rmd`](TestRMarkdown.Rmd) document.  This means that you will need to have:
 
-a) Installed R.  (Preferably 3.5.1)
+a) Installed R.  (Preferably 3.6.1)
 b) Installed RStudio.
 c) Installed the **knitr** and **rmarkdown** packages.  (When you open the `TestRMarkdown.Rmd` file, you should see a button for "Knit".  When you click on that, if the required packages are not yet installed, you should be prompted to install them.)
 d) When this is successful, you will have converted a mixture of Markdown and R code into an HTML document.  This is an important step, since the homework is in Rmarkdown.
@@ -80,7 +79,3 @@ df$state <- rownames(df)
 ```{r}
 # add your code here
 ```
-
-
-
-
