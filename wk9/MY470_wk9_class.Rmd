@@ -1,6 +1,5 @@
 ---
 title: "MY470 - Class Week 9 - More R Programming"
-author: "Pablo Barbera"
 ---
 
 ### Working with data frames
@@ -43,7 +42,7 @@ Write an R function that checks if a string is a palindrome. As you may recall f
 Loops in R have a similar structure as in python. For example:
 
 ```{r}
-for (i in 1:10){
+for (i in 1:10) {
 	print(i)
 }
 ```
@@ -56,7 +55,3 @@ Compute and display the Fibonacci sequence of length 20 using your function.
 n <- 20
 # add your code here
 ```
-
-
-
-

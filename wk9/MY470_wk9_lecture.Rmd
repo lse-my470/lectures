@@ -1,13 +1,13 @@
 ---
 title: "Programming in the R Language"
-author: "Pablo Barbera"
-date: '2018-11-26'
+author: "Kenneth Benoit"
+date: "2019-11-25"
 output:
-  beamer_presentation: default
   ioslides_presentation:
     widescreen: yes
+  beamer_presentation: default
   slidy_presentation: default
-subtitle: 'MY 470, Week 9: Advanced R Programming'
+subtitle: "MY 470, Week 9: Advanced R Programming"
 ---
 
 # (More) Advanced R Programming
@@ -21,7 +21,7 @@ char_vec <- c("apple", "pear", "plumb", "pineapple", "strawberry")
 logical_vec <- c(TRUE, FALSE, FALSE, TRUE, FALSE)
 
 my_data_frame <- data.frame(numbers = c(5, 4, 2, 100, 7.65),
-                            fruits = char_vec, 
+                            fruits = char_vec,
                             logical = logical_vec)
 my_data_frame
 ```
@@ -36,7 +36,7 @@ str(my_data_frame)
 
 ```{r}
 my_data_frame <- data.frame(numbers = c(5, 4, 2, 100, 7.65),
-                            fruits = char_vec, 
+                            fruits = char_vec,
                             logical = logical_vec,
                             stringsAsFactors = FALSE)
 str(my_data_frame)
@@ -47,8 +47,8 @@ str(my_data_frame)
 A `list` is a collection of any set of object types
 
 ```{r}
-my_list <- list(something = my_data_frame$num_vec, 
-                another_thing = matrix(1:6, nrow=2), 
+my_list <- list(something = my_data_frame$num_vec,
+                another_thing = matrix(1:6, nrow = 2),
                 something_else = "ken")
 my_list
 ```
@@ -177,10 +177,10 @@ my_data <- read.csv(file = "my_file.csv")
 - `my_file.csv` is a .csv file with your data
 - `<-` is the assignment operator
 - In order for R to access `my_file.csv`, it will have to be saved in your current working directory
-  - Use `get_wd()` to check your current working directory
-  - Use `set_wd()` to change your current working directory
+  - Use `getwd()` to check your current working directory
+  - Use `setwd()` to change your current working directory
 - Might need to use the `stringsAsFactors = FALSE` argument
-- For large datasets, functions `read_csv` in `readr` package
+- For large datasets, functions `read_csv` in **readr** package
 
 
 ## (creating some fake data)
@@ -194,8 +194,8 @@ beta <- 0.5
 beta2 <- 0.3
 beta3 <- -0.4
 alpha <- 0.3
-eps <- rnorm(n,sd = 1)
-y <- alpha + beta*x + beta2*z + beta3 *(x*z) + eps
+eps <- rnorm(n, sd = 1)
+y <- alpha + beta * x + beta2 * z + beta3 * (x * z) + eps
 y_bin <- as.numeric(y > median(y))
 my_data <- data.frame(x = x, y = y, z = z, g = g)
 ```
@@ -224,9 +224,9 @@ This can be substantially improved!
 The plot function takes a number of arguments (`?plot` for a full list). The fewer you specify, the uglier your plot:
 
 ```{r, eval=FALSE}
-plot(x = my_data$x, y = my_data$y, 
+plot(x = my_data$x, y = my_data$y,
      xlab = "X variable",            # x axis label
-     ylab = "Y variable",            # y axis label 
+     ylab = "Y variable",            # y axis label
      main = "My spilled bubble gum", # main title
      pch = 19,                       # solid points
      cex = 0.5,                      # smaller points
@@ -238,14 +238,15 @@ plot(x = my_data$x, y = my_data$y,
 ## Base R plots
 
 ```{r, echo=FALSE, fig.align="center"}
-plot(my_data$x, my_data$y, 
-     xlab = "X variable", 
-     ylab = "Y variable", 
+plot(my_data$x, my_data$y,
+     xlab = "X variable",
+     ylab = "Y variable",
      main = "My spilled bubble gum",
      pch = 19, # Solid points
      cex = 0.5, # Smaller points
      bty = "n", # Remove surrounding box
-     col = as.factor(my_data$g) # Convert grouping variable to factor, colour by this
+     col = as.factor(my_data$g) # Convert grouping variable to factor,
+                                # colour by this
 )
 ```
 
@@ -276,24 +277,24 @@ Also popular is the **ggplot2** library. This is a separate package (i.e. it is 
 Let's recreate the previous scatter plot using `ggplot`:
     
 ```{r, eval=FALSE, fig.align="center"}
-library("ggplot2"")
-ggplot(data = my_data, aes(x= x, y= y, col = g)) + 
+library("ggplot2")
+ggplot(data = my_data, aes(x = x, y = y, col = g)) +
     geom_point() +
-    xlab("X variable")+
-    ylab("Y variable")+
-    ggtitle("ggplot title")+
+    xlab("X variable") +
+    ylab("Y variable") +
+    ggtitle("ggplot title") +
     theme(panel.background = element_rect("white"))
 ```
 
 ## ggplot
 
-```{r, echo=FALSE, fig.align="center"}
+```{r, echo=FALSE, fig.align = "center"}
 library("ggplot2")
-ggplot(data = my_data, aes(x= x, y= y, col = g)) + 
+ggplot(data = my_data, aes(x = x, y = y, col = g)) +
     geom_point() +
-    xlab("X variable")+
-    ylab("Y variable")+
-    ggtitle("ggplot title")+
+    xlab("X variable") +
+    ylab("Y variable") +
+    ggtitle("ggplot title") +
     theme(panel.background = element_rect("white"))
 ```
 
@@ -303,12 +304,12 @@ One nice feature of `ggplot` is that it is very easy to create facet plots:
     
 ```{r, eval=FALSE, fig.align="center"}
 library("ggplot2")
-ggplot(data = my_data, aes(x= x, y= y, col = g)) + 
+ggplot(data = my_data, aes(x = x, y = y, col = g)) +
     geom_point() +
-    xlab("X variable")+
-    ylab("Y variable")+
-    ggtitle("ggplot facet title")+
-    theme(panel.background = element_rect("white"))+
+    xlab("X variable") +
+    ylab("Y variable") +
+    ggtitle("ggplot facet title") +
+    theme(panel.background = element_rect("white")) +
     facet_wrap(~ g)
 ```
 
@@ -316,12 +317,12 @@ ggplot(data = my_data, aes(x= x, y= y, col = g)) +
 
 ```{r, echo=FALSE, fig.align="center"}
 library("ggplot2")
-ggplot(data = my_data, aes(x= x, y= y, col = g)) + 
+ggplot(data = my_data, aes(x = x, y = y, col = g)) +
     geom_point() +
-    xlab("X variable")+
-    ylab("Y variable")+
-    ggtitle("ggplot facet title")+
-    theme(panel.background = element_rect("white"))+
+    xlab("X variable") +
+    ylab("Y variable") +
+    ggtitle("ggplot facet title") +
+    theme(panel.background = element_rect("white")) +
     facet_wrap(~ g)
 ```
 
@@ -443,10 +444,10 @@ my_lm_r2 <- summary(my_lm)$r.squared
 my_lm_multi_r2 <- summary(my_lm_multi)$r.squared
 my_lm_interact_r2 <- summary(my_lm_interact)$r.squared
 
-r2.compare <- data.frame(
-    model = c("bivariate", "multivariate", "interaction"), 
-    r.squared = c(my_lm_r2, 
-                  my_lm_multi_r2, 
+r2_compare <- data.frame(
+    model = c("bivariate", "multivariate", "interaction"),
+    r.squared = c(my_lm_r2,
+                  my_lm_multi_r2,
                   my_lm_interact_r2))
 ```
 
@@ -455,22 +456,22 @@ r2.compare <- data.frame(
 We can print the values:
     
 ```{r}
-print(r2.compare)
+print(r2_compare)
 ```
 
 Or we can plot them:
 ```{r, eval = FALSE}
-ggplot(r2.compare, aes(x = model, y = r.squared))+
-    geom_point(size = 4)+
+ggplot(r2_compare, aes(x = model, y = r.squared)) +
+    geom_point(size = 4) +
     ggtitle("R^2 Comparison")
 ```
 
 ## `lm`
 
 ```{r, echo= F, fig.align="center"}
-ggplot(r2.compare, aes(x = model, y = r.squared))+
-    geom_point(size = 4)+
-    ggtitle("R^2 Comparison")+
+ggplot(r2_compare, aes(x = model, y = r.squared)) +
+    geom_point(size = 4) +
+    ggtitle("R^2 Comparison") +
     theme(panel.background = element_rect("white"))
 ```
 
@@ -488,27 +489,27 @@ There are a number of functions that are helpful in producing model diagnostics:
 We can easily plot the residuals from a fitted model against an explanatory variable of interest:
     
 ```{r, eval = FALSE}
-par(mfrow = c(1,2)) # Divide the plotting region into 1 row and 2 cols
-plot(x = my_data$x, y = residuals(my_lm_multi), 
+par(mfrow = c(1, 2)) # Divide the plotting region into 1 row and 2 cols
+plot(x = my_data$x, y = residuals(my_lm_multi),
      xlab = "x", ylab = "residuals",  # axis labels
      pch = 19,                        # filled circles
-     col="grey",                      # mhange colour
+     col = "grey",                    # change colour
      cex = 0.5)                       # make point size smaller
-abline(h = 0)                         # add a horizontal line with y-intercept of 0
-plot(x = my_data$z, y = residuals(my_lm_multi), 
+abline(h = 0)                         # add a horiz line with y-intercept of 0
+plot(x = my_data$z, y = residuals(my_lm_multi),
      xlab = "z", ylab = "residuals",
-     pch = 19, col = "grey", cex = 0.5) 
-abline(h = 0)                         
+     pch = 19, col = "grey", cex = 0.5)
+abline(h = 0)                      
 ```
 
 ## `lm` residual plot
 
 ```{r, echo=F, fig.align="center"}
-par(mfrow = c(1,2)) # Divide the plotting region into 1 row and 2 cols
-plot(my_data$x, residuals(my_lm_multi), 
+par(mfrow = c(1, 2)) # Divide the plotting region into 1 row and 2 cols
+plot(my_data$x, residuals(my_lm_multi),
      xlab = "x", ylab = "residuals",
-     pch = 19, col="grey", cex = 0.5)
-plot(my_data$z, residuals(my_lm_multi), 
+     pch = 19, col = "grey", cex = 0.5)
+plot(my_data$z, residuals(my_lm_multi),
      xlab = "z", ylab = "residuals",
      pch = 19, col = "grey", cex = 0.5)
 ```
@@ -553,7 +554,7 @@ cat(paste0(capture.output(summary(my_logit))[-c(1:4)], collapse = "\n"))
 
 ## `glm`
 
-OK, but no-one actually thinks in terms of log-odds, so let's translate that into something more meaningful.
+OK, but no one actually thinks in terms of log-odds, so let's translate that into something more meaningful.
 
 ```{r, message=FALSE}
 my_logit_OR <- exp(cbind(OR = coef(my_logit), confint(my_logit)))
@@ -645,9 +646,9 @@ y_hat_z1 <- predict(my_lm_interact, newdata = sim_data_z1)
 
 ```{r, eval = FALSE}
 # Create a plot of the data
-plot(my_data$x, my_data$y, cex = 0.5, pch = 19, 
+plot(my_data$x, my_data$y, cex = 0.5, pch = 19,
 col = "gray", bty = "n",
-xlab = "X", ylab = "Y", 
+xlab = "X", ylab = "Y",
 main = "Fitted values for sim_data")
 
 # Add a prediction line for z = 0
@@ -657,29 +658,32 @@ lines(x = sim_data_z0$x, y = y_hat_z0, lwd = 2)
 lines(x = sim_data_z1$x, y = y_hat_z1, lwd = 2, col = "red")
 
 # Add a legend
-legend("bottomright", legend = c("z = 0", "z = 1"), col = c("black", "red"), lty = 1) 
+legend("bottomright", legend = c("z = 0", "z = 1"),
+       col = c("black", "red"), lty = 1)
 ```
 
 ## `predict`
 
 ```{r, echo = F, fig.align="center"}
-par(mfrow = c(1,1))
-plot(my_data$x, my_data$y, cex = 0.5, pch = 19, 
+par(mfrow = c(1, 1))
+plot(my_data$x, my_data$y, cex = 0.5, pch = 19,
 col = "gray", bty = "n",
-xlab = "X", ylab = "Y", 
+xlab = "X", ylab = "Y",
 main = "Fitted values for sim_data")
 lines(x = sim_data_z0$x, y = y_hat_z0, lwd = 2)
 lines(x = sim_data_z1$x, y = y_hat_z1, lwd = 2, col = "red")
-legend("bottomright", legend = c("z = 0", "z = 1"), col = c("black", "red"), lty = 1)
+legend("bottomright", legend = c("z = 0", "z = 1"),
+       col = c("black", "red"), lty = 1)
 ```
 
 ## Other helpful functions
 
 ```{r, echo = T, eval = FALSE}
-objects() / ls() # Which objects are currently loaded in my working environment?
+objects() / ls() # Which objects are currently loaded in my working environmnt?
 rm()             # Remove objects from my current environment
 save()           # Save R object(s) to disk
-is.na()          # Is this object a missing value? Or, which elements in this vector are missing?
+is.na()          # Is this object a missing value?
+                 # Or, which elements in this vector are missing?
 rnorm()          # Generate random numbers from a normal distribution
 runif()          # Generate random numbers from a uniform distribution
 ```

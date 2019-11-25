@@ -1,0 +1,111 @@
+# Exercise One
+
+# Data manipulation and exploration
+
+## Reading data into R (.csv)
+
+```{r, eval = F}
+
+my_data <- read.csv(file = "my_file.csv")
+
+```
+
+- `my_data` is an R data.frame object (you could call this anything)
+- `my_file.csv` is a .csv file with your data
+- `<-` is the assignment operator
+- In order for R to access `my_file.csv`, it will have to be saved in your current working directory
+- Use `get_wd()` to check your current working directory
+- Use `set_wd()` to change your current working directory
+
+## Reading data into R (.dta)
+
+```{r, eval = F}
+install.packages("foreign") ## install the "foreign" package
+library(foreign) ## Loads an additional package that deals with STATA files
+my_data <- read.dta(file = "my_file.dta") 
+
+```
+
+```{r, eval = T, echo = F}
+n <- 1000
+
+x <- rnorm(n)
+z <- runif(n)
+g <- sample(letters[1:6], n, replace = T)
+beta <- 0.5
+beta2 <- 0.3
+beta3 <- -0.4
+alpha <- 0.3
+eps <- rnorm(n,sd = 1)
+y <- alpha + beta*x + beta2*z + beta3 *(x*z) + eps
+y_bin <- as.numeric(y > median(y))
+
+my_data <- data.frame(x = x, y = y, z = z, g = g)
+
+```
+
+- The `foreign` package is not automatically installed in R so we need to do that ourselves
+- `my_data` is still an R data.frame object (you could still call this anything)
+- `my_file.dta` is a .dta file with your data
+- `<-` is still an assignment operator
+
+## Descriptive statistics functions
+
+R includes a number of helpful functions for exploring your data
+
+```{r, eval = F}
+View(my_data) # View data in spreadsheet-style
+names(my_data) # Names of the variables in your data
+head(my_data) # First six rows of the data
+tail(my_data) # Last six rows of the data
+str(my_data) # "Structure" of any R object
+summary(my_data) # Summary statistics for each of the columns in the data
+dim(my_data) # Dimensions of a matrix
+range(my_data$my_variable) # Range of a numeric vector
+quantile(my_data$my_variable) # Quantiles of a numeric vector
+```
+
+## `head`
+```{r}
+head(my_data) 
+```
+
+## `str`
+```{r}
+str(my_data) 
+```
+
+## `summary`
+```{r}
+summary(my_data) 
+```
+
+## `pairs`
+
+```{r}
+pairs(my_data)
+```
+
+
+## `range`
+
+Suppose you would like to find the range of a variable in your `data.frame`. The following will not work:
+    
+```{r, error=T}
+range(my_data) 
+```
+
+Right, we cannot take the range of the entire data! Some of the variables are not numeric, and therefore do not have a range...
+
+## `range`
+
+Instead, we need to access one variable. There are two ways to do this. 
+
+- We can subset using square parenthesis, or
+- We can use the `$` operator and access the variable of interest by name
+
+```{r}
+range(my_data[,1])
+range(my_data$x) 
+
+```
