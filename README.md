@@ -220,6 +220,6 @@ We will use the concepts and approaches introduced in the previous lecture to lo
 * Guttag. Chapter 10.1–10.2, pp.151–164.
 * Bradley and Ranum. [Chapter 5](http://interactivepython.org/runestone/static/pythonds/SortSearch/toctree.html).
 
-*Lab*: **Preparation for the Final Assignment**
-* Getting familiar with the data
-* Understanding temporal motifs
+*Lab*: **Useful Python Modules and Libraries**
+* `datetime` and `pickle`
+* `numpy`, `pandas`, `statsmodels`, `networkx`, `scikitlearn`
