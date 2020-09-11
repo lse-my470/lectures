@@ -1,25 +1,27 @@
 # MY470 Computer Programming
 
 
-## Michaelmas Term 2019
+## Michaelmas Term 2020
 
 ## Instructors
 
-* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 10:00–12:00, COL 8.03
-* [Ken Benoit](k.r.benoit@lse.ac.uk), *Office hours*: Tuesdays 15:30–17:00 and Wednesdays 10:00–11:00, COL 8.11
-* Christian Mueller (GTA)
-* Altaf Ali (GTA)
-* Ji Eun Kim (GTA)
+* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 15:00–17:00, on campus or on Zoom
+* [Friedrich Geiecke](f.c.geiecke@lse.ac.uk), *Office hours*:
+* [Sian Brooke](s.j.brooke@lse.ac.uk), *Office hours*:
+* Lana Bilalova (GTA)
 
 ## Course Information
 
-* Lectures on Mondays 13:00–15:00 in CBG 1.01
-* Classes on:
-  * Mondays 15:00–16:30 in CBG 1.09
-  * Tuesdays 10:00–11:30 in CBG 1.02
-  * Tuesdays 15:00–16:30 in CBG 1.02
+* Interactive lecture sessions take place online (Zoom links on Moodle) on:
+  * Mondays 14:00–15:00
+  * Tuesdays 11:00–12:00
 
-No lectures or classes will take place during School Reading Week 6.
+* Seminars take place on:
+  * Tuesdays 10:00–11:00 in CLM.2.02
+  * Tuesdays 17:00–18:00 in PAN.G.01
+  * Tuesdays 18:00–19:00 in PAN.G.01
+
+No lecturer sessions or classes will take place during School Reading Week 6.
 
 
 ## Course Description
@@ -44,8 +46,6 @@ The main course texts will be:
 * Guttag, John V. *Introduction to Computation and Programming Using Python: With Application to Understanding Data*. MIT Press, 2016.
 * Miller, Bradley N. and David L. Ranum. [*Problem Solving with Algorithms and Data Structures Using Python*](http://interactivepython.org/runestone/static/pythonds/index.html).
 * Grolemund, Garrett and Hadley Wickham. [*R for Data Science*](http://r4ds.had.co.nz). O’Reilly, 2016.
-* Grolemund, Garrett. *Hands-On Programming with R*. O’Reilly, 2014.
-
 
 Additional resources include:
 * [Intermediate and advanced Python documentation](http://docs.python.org/3/)
@@ -54,13 +54,13 @@ Additional resources include:
 
 ## Assessment
 
-Take home exam (50%) and in-class assessment (50%). Students will be expected to produce 10 problem sets in the MT. Student problem sets will be marked each week, and will provide 50% of the mark.
+Take home exam (50%) and in-class assessment (50%). Students will be expected to produce 9 weekly problem sets in the MT. The first problem set is formative. The remaining 8 problem sets will be marked, and will provide 50% of the mark.
 
-Doctoral students registered for MY570 will be required to complete a substantive project of their own choice in place of the take home exam. You will be required to develop software that addresses a sufficiently complex computational social science task. Examples of possible projects include a software package that collects and analyses online data, an experimental game, or an agent-based model. The project should be approved by the instructors, so please get in touch with us well in advance.
+Doctoral students registered for MY570 will be required to complete a substantive project of their own choice in place of the take home exam. You will be required to develop Python software that addresses a sufficiently complex computational social science task. Examples of possible projects include a software package that collects and analyses online data, an experimental game, or an agent-based model. The project should be approved by the instructors, so please get in touch with us well in advance.
 
-Problem sets will be distributed on Monday evening and due at 12:00 noon the following Monday.
+Problem sets will be distributed by Tuesday evening and due at 12:00 noon the following Monday.
 
-The take home exam will be distributed on Monday, December 16, 2019 and due at 12:00 noon on Monday, January 20, 2020.
+The take home exam will be distributed on Monday, December 14, 2020 and due at 12:00 noon on Monday, January 18, 2021.
 
 Please note that the deadlines are final. Late submissions for the weekly problem sets will automatically receive score 0, except in the case of a valid documented legal or medical excuse. Late submissions for the final take home exam will be penalized according to LSE's standard assessment rules. More information can be found [here](https://info.lse.ac.uk/current-students/services/assessment-and-results/exceptional-circumstances/extension-policy).
 
@@ -168,16 +168,17 @@ Writing computer programs is easy but making them work properly is hard. We test
 ---
 ### Week 8. The R Programming Language
 
-In the next two weeks of the course, we will review the concepts learned until now by learning how they are implemented in the R programming language. We will start with basic data types in R (vectors, lists, matrices, factors, data frames) and object classes.
+This week, we will review the concepts learned until now by learning how they are implemented in the R programming language. We will start with basic data types in R (vectors, lists, matrices, factors, data frames) and object classes. We will then cover control flow (if-else statements, for and while loops, repeat, next, break), vectorized operations in R, and functions.
 
 *Lecture Notes*:
 * as [html slides](wk8/MY470_wk8_lecture.html)
 * as [pdf slides](wk8/MY470_wk8_lecture.pdf)
 
 *Readings*:
-* Venables, W. N. et. al.  2017.  [_An Introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf).  Chapters 1-6.
-* (optional, but recommended) Zuur, A., Ieno, E. N., & Meesters, E. (2009). _A Beginner's Guide to R_. Springer Science & Business Media.
+* Venables, W. N. et. al.  2017.  [_An Introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf).  Chapters 1-6, 9-10.
 * The [Introduction to R handout](wk8/Introductory_R.pdf).
+* (optional, but recommended) Zuur, A., Ieno, E. N., & Meesters, E. (2009). _A Beginner's Guide to R_. Springer Science & Business Media.
+* (optional) Patrick Burns.  2011.  _The R Inferno_.  http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 
 *Lab*: **Introduction to R**
 * Installing R and RStudio
@@ -185,22 +186,7 @@ In the next two weeks of the course, we will review the concepts learned until n
 * Working with R objects
 
 ---
-### Week 9. (More) Advanced R
-
-Continuing from the previous week, we will cover control flow (if-else statements, for and while loops, repeat, next, break), and vectorized operations in R, functions, and variable scoping.
-
-*Readings*:
-* Venables et. al., Chs. 9-10.
-* (optional) Patrick Burns.  2011.  _The R Inferno_.  http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
-
-*Lecture Notes*:
-* as [html slides](wk9/MY470_wk9_lecture.html)
-* as [pdf slides](wk9/MY470_wk9_lecture.pdf)
-
-*Lab*: **Working with Lists and Functions in R**
-
----
-### Week 10. Algorithms and Order of Growth
+### Week 9. Algorithms and Order of Growth
 
 Algorithms are recipes that consist of a sequence of simple steps, control flow, and stopping rule. To evaluate the scalability of algorithms and to compare their efficiency, we use the abstraction “order of growth”. Order of growth expresses how the maximum amount of time needed grows as the size of the input grows. We will discuss different complexity classes and ways to analyze the complexity of programs.
 
@@ -212,13 +198,25 @@ Algorithms are recipes that consist of a sequence of simple steps, control flow,
 * Reading programs written in Python and R and evaluating their time complexity
 
 ---
-### Week 11. Searching and Sorting Algorithms
+### Week 10. Searching and Sorting Algorithms
 
-We will use the concepts and approaches introduced in the previous lecture to look at the complexity of several classic algorithms on searching and sorting. The goal is to get a better intuition of how to approach problems of efficiency. We will use examples written in both Python and R. The lecture will end with an overview of what we have learned in the course and possible steps you can take to further develop your programming skills.  
+We will use the concepts and approaches introduced in the previous lecture to look at the complexity of several classic algorithms on searching and sorting. The goal is to get a better intuition of how to approach problems of efficiency. We will use examples written in both Python and R.   
 
 *Readings*:
 * Guttag. Chapter 10.1–10.2, pp.151–164.
 * Bradley and Ranum. [Chapter 5](http://interactivepython.org/runestone/static/pythonds/SortSearch/toctree.html).
+
+*Lab*: **Functional Programming in Python**
+* `lambda`, `filter`, `map` and `reduce`
+
+
+---
+### Week 11. Tree and Graph Algorithms
+We will continue getting a better understanding of computational complexity by covering algorithms for tree structures and graphs. The lecture will end with an overview of what we have learned in the course and possible steps you can take to further develop your programming skills.
+
+*Readings*:
+* Bradley and Ranum. [Chapter 7](https://runestone.academy/runestone/books/published/pythonds/Trees/toctree.html).
+* Bradley and Ranum. [Chapter 8](https://runestone.academy/runestone/books/published/pythonds/Graphs/toctree.html).
 
 *Lab*: **Useful Python Modules and Libraries**
 * `datetime` and `pickle`
