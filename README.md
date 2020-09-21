@@ -6,8 +6,8 @@
 ## Instructors
 
 * [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 15:00–17:00, on campus or on Zoom
-* [Friedrich Geiecke](f.c.geiecke@lse.ac.uk), *Office hours*:
-* [Sian Brooke](s.j.brooke@lse.ac.uk), *Office hours*:
+* [Friedrich Geiecke](f.c.geiecke@lse.ac.uk), *Office hours*: Tuesdays 10:30–12:30, on Zoom
+* [Sian Brooke](s.j.brooke@lse.ac.uk), *Office hours*: Fridays 13:00–15:00, on Zoom
 * Lana Bilalova (GTA)
 
 ## Course Information
@@ -17,8 +17,8 @@
   * Tuesdays 11:00–12:00
 
 * Seminars take place on:
-  * Tuesdays 10:00–11:00 in CLM.2.02
-  * Tuesdays 17:00–18:00 in PAN.G.01
+  * Tuesdays 10:00–11:00 in CLM.2.02 (or on Zoom, link on Moodle)
+  * Tuesdays 17:00–18:00 in PAN.G.01 (or on Zoom, link on Moodle)
   * Tuesdays 18:00–19:00 in PAN.G.01
 
 No lecturer sessions or classes will take place during School Reading Week 6.
