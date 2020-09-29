@@ -220,7 +220,7 @@ Now we can use the **git log** command again to see all new commits.
 
 <img src="Images/github_gitlog.PNG" height=200>
 
-### Congratulations! You now know the GitHub Basics!
+### Congratulations! You now know how to use GitHub!
 
 
 
