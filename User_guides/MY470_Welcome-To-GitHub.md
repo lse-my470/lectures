@@ -27,11 +27,17 @@ Before we set up GitHub it is crucial that we familiarise you with some key term
 **Branch**
 > A version of the repository that diverges from the main working project. Branches can be a new version of a repository, experimental changes, or personal forks of a repository for users to alter and test changes.
 
+**Bash**
+> Bash is a Unix shell and command language. It is the language used in "Git Bash".
+
 **Checkout**
 > The git checkout command is used to switch branches in a repository.
 
 **Clone**
 > A clone is a copy of a repository or the action of copying a repository. 
+
+**Command Line**
+> Same as terminal. An interface for typing commands directly to a computer's operating system
 
 **Fetch**
 > By performing a Git fetch, you are downloading and copying that branch’s files to your computer. Multiple branches can be fetched at once, and you can rename the branches when running the command to suit your needs.
@@ -59,6 +65,12 @@ Before we set up GitHub it is crucial that we familiarise you with some key term
 
 **Remote**
 > A copy of the original branch. When you clone a branch, that new branch is a remote, or clone. Remotes can talk to the origin branch, as well as other remotes for the repository, to make communication between working branches easier.
+
+**Shell**
+> A text based command line interface. Asoftware program that interprets commands from the user so that the operating system can understand them and perform the appropriate functions.
+
+**Terminal**
+> The command line interface (or simply command line) used on Mac (Apple) Computers.
 
 **Upstream**
 > While there is not necessarily a default “upstream” or “downstream” for Git projects, upstream can be considered where you push your Git changes — this is often the master branch of the project within the origin
