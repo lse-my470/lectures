@@ -23,7 +23,9 @@ Install Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 <img src="Images/git_bash_components.jpg" height=400>
 
-Windows Explorer Intergration is selected by default, so don't panic if you have already installed Git! If you un-selected this option, or it is not appearing on your context menu, the simpliest solution is to re-download and re-install Git making sure this option is selected. Note: Git for Windows comes with its own command prompt (Git Bash) that, besides git commands, has some useful Unix commands (and it looks better than the Windows default prompt).
+Windows Explorer Intergration is selected by default, so don't panic if you have already installed Git! If you un-selected this option, or it is not appearing on your context menu, the simpliest solution is to re-download and re-install Git making sure this option is selected. 
+
+Note: Git for Windows comes with its own command prompt (Git Bash) that, besides git commands, has some useful Unix commands (and it looks better than the Windows default prompt).
 
 **Make sure you have setup a GitHub account before advancing to the next stage of this walkthrough**
 
