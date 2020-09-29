@@ -37,7 +37,7 @@ For instructions on commit messages, refer to *Commit_Message_Guidelines.md*
 
 If you are having trouble installing git on Mac visit this website: https://git-scm.com/download/mac
 
-'''
+```
 # First try running the command below in terminal
 $ brew install git
 
@@ -48,8 +48,8 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 
 # Once the install has finished, trying running the git install command again (below).
 $ brew install git
+```
 
-'''
 If you are still having problems, please email me (s.j.brooke@lse.ac.uk). It will be helpful if you can include a screen shot of the issue you are having.
 
 ### Introduction to Command Line
