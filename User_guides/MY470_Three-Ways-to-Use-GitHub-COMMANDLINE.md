@@ -86,7 +86,7 @@ This is a third
 $ This is a fourth
 ```
 After each command line you need to press Enter (or Return) in order to execute it.
-On the command line (terminal) on your machine, the text before the $ or > is the user, Computer Name (after @) and (often) the directory that you are currently working in. The commands are typed after the > or $. In the example below BrookSJ is the user and MY470 is the folder. Notice that slashes go in different directions in Windows, **but not in a Git Bash shell**.
+On the command line (terminal) on your machine, the text before the $ or > is the user, Computer Name (after @) and (often) the directory that you are currently working in. The commands are typed after the > or $. In the example below BrookeSJ is the user and MY470 is the folder. Notice that slashes go in different directions in Windows, **but not in a Git Bash shell**.
 ```
 # Windows
 C:\Users\BrookeSJ\Documents\MY470>
