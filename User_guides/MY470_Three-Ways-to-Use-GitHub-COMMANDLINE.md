@@ -33,10 +33,24 @@ The general workflow of GitHub is represented in the diagram below. The black ar
 
 <img src="Images/git_workflow.PNG" height=200>
 
-Each of these commands will be outlined in more detail below. For specific instructions on **assignment submission** refer to *How_to_Submit_Assignments.md*.
-
 For instructions on commit messages, refer to *Commit_Message_Guidelines.md*
 
+If you are having trouble installing git on Mac visit this website: https://git-scm.com/download/mac
+
+'''
+# First try running the command below in terminal
+$ brew install git
+
+# If this does not work, try running the command below in your terminal.
+# If you a prompted for a password, enter the password you use to log into you account (no password will appear on screen)
+# Press enter (return) when you have entered your password, and again when prompted by the intaller.
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# Once the install has finished, trying running the git install command again (below).
+$ brew install git
+
+'''
+If you are still having problems, please email me (s.j.brooke@lse.ac.uk). It will be helpful if you can include a screen shot of the issue you are having.
 
 ### Introduction to Command Line
 To use Git we'll be using the terminal. If you’re not familiar with using the cmd line, some basic commands for navigating the file system are below. 
