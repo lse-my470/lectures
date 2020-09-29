@@ -110,6 +110,15 @@ To initialize a git repository in the root of the folder, run the **git init** c
 <img src="Images/git_init.PNG" height=30>
 
 ### Add a New File to the Repo
+
+You can open the terminal (command line) and navigate to the directory you want to push to GitHub using the **cd** command we explored in the first section. Another way to do this is to navigate to the *folder which contains* the files you would like to push, bringing up the *context menu* and select "Git Bash" or "Git Bash Here", depending on your version.
+
+> Remember that you need to open the context menu for the folder that contains the files you want to push to GitHub, NOT inside the folder itself.
+
+<img src="Images/git_bash_contextmenu.png" height=400>
+
+Once your in the correct location you are ready to push this changes to GitHub.
+
 Once you've added or modified files in a folder containing a git repo, git will notice that changes have been made inside the repo. But, git won't officially keep track of the file (that is, put it in a commit - we'll talk more about commits next) unless you explicitly tell it to.
 
 > Git init using the bash shell
@@ -132,6 +141,7 @@ To add a file to a commit, you first need to add it to the staging environment. 
 
 Once you've used the git add command to add all the files you want to the staging environment, you can then tell git to package them into a commit using the git commit command. 
 
+
 ### Add a File to the Staging Environment
 Add a file to the staging environment using the "git add" command. 
 
@@ -148,6 +158,20 @@ It's time to create your first commit! Run the command: git commit -m "Your mess
 <img src="Images/git_commit.PNG" height=300>
 
 The message at the end of the commit should be something related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo. Don't put a message like "asdfadsf" or "foobar" or even "FINALLY finish it". **That makes the other people who see your commit (and future you) sad. Very, very, sad.**
+
+Once you have commited your changede you are ready to **Push** all of your changes to GitHub!
+
+```bash
+cd Path/to/directory
+git add .
+git commit -m 'Submitting assignment'
+git push
+```
+After the push command, all of your files will have been uploaded to GitHub. You can check this has worked by looking at the **"Contribution Activity"** on your GitHub Profile.
+
+> GitHub Profile: Contribution Activity
+<img src="Images/git_history.PNG" height=300>
+
 
 ## 4. Creating a New Repo on GitHub
 
@@ -184,14 +208,6 @@ If you switch back to the master branch and make some more commits, your new bra
 
 ### Push a Branch to GitHub
 Now we'll push the commit in your branch to your new GitHub repo. This allows other people to see the changes you've made. If they're approved by the repository's owner, the changes can then be merged into the master branch.
-
-You can open the terminal (command line) and navigate to the directory you want to push to GitHub using the **cd** command we explored in the first section. Another way to do this is to navigate to the *folder which contains* the files you would like to push, bringing up the *context menu* and select "Git Bash" or "Git Bash Here", depending on your version.
-
-> Remember that you need to open the context menu for the folder that contains the files you want to push to GitHub, NOT inside the folder itself.
-
-<img src="Images/git_bash_contextmenu.png" height=400>
-
-Once your in the correct location you are ready to push this changes to GitHub.
 
 To push changes onto a new branch on GitHub, you'll want to run "git push origin <my branch name>". GitHub will automatically create the branch for you on the remote repository.
 
