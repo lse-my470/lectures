@@ -29,7 +29,7 @@ Put together a document that [...]
 Bullet points are also okay. They too should follow a blank line after the Subject Line.
 - Bullet points are okay, too.
 - Typically a hyphen or asterisk is used for the bullet, followed by a
-  single space. Use a hanging indent.
+  single space. Use a hanging indent (tab).
   
 ### Rule of Thumb
 A properly formed git commit subject line should always be able to complete the following sentence:
