@@ -2,11 +2,11 @@
 This document lays out the main ways that GitHub can be used.
 
 This guide covers everything you need to know to interact with GitHub. **You can skip to the relevant section if you are stuck with a particular task.** Section 5 is advanced difficulty, intended to show you what is possible when working with GitHUb. The topics covered in this document are:
-- 1. General commands (Command Line / Terminal)
-- 2. Cloning a existing repository
-- 3. Working from your local (personal) computer
-- 4. Creating a repo on GitHub
-- 5. Working with branches (Advanced Difficulty)
+1. General commands (Command Line / Terminal)
+2. Cloning a existing repository
+3. Working from your local (personal) computer
+4. Creating a repo on GitHub
+5. Working with branches (Advanced Difficulty)
 
 
 These guides are brief, focusing on getting started with each way of using the platform. The three approaches are listed in order of complexity, starting with the **web interface**, then to **GitKracken**, and finally to the **command line**. 
