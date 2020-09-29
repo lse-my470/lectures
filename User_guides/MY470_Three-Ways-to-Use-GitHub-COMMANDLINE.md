@@ -2,17 +2,18 @@
 This document lays out the main ways that GitHub can be used.
 
 This guide covers everything you need to know to interact with GitHub. **You can skip to the relevant section if you are stuck with a particular task.** Section 5 is advanced difficulty, intended to show you what is possible when working with GitHUb. The topics covered in this document are:
-1. General commands (Command Line / Terminal)
+
+1. Command Line / Terminal: Intro and Syntax
 2. Cloning a existing repository
 3. Working from your local (personal) computer
 4. Creating a repo on GitHub
 5. Working with branches (Advanced Difficulty)
 
-
 These guides are brief, focusing on getting started with each way of using the platform. The three approaches are listed in order of complexity, starting with the **web interface**, then to **GitKracken**, and finally to the **command line**. 
 GitKracken is a Git Graphic User Interface (GUI) for Widows, Mac, and Linux. Students can get the Pro-licence for free through the GitHub Students Developer Pack.
 While there are some great Git GUIs (like GitKracken) I think it's easier to learn git using Git-specific commands first and then to try out a git GUI once you're more comfortable with the commands.
-## Command Line
+
+## 1. Command Line
 The very first thing you need to do if you are using GitHub from the command (cmd) line is to install Git. Even if it’s already installed, it’s probably a good idea to update to the latest version. The link below 
 ains all the information you need to install Git on Windows, Mac, and Linux.
 
@@ -35,7 +36,7 @@ Each of these commands will be outlined in more detail below. For specific instr
 For instructions on commit messages, refer to *Commit_Message_Guidelines.md*
 
 
-## 1. Introduction to Command Line
+### Introduction to Command Line
 To use Git we'll be using the terminal. If you’re not familiar with using the cmd line, some basic commands for navigating the file system are below. 
 
 ```
@@ -73,6 +74,43 @@ touch filename.html
 
 # You can specify more filenames, as follows, to create multiple files at once.
 touch file.html style.html readme.txt
+```
+
+### Command Line Syntax
+
+In working with the command line (terminal) there are few important things that you need to know. In this guide each new line designates a *command line* that should be entered in the terminal. New lines are also sometimes designated with a chevron (>) or dollar sign ($). Exactly how this is written will depend on the guide you are looking at and the operating system you are working with.
+```
+> This is one line of code
+> This is a second
+This is a third
+$ This is a fourth
+```
+After each command line you need to press Enter (or Return) in order to execute it.
+On the command line (terminal) on your machine, the text before the $ or > is the user, Computer Name (after @) and (often) the directory that you are currently working in. The commands are typed after the > or $. In the example below BrookSJ is the user and MY470 is the folder. Notice that slashes go in different directions in Windows, **but not in a Git Bash shell**.
+```
+# Windows
+C:\Users\BrookeSJ\Documents\MY470>
+
+# Mac
+BrookeSJ-MacBook-Pro: ~Documents/MY470$
+
+# Bash Shell (MING64 stands for Minimalist GNU for Windows)
+BrookeSJ@LSELaptop MING64 ~/BrookeSJ/Documents/MY470$
+```
+You will encounter errors if you use folder names with spaces in them as this will be read as two separate arguments in the command line. If you have spaces in you folder name, you can rename the folder/file in the usual way (i.e. using file explorer) or you can wrap the file name in quotation marks or inverted commas in the specified directory.
+```
+# This won’t work
+cd users/sian brooke/programs
+
+# This will work
+cd user/“sian brooke”/programs
+```
+When using git from the command line, you also need to start each command with the word “git” so the computer knows it is meant to be using git. Just putting “pull” or “push” etc. will result in an error
+
+``` bash
+git pull
+git status
+git clone
 ```
 
 ## 2. Cloning a Existing Repository
