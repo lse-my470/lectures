@@ -199,7 +199,9 @@ It's time to create your first commit! Run the command: git commit -m "Your mess
 
 The message at the end of the commit should be something related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo. Don't put a message like "asdfadsf" or "foobar" or even "FINALLY finish it". **That makes the other people who see your commit (and future you) sad. Very, very, sad.**
 
-Once you have commited your changede you are ready to **Push** all of your changes to GitHub!
+### Pushing to GitHub
+
+Once you have commited your changede you are ready to **Push** all of your changes to GitHub! Note that if you have followed the steps above you do not need to repeat the commands, you only need to type **git push** and press enter.
 
 ```bash
 cd Path/to/directory
