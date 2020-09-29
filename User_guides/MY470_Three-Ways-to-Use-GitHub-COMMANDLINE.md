@@ -13,13 +13,14 @@ These guides are brief, focusing on getting started with each way of using the p
 GitKracken is a Git Graphic User Interface (GUI) for Widows, Mac, and Linux. Students can get the Pro-licence for free through the GitHub Students Developer Pack.
 While there are some great Git GUIs (like GitKracken) I think it's easier to learn git using Git-specific commands first and then to try out a git GUI once you're more comfortable with the commands.
 ## Command Line
-The very first thing you need to do if you are using GitHub from the command (cmd) line is to install Git. Even if it’s already installed, it’s probably a good idea to update to the latest version. The link below contains all the information you need to install Git on Windows, Mac, and Linux.
+The very first thing you need to do if you are using GitHub from the command (cmd) line is to install Git. Even if it’s already installed, it’s probably a good idea to update to the latest version. The link below 
+ains all the information you need to install Git on Windows, Mac, and Linux.
 
 Install Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 **TIP:** When the Git installer prompts you "Select Components", ensure that *Windows Explorer Integration* is selected, along with Git Bash Here and Git GUI Here. This will allow you to use the context menu to open Git Bash in a specific location, without having to navigate to the directory your repository is in every time.
 
-<img src="Images/git_bash_components.PNG" height=200>
+<img src="Images/git_bash_components.jpg" height=400>
 
 **Make sure you have setup a GitHub account before advancing to the next stage of this walkthrough**
 
@@ -186,7 +187,7 @@ You can open the terminal (command line) and navigate to the directory you want 
 
 > Remember that you need to open the context menu for the folder that contains the files you want to push to GitHub, NOT inside the folder itself.
 
-<img src="Images/git_bash_contextmenu.png" height=300>
+<img src="Images/git_bash_contextmenu.png" height=400>
 
 Once your in the correct location you are ready to push this changes to GitHub.
 
@@ -244,24 +245,3 @@ Now we can use the **git log** command again to see all new commits.
 <img src="Images/github_gitlog.PNG" height=200>
 
 ### Congratulations! You now know how to use GitHub!
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
