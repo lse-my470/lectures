@@ -178,6 +178,14 @@ If you switch back to the master branch and make some more commits, your new bra
 ### Push a Branch to GitHub
 Now we'll push the commit in your branch to your new GitHub repo. This allows other people to see the changes you've made. If they're approved by the repository's owner, the changes can then be merged into the master branch.
 
+You can open the terminal (command line) and navigate to the directory you want to push to GitHub using the **cd** command we explored in the first section. Another way to do this is to navigate to the *folder which contains* the files you would like to push, bringing up the *context menu* and select "Git Bash" or "Git Bash Here", depending on your version.
+
+> Remember that you need to open the context menu for the folder that contains the files you want to push to GitHub, NOT inside the folder itself.
+
+<img src="Images/git_bash_contextmenu.png" height=300>
+
+Once your in the correct location you are ready to push this changes to GitHub.
+
 To push changes onto a new branch on GitHub, you'll want to run "git push origin <my branch name>". GitHub will automatically create the branch for you on the remote repository.
 
 <img src="Images/push_branch_to_github.PNG" height=300>
