@@ -17,6 +17,10 @@ The very first thing you need to do if you are using GitHub from the command (cm
 
 Install Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
+**TIP:** When the Git installer prompts you "Select Components", ensure that *Windows Explorer Integration* is selected, along with Git Bash Here and Git GUI Here. This will allow you to use the context menu to open Git Bash in a specific location, without having to navigate to the directory your repository is in every time.
+
+<img src="Images/git_bash_components.PNG" height=200>
+
 **Make sure you have setup a GitHub account before advancing to the next stage of this walkthrough**
 
 The general workflow of GitHub is represented in the diagram below. The black arrows are the commands that can be directly inputted into a console
