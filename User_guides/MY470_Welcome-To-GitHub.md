@@ -39,6 +39,9 @@ Before we set up GitHub it is crucial that we familiarise you with some key term
 **Command Line**
 > Same as terminal. An interface for typing commands directly to a computer's operating system
 
+**Context Menu**
+> A context menu is a menu in a graphical user interface that appears upon user interaction, such as a right-click mouse operation. A context menu offers a limited set of choices that are available in the current state, or context, of the operating system or application to which the menu belongs. In Windows it is accessed by right clicking on a object, and in Mac by Control + click.
+
 **Fetch**
 > By performing a Git fetch, you are downloading and copying that branch’s files to your computer. Multiple branches can be fetched at once, and you can rename the branches when running the command to suit your needs.
 
