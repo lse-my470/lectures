@@ -1,5 +1,15 @@
 # Three Ways to Use GitHub: Command Line
-This document lays out the main ways that GitHub can be used by staff and students. These guides are brief, focusing on getting started with each way of using the platform. The three approaches are listed in order of complexity, starting with the **web interface**, then to **GitKracken**, and finally to the **command line**. 
+This document lays out the main ways that GitHub can be used.
+
+This guide covers everything you need to know to interact with GitHub. **You can skip to the relevant section if you are stuck with a particular task.** Section 5 is advanced difficulty, intended to show you what is possible when working with GitHUb. The topics covered in this document are:
+- 1. General commands (Command Line / Terminal)
+- 2. Cloning a existing repository
+- 3. Working from your local (personal) computer
+- 4. Creating a repo on GitHub
+- 5. Working with branches (Advanced Difficulty)
+
+
+These guides are brief, focusing on getting started with each way of using the platform. The three approaches are listed in order of complexity, starting with the **web interface**, then to **GitKracken**, and finally to the **command line**. 
 GitKracken is a Git Graphic User Interface (GUI) for Widows, Mac, and Linux. Students can get the Pro-licence for free through the GitHub Students Developer Pack.
 While there are some great Git GUIs (like GitKracken) I think it's easier to learn git using Git-specific commands first and then to try out a git GUI once you're more comfortable with the commands.
 ## Command Line
@@ -18,7 +28,7 @@ Each of these commands will be outlined in more detail below. For specific instr
 For instructions on commit messages, refer to *Commit_Message_Guidelines.md*
 
 
-### Introduction to Command Line
+## 1. Introduction to Command Line
 To use Git we'll be using the terminal. If you’re not familiar with using the cmd line, some basic commands for navigating the file system are below. 
 
 ```
@@ -58,7 +68,7 @@ touch filename.html
 touch file.html style.html readme.txt
 ```
 
-## Cloning a Existing Repository
+## 2. Cloning a Existing Repository
 **Read: Downloading Github Repo to my Computer**
 
 Cloning a repository pulls down a full copy of all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project. At any point, you can push your changes to the remote repository on GitHub, or pull other people's changes from GitHub. For more information, see "Working From Your Local Computer" below.
@@ -81,7 +91,7 @@ Type **git clone**, and then paste the URL you copied earlier. Then press Enter 
 
 These files should now be copied to your local directory (folder).
 
-## Working From Your Local Computer
+## 3. Working From Your Local (Personal) Computer
 ### Creating a Repo
 When creating a new project on your local machine using git, you'll first create a new repository (repo). *This is different to copying a exisiting project to your machine, which we will go through later.*
  
@@ -130,9 +140,22 @@ It's time to create your first commit! Run the command: git commit -m "Your mess
 > Commiting a file
 <img src="Images/git_commit.PNG" height=300>
 
-The message at the end of the commit should be something related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo. Don't put a message like "asdfadsf" or "foobar" or even "f\*\*cking finish it". **That makes the other people who see your commit (and future you) sad. Very, very, sad.**
+The message at the end of the commit should be something related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo. Don't put a message like "asdfadsf" or "foobar" or even "FINALLY finish it". **That makes the other people who see your commit (and future you) sad. Very, very, sad.**
 
-### Create a New Branch
+## 4. Creating a New Repo on GitHub
+
+If you only want to keep track of your code locally, you don't need to use GitHub. But if you want to work with a team, you can use GitHub to collaboratively modify the project's code.
+
+To create a new repo on GitHub, log in and go to the GitHub home page. You should see a green "+" and then click "New repository" button.
+
+<img src="Images/Create_repo_github.PNG" height=300>
+
+When you're done filling out the information, press the "Create repository" button to make your new repo.
+
+GitHub will ask if you want to create a new repo from scratch or if you want to add a repo you have created locally. In this case, since we've already created a new repo locally, we want to push that onto GitHub so follow the "....or push an existing repository from the command line" section.
+
+
+## 5. Working with Branches
 Now that you've made a new commit, let's try something a little more advanced.
 
 Say you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where *git branches* come in. 
@@ -151,18 +174,6 @@ You can change to a branch that already exists using: "git checkout <my branch n
 The branch name with the asterisk next to it indicates which branch you're pointed to at that given time. 
 
 If you switch back to the master branch and make some more commits, your new branch won't see any of those changes until you merge those changes onto your new branch.
-
-### Create a New Repo on GitHub
-
-If you only want to keep track of your code locally, you don't need to use GitHub. But if you want to work with a team, you can use GitHub to collaboratively modify the project's code.
-
-To create a new repo on GitHub, log in and go to the GitHub home page. You should see a green "+" and then click "New repository" button.
-
-<img src="Images/Create_repo_github.PNG" height=300>
-
-When you're done filling out the information, press the "Create repository" button to make your new repo.
-
-GitHub will ask if you want to create a new repo from scratch or if you want to add a repo you have created locally. In this case, since we've already created a new repo locally, we want to push that onto GitHub so follow the "....or push an existing repository from the command line" section.
 
 ### Push a Branch to GitHub
 Now we'll push the commit in your branch to your new GitHub repo. This allows other people to see the changes you've made. If they're approved by the repository's owner, the changes can then be merged into the master branch.
