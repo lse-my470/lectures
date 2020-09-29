@@ -72,5 +72,9 @@ Before we set up GitHub it is crucial that we familiarise you with some key term
 **Terminal**
 > The command line interface (or simply command line) used on Mac (Apple) Computers.
 
+**Unix**
+> UNIX is an operating system which was first developed in the 1960s, and has been under constant development ever since. It is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix at Bell Labs.
+
 **Upstream**
 > While there is not necessarily a default “upstream” or “downstream” for Git projects, upstream can be considered where you push your Git changes — this is often the master branch of the project within the origin
+
