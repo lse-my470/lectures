@@ -119,7 +119,7 @@ You will encounter errors if you use folder names with spaces in them as this wi
 cd users/sian brooke/programs
 
 # This will work
-cd user/“sian brooke”/programs
+cd "user/sian brooke/programs"
 ```
 When using git from the command line, you also need to start each command with the word “git” so the computer knows it is meant to be using git. Just putting “pull” or “push” etc. will result in an error
 
@@ -128,6 +128,27 @@ git pull
 git status
 git clone
 ```
+
+### Configuring Git
+**Read: Telling git/GitHub who you are**
+
+When you start working with git on the command line, you might recive the message "\*\*\*Please tell me who you are.". This slightly odd meseage is just git asking for your GitHub credentials so that you can login and uploaded (push) changes to the right location, with the appropiate permissions. **If you run the commands below, you will only need to configure the details for git once.**
+
+``` bash
+git config --global user.email "insert your GitHub email here"
+git config --global user.name "insert you GitHub user name here"
+
+# So for me, this would look like:
+git config --global user.email s.j.brooke@lse.ac.uk
+git config --global user.name SianJMBrooke
+```
+**Remember if there are spaces in your username you need to wrap it in speech marks**. SO if my user name was *Sian Brooke* I was need to write the user.name as detailed below, other wise each word will be understoond by git as seperate arguements.
+
+``` bash
+git config --global user.email s.j.brooke@lse.ac.uk
+git config --global user.name "Sian Brooke"
+```
+
 
 ## 2. Cloning a Existing Repository
 **Read: Downloading Github Repo to my Computer**
