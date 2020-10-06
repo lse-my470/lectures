@@ -17,8 +17,9 @@
   * Tuesdays 11:00–12:00
 
 * Seminars take place on:
-  * Tuesdays 10:00–11:00 in CLM.2.02 (or on Zoom, link on Moodle)
-  * Tuesdays 17:00–18:00 in PAN.G.01 (or on Zoom, link on Moodle)
+  * Tuesdays 10:00–11:00 in CLM.2.02
+  * Tuesdays 12:00–13:00 on Zoom, link on Moodle
+  * Tuesdays 17:00–18:00 in PAN.G.01
   * Tuesdays 18:00–19:00 in PAN.G.01
 
 No lecturer sessions or classes will take place during School Reading Week 6.
