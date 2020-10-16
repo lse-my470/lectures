@@ -79,3 +79,55 @@ df$state <- rownames(df)
 ```{r}
 # add your code here
 ```
+
+#### Factorizing a categorical variable
+
+Using the `mtcars` dataset, you need to transform the `am` variable into a factor with two levels, automatic and manual.  Create a new column of `mtcars` called `am_factor` that is such a factor variable.
+
+```{r}
+data(mtcars) # this line of code will load the data into your workspace
+
+# add your code here
+```
+
+#### Computing aggregated statistics
+
+Create a table with the median value of `mpg` for each value of `am_factor` using the `aggregate` function. Read the help page for `aggregate` to find information on how to achieve this.
+
+```{r}
+# add your code here
+```
+
+Now replicate the code above, but this time with the average instead of the median.
+
+```{r}
+# add your code here
+```
+
+### Working with functions
+
+Write an R function that checks if a string is a palindrome. As you may recall from earlier in the term, a palindrome is a word or phrase that reads the same backward as forward. Note that you may run into some of the limitations of R when working with strings. 
+
+```{r}
+# add your code here
+```
+
+
+### Loops
+
+Loops in R have a similar structure as in python. For example:
+
+```{r}
+for (i in 1:10) {
+	print(i)
+}
+```
+
+Write a loop to compute a [Fibonacci sequence](https://www.mathsisfun.com/numbers/fibonacci-sequence.html) in R for an input of length `n`.  We realize that the Internet is full of solutions for this, and you are free to use one, but you should discuss why you chose this solution and what advantages it has over alternatives.
+
+Compute and display the Fibonacci sequence of length 20 using your function.
+
+```{r}
+n <- 20
+# add your code here
+```

@@ -615,6 +615,30 @@ my_data_frame <- data.frame(numbers = num_vec, fruits = char_vec, logical = logi
 my_data_frame
 ```
 
+
+## Beware: `stringsAsFactors = TRUE` by default
+
+```{r}
+char_vec <- c("apple", "pear", "plumb", "pineapple", "strawberry")
+logical_vec <- c(TRUE, FALSE, FALSE, TRUE, FALSE)
+
+my_data_frame <- data.frame(numbers = c(5, 4, 2, 100, 7.65),
+                            fruits = char_vec,
+                            logical = logical_vec)
+str(my_data_frame)
+```
+
+## How to correct this:
+
+```{r}
+my_data_frame <- data.frame(numbers = c(5, 4, 2, 100, 7.65),
+                            fruits = char_vec,
+                            logical = logical_vec,
+                            stringsAsFactors = FALSE)
+str(my_data_frame)
+```
+
+
 ## `matrix` and `data.frame` subsetting
 
 To subset a `matrix` or `data.frame`, you need to specify both rows and columns:
@@ -655,6 +679,117 @@ my_list <- list(something = num_vec,
 my_list
 ```
 
+
+## How to index list elements in R
+
+### Using `[`
+```{r}
+my_list["something_else"]
+my_list[3]
+```
+
+----
+
+### Using `[[`
+```{r}
+my_list[["something"]]
+my_list[[1]]
+```
+
+----
+
+### Using `$`
+```{r}
+my_list$another_thing
+```
+
+(Does not allow multiple elements to be indexed in one command)
+
+## `functions`
+
+R makes extensive use of functions, which all have the same basic structure.
+
+```{r, eval = FALSE}
+function_name(argument_one, argument_two, ...)
+```
+
+Where 
+
+- `function_name` is the name of the function
+- `argument_one` is the first argument passed to the function
+- `argument_two` is the second argument passed to the function
+
+## using function arguments
+
+>- when a function is not assigned a _default value_, then it is mandatory
+>- when a function has a default, this is used but can be overridden
+>- it is not necessary to specify the names of the arguments, although it is best to do so except for the first or possibly second arguments
+
+## `function` example
+
+Let's consider the `mean()` function. This function takes two main arguments:
+
+```{r, eval = FALSE}
+mean(x, na.rm = FALSE)
+```
+
+Where `x` is a numeric vector, and `na.rm` is a logical value that indicates whether we'd like to remove missing values (`NA`).
+
+```{r, eval = TRUE}
+vec <- c(1, 2, 3, 4, 5)
+mean(x = vec, na.rm = FALSE)
+```
+
+```{r, eval = TRUE}
+vec <- c(1, 2, 3, NA, 5)
+mean(x = vec, na.rm = TRUE)
+```
+
+## `function` example
+
+We can also perform calculations on the output of a function:
+```{r, eval = TRUE}
+vec <- 1:5
+mean(vec) * 3
+```
+
+Which means that we can also have nested functions:
+```{r, eval = TRUE}
+sqrt(mean(vec))
+```
+
+We can also assign the output of any function to a new object for use later:
+```{r, eval = TRUE}
+sqrt_mean_of_vec <- sqrt(mean(vec))
+```
+
+## User defined `functions`
+
+Functions are also objects, and we can create our own. We define a function as follows:
+    
+```{r}
+my_addition_function <- function(a = 10, b) {
+    a + b
+}
+
+my_addition_function(a = 5, b = 50)
+my_addition_function(3, 4)
+my_addition_function(b = 100)
+```
+
+## Variables in functions have local scope
+
+```{r}
+my_demo_function <- function(a = 10) {
+    a <- a * 2
+    a
+}
+
+a <- 1
+my_demo_function(a = 20)
+a
+```
+
 # Style Guide
 
 ## Formatting code nicely in R
@@ -664,4 +799,3 @@ my_list
 - Works great from RStudio
 
 
-# Exercise Week 8 Preview
