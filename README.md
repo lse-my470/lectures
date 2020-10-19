@@ -5,7 +5,7 @@
 
 ## Instructors
 
-* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 15:00–17:00, on campus or on Zoom
+* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 10:00–11:00 and 15:00–16:00, on Zoom
 * [Friedrich Geiecke](f.c.geiecke@lse.ac.uk), *Office hours*: Tuesdays 10:30–12:30, on Zoom
 * [Sian Brooke](s.j.brooke@lse.ac.uk), *Office hours*: Fridays 13:00–15:00, on Zoom
 * Lana Bilalova (GTA)
@@ -90,6 +90,25 @@ Weekly assignments and the final take home exam are individual unless we instruc
 * Use the forum "Clarifying Questions about Assignments" on the course Moodle site to ask and answer questions about the instructions in the assignments.
 
 Violation of the plagiarism policy for the course will be dealt with in accordance with the [LSE Regulations on Assessment Offences](https://info.lse.ac.uk/Staff/Divisions/Academic-Registrars-Division/Teaching-Quality-Assurance-and-Review-Office/Assets/Documents/Calendar/RegulationsAssessmentOffences-Plagiarism.pdf).
+
+## Communication Channels
+
+**Questions about the content:**
+* Ask during the lecture sessions or your seminar
+* Schedule office hours with Sian or Milena
+
+**Questions about the upcoming assignment:**
+* Post a question on Slack (no code allowed!)
+* Post a question on the Moodle forum "Clarifying questions about assignments" (no code allowed!)
+* Schedule office hours with Sian or Milena
+
+**Questions about your marked assignment:**
+* See the example answers to help you understand the comments
+* Schedule office hours with Sian or Milena
+
+**Personal emergencies (e.g. cannot access assignment, cannot meet a deadline):**
+* E-mail Milena
+
 
 ## Schedule
 
