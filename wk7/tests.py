@@ -1,4 +1,5 @@
-# Example taken from Gries et al. 2013. Practical Programming: An Introduction to Computer Science Using Python 3
+# Example taken from Gries et al. 2013. Practical Programming: An Introduction
+# to Computer Science Using Python 3
 
 import unittest
 import tools
