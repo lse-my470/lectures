@@ -231,12 +231,12 @@ We will use the concepts and approaches introduced in the previous lecture to lo
 
 
 ---
-### Week 11. Tree and Graph Algorithms
-We will continue getting a better understanding of computational complexity by covering algorithms for tree structures and graphs. The lecture will end with an overview of what we have learned in the course and possible steps you can take to further develop your programming skills.
+### Week 11. Graph Algorithms
+We will continue getting a better understanding of abstract data types and computational complexity by covering stacks, queues, trees, graphs, and algorithms for graphs. The lecture will end with an overview of what we have learned in the course and possible steps you can take to further develop your programming skills.
 
 *Readings*:
-* Bradley and Ranum. [Chapter 7](https://runestone.academy/runestone/books/published/pythonds/Trees/toctree.html).
-* Bradley and Ranum. [Chapter 8](https://runestone.academy/runestone/books/published/pythonds/Graphs/toctree.html).
+* Bradley and Ranum. [Chapter 4.1-4.14](https://runestone.academy/runestone/books/published/pythonds/BasicDS/toctree.html).
+* Guttag. Chapter 12.2, pp.190–201.
 
 *Lab*: **Useful Python Modules and Libraries**
 * `datetime` and `pickle`
