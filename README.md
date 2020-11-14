@@ -188,11 +188,9 @@ Writing computer programs is easy but making them work properly is hard. We test
 ---
 ### Week 8. The R Programming Language
 
-This week, we will review the concepts learned until now by learning how they are implemented in the R programming language. We will start with basic data types in R (vectors, lists, matrices, factors, data frames) and object classes. We will then cover control flow (if-else statements, for and while loops, repeat, next, break), vectorized operations in R, and functions.
+This week, we will review many concepts studied until now by learning how they are implemented in the R programming language. After a general introduction to R, we will discuss basic data structures. We will then continue with the control flow, a discussion of functions in R, and reading in data and plotting. We will conclude the lecture with an outlook on tools which are currently used in a typical data science workflow with R.
 
-*Lecture Notes*:
-* as [html slides](wk8/MY470_wk8_lecture.html)
-* as [pdf slides](wk8/MY470_wk8_lecture.pdf)
+[Lecture slides](wk8/my470-week08-r.pdf)
 
 *Readings*:
 * Venables, W. N. et. al.  2017.  [_An Introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf).  Chapters 1-6, 9-10.
@@ -201,9 +199,8 @@ This week, we will review the concepts learned until now by learning how they ar
 * (optional) Patrick Burns.  2011.  _The R Inferno_.  http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 
 *Lab*: **Introduction to R**
-* Installing R and RStudio
-* Introduction to RStudio and workflow
-* Working with R objects
+* R Markdown
+* Exercises
 
 ---
 ### Week 9. Algorithms and Order of Growth
