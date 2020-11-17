@@ -190,7 +190,7 @@ Writing computer programs is easy but making them work properly is hard. We test
 
 This week, we will review many concepts studied until now by learning how they are implemented in the R programming language. After a general introduction to R, we will discuss basic data structures. We will then continue with the control flow, a discussion of functions in R, and reading in data and plotting. We will conclude the lecture with an outlook on tools which are currently used in a typical data science workflow with R.
 
-[Lecture slides](wk8/my470-week08-r.pdf)
+* [Lecture slides](wk8/my470-week08-r.pdf)
 
 *Readings*:
 * Venables, W. N. et. al.  2017.  [_An Introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf).  Chapters 1-6, 9-10.
@@ -198,9 +198,9 @@ This week, we will review many concepts studied until now by learning how they a
 * (optional, but recommended) Zuur, A., Ieno, E. N., & Meesters, E. (2009). _A Beginner's Guide to R_. Springer Science & Business Media.
 * (optional) Patrick Burns.  2011.  _The R Inferno_.  http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 
-*Lab*: **Introduction to R**
-* R Markdown
-* Exercises
+*Lab*: **Vectorised operations**
+* [R Markdown intro](wk8/01-rmarkdown.Rmd)
+* [Exercises](wk8/02-exercises.Rmd)
 
 ---
 ### Week 9. Algorithms and Order of Growth
