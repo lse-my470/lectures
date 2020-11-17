@@ -23,10 +23,10 @@ x <- ____
 # Creating an empty vector with correct final length
 vector_of_squares <- numeric(length(x))
   
-for (i in 1:length(____)) {
+for (i in 1:length(x)) {
   
   # Replacing the relevant element of the empty vector with the associated square
-  vector_of_squares[i] <- x[____]*x[____]
+  vector_of_squares[i] <- x[i]*x[____]
   
   # Printing out the memory address of the vector
   print(address(vector_of_squares))
@@ -43,10 +43,10 @@ vector_of_squares
 # Creating an empty vector with length zero
 vector_of_squares <- numeric(0)
 
-for (i in 1:length(____)) {
+for (i in 1:length(x)) {
   
   # Appending every new element to the vector which implicitly creates a copy
-  vector_of_squares <- append(____, x[i]*x[i])
+  vector_of_squares <- append(____, x[i]*x[____])
   
   # Printing out the memory address of the vector
   print(address(vector_of_squares))
@@ -91,7 +91,7 @@ vector_length_a <- function(x) {
   vector_of_squares <- numeric(length(____))
   
   # Filling out the vector
-  for ____ {
+  for (i in 1:length(x)) {
     
     vector_of_squares[i] <- x[i]*x[i]
     
@@ -119,7 +119,7 @@ vector_length_b <- function(x) {
   vector_of_squares <- numeric(0)
   
   # Filling out the vector
-  for ____ {
+  for (i in 1:length(x)) {
     
     ____ <- append(____, x[i]*x[i])
     
@@ -191,11 +191,11 @@ Check whether all functions return the same outcome:
 
 some_example_vector <- ____
 
-vector_length____(some_example_vector)
-vector_length____(some_example_vector)
-vector_length____(some_example_vector)
-vector_length____(some_example_vector)
-vector_length____(some_example_vector)
+vector_length_a(some_example_vector)
+vector_length_b(some_example_vector)
+vector_length_c(some_example_vector)
+vector_length_d(some_example_vector)
+vector_length_e(some_example_vector)
 ```
 
 
