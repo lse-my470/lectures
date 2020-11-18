@@ -1,4 +1,5 @@
-# Example taken from Gries et al. 2013. Practical Programming: An Introduction to Computer Science Using Python 3
+# Example taken from Gries et al. 2013. Practical Programming: An Introduction
+# to Computer Science Using Python 3
 
 def main():
     ls = [1, 2, 3]
@@ -7,7 +8,7 @@ def main():
 
 def running_sum(ls):
     '''Modify ls so that it contains the running sums of its original items.
-    E.g., running_sum([1, 2, 3]) returns [1, 3, 6].'''
+    E.g., running_sum([1, 2, 3]) becomes [1, 3, 6].'''
     for i in range(len(ls)):
         ls[i] = ls[i - 1] + ls[i]
 

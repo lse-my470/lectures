@@ -5,7 +5,7 @@
 
 ## Instructors
 
-* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 15:00–17:00, on campus or on Zoom
+* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 10:00–11:00 and 15:00–16:00, on Zoom
 * [Friedrich Geiecke](f.c.geiecke@lse.ac.uk), *Office hours*: Tuesdays 10:30–12:30, on Zoom
 * [Sian Brooke](s.j.brooke@lse.ac.uk), *Office hours*: Fridays 13:00–15:00, on Zoom
 * Lana Bilalova (GTA)
@@ -91,6 +91,25 @@ Weekly assignments and the final take home exam are individual unless we instruc
 
 Violation of the plagiarism policy for the course will be dealt with in accordance with the [LSE Regulations on Assessment Offences](https://info.lse.ac.uk/Staff/Divisions/Academic-Registrars-Division/Teaching-Quality-Assurance-and-Review-Office/Assets/Documents/Calendar/RegulationsAssessmentOffences-Plagiarism.pdf).
 
+## Communication Channels
+
+**Questions about the content:**
+* Ask during the lecture sessions or your seminar
+* Schedule office hours with Sian or Milena
+
+**Questions about the upcoming assignment:**
+* Post a question on Slack (no code allowed!)
+* Post a question on the Moodle forum "Clarifying questions about assignments" (no code allowed!)
+* Schedule office hours with Sian or Milena
+
+**Questions about your marked assignment:**
+* See the example answers to help you understand the comments
+* Schedule office hours with Sian or Milena
+
+**Personal emergencies (e.g. cannot access assignment, cannot meet a deadline):**
+* E-mail Milena
+
+
 ## Schedule
 
 ---
@@ -169,11 +188,9 @@ Writing computer programs is easy but making them work properly is hard. We test
 ---
 ### Week 8. The R Programming Language
 
-This week, we will review the concepts learned until now by learning how they are implemented in the R programming language. We will start with basic data types in R (vectors, lists, matrices, factors, data frames) and object classes. We will then cover control flow (if-else statements, for and while loops, repeat, next, break), vectorized operations in R, and functions.
+This week, we will review many concepts studied until now by learning how they are implemented in the R programming language. After a general introduction to R, we will discuss basic data structures. We will then continue with the control flow, a discussion of functions in R, and reading in data and plotting. We will conclude the lecture with an outlook on tools which are currently used in a typical data science workflow with R.
 
-*Lecture Notes*:
-* as [html slides](wk8/MY470_wk8_lecture.html)
-* as [pdf slides](wk8/MY470_wk8_lecture.pdf)
+* [Lecture slides](wk8/my470-week08-r.pdf)
 
 *Readings*:
 * Venables, W. N. et. al.  2017.  [_An Introduction to R_](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf).  Chapters 1-6, 9-10.
@@ -181,10 +198,9 @@ This week, we will review the concepts learned until now by learning how they ar
 * (optional, but recommended) Zuur, A., Ieno, E. N., & Meesters, E. (2009). _A Beginner's Guide to R_. Springer Science & Business Media.
 * (optional) Patrick Burns.  2011.  _The R Inferno_.  http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 
-*Lab*: **Introduction to R**
-* Installing R and RStudio
-* Introduction to RStudio and workflow
-* Working with R objects
+*Lab*: **Vectorised operations**
+* [R Markdown intro](wk8/01-rmarkdown.Rmd)
+* [Exercises](wk8/02-exercises.Rmd)
 
 ---
 ### Week 9. Algorithms and Order of Growth
@@ -212,12 +228,12 @@ We will use the concepts and approaches introduced in the previous lecture to lo
 
 
 ---
-### Week 11. Tree and Graph Algorithms
-We will continue getting a better understanding of computational complexity by covering algorithms for tree structures and graphs. The lecture will end with an overview of what we have learned in the course and possible steps you can take to further develop your programming skills.
+### Week 11. Graph Algorithms
+We will continue getting a better understanding of abstract data types and computational complexity by covering stacks, queues, trees, graphs, and algorithms for graphs. The lecture will end with an overview of what we have learned in the course and possible steps you can take to further develop your programming skills.
 
 *Readings*:
-* Bradley and Ranum. [Chapter 7](https://runestone.academy/runestone/books/published/pythonds/Trees/toctree.html).
-* Bradley and Ranum. [Chapter 8](https://runestone.academy/runestone/books/published/pythonds/Graphs/toctree.html).
+* Bradley and Ranum. [Chapter 4.1-4.14](https://runestone.academy/runestone/books/published/pythonds/BasicDS/toctree.html).
+* Guttag. Chapter 12.2, pp.190–201.
 
 *Lab*: **Useful Python Modules and Libraries**
 * `datetime` and `pickle`
