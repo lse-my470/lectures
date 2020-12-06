@@ -80,12 +80,12 @@ Your code will be evaluated both on whether it completes the task and on the ext
 Weekly assignments and the final take home exam are individual unless we instruct you otherwise. For all summative assessment, you need to write the code entirely by yourself (or together with your partner if you have been assigned one).
 
 **You are not allowed to:**
+* Talk about the assignments and your approach to solving them with others
 * Show your code to other students
 * View and copy code by other students (current or past)
 * View and copy example solutions that may have leaked
 
 **You may:**
-* Talk about the assignments and your approach to solving them with others
 * Use general online resources such as Stack Overflow or Python documentation for general queries (e.g. "how to unpack a tuple"). However, if you borrow substantive blocks of code or specific solutions from online forums or blogs, you need to cite your source in the comments.
 * Use the forum "Clarifying Questions about Assignments" on the course Moodle site to ask and answer questions about the instructions in the assignments.
 
