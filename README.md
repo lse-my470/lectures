@@ -1,13 +1,13 @@
 # MY470 Computer Programming
 
 
-## Michaelmas Term 2021
+## Michaelmas Term 2022
 
 ## Instructors
 
 * [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 15:00–17:00, COL.8.06 or Zoom
-* [Sian Brooke](s.j.brooke@lse.ac.uk), *Office hours*: TBA, on Zoom
-* [Patrick Gildersleve](p.gildersleve@lse.ac.uk), *Office hours*: TBA, on Zoom
+* [Sian Brooke](s.j.brooke@lse.ac.uk), *Office hours*: Fridays 10:00–12:00, COL.7.07 or Zoom
+* [Patrick Gildersleve](p.gildersleve@lse.ac.uk), *Office hours*: Tuesdays 14:00–15:00 and Fridays 15:00–16:00, COL.7.07 or Zoom
 * Yuanmo He (GTA)
 
 ## Course Information
@@ -17,7 +17,7 @@
 
 * Seminars take place on:
   * Tuesdays 10:00–11:30 in NAB.2.13
-  * Tuesdays 11:30–13:00 in NAB.2.13
+  * Tuesdays 11:30–13:00 on Zoom in weeks 1–4, then in NAB.2.13
   * Tuesdays 15:00–16:30 in CLM.4.02
   * Tuesdays 16:30–18:00 in CLM.4.02
 
