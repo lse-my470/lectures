@@ -5,7 +5,7 @@
 
 ## Instructors
 
-* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 15:00–17:00, COL.8.06 or Zoom
+* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 14:00–16:00, COL.8.06 or Zoom
 * [Sian Brooke](s.j.brooke@lse.ac.uk), *Office hours*: Fridays 10:00–12:00, COL.7.07 or Zoom
 * [Patrick Gildersleve](p.gildersleve@lse.ac.uk), *Office hours*: Tuesdays 14:00–15:00 and Fridays 15:00–16:00, COL.7.07 or Zoom
 * Yuanmo He (GTA)
