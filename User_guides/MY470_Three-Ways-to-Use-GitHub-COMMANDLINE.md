@@ -165,13 +165,28 @@ To clone the repository using HTTPS, under "Clone with HTTPS", click 📋. To cl
 
 <img src="Images/download_ssh.PNG" height=300>
 
-Open Git Bash and change the current working directory to the location where you want the cloned directory (**cd**).
+Open Git Bash or your terminal (command line) and change the current working directory to the location where you want the cloned directory (**cd**).
 
 Type **git clone**, and then paste the URL you copied earlier. Then press Enter to create your local clone.
 
 <img src="Images/git_clone.PNG" height=200>
 
 These files should now be copied to your local directory (folder).
+
+To summarise, the code you would need to download the lectures repo for this course, is shown below.
+
+``` bash
+git clone https://github.com/lse-my470/lectures.git
+```
+And you would see a output that looks something like:
+```
+Cloning into 'lectures'...
+remote: Enumerating objects: 1353, done.
+remote: Counting objects: 100% (74/74), done.
+remote: Compressing objects: 100% (57/57), done.
+Receiving objects:  32% (433/1353), 10.23 MiB | 2.23 MiB/s
+```
+That's it! All of the lecture files are now avaliable on your personal computer.
 
 ## 3. Working From Your Local (Personal) Computer
 ### Creating a Repo
