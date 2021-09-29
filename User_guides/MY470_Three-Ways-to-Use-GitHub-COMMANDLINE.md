@@ -269,7 +269,7 @@ To clone the repository using HTTPS, under "Clone with HTTPS", click 📋. To cl
 
 Open Git Bash or your terminal (command line) and change the current working directory to the location where you want the cloned directory (**cd**).
 
-Type **git clone**, and then paste the URL you copied earlier. Then press Enter to create your local clone.
+Type```git clone```, and then paste the URL you copied earlier. Then press Enter to create your local clone.
 
 <img src="Images/git_clone.PNG" height=200>
 
@@ -289,6 +289,12 @@ remote: Compressing objects: 100% (57/57), done.
 Receiving objects:  32% (433/1353), 10.23 MiB | 2.23 MiB/s
 ```
 That's it! All of the lecture files are now avaliable on your personal computer.
+
+**August 2021: Using GitHub CLI**
+If you have chosen to use GitHub CLI, you can use the command below to download the lectures in Anaconda Prompt.
+```
+gh repo clone https://github.com/lse-my470/lectures.git
+```
 
 ## 3. Working From Your Local (Personal) Computer
 ### Creating a Repo
