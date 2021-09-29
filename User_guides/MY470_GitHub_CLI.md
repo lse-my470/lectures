@@ -130,7 +130,7 @@ gh repo clone https://github.com/lse-my470/lectures.git
 ```
 You can also just use the GitHub CLI code provided directly in the menu, instead of HTTPS. 
 
-<img src="Images/githubcli_direct.png" height=400>
+<img src="Images/githubcli_direct.png" height=300>
 
 Here, we copy the code using 📋 and paste it directly into Anaconda Prompt, with no other code needed.
 
@@ -172,8 +172,80 @@ Resolving deltas: 100% (723/723), done.
 From https://github.com/lse-my470/lectures
  * branch            HEAD       -> FETCH_HEAD
 ```
-These files should now be copied to your local directory (folder).
+These files should now be copied to your local directory (folder). You can read more on ```git fetch ``` [here](https://www.atlassian.com/git/tutorials/syncing/git-fetch).
 
 ## 3. Working on Assignments
+Each week you will recieve a email that provides you with a GitHub Classoom link. When you click on this link you will be directed to a page to accept the assignment 
+and create your repo with your GitHub name (i.e. assignment-1-SianJMBrooke) in the [MY470 Organisation](https://github.com/lse-my470). In this repo will be your own copy of the assignment to work with, answer, and submit.
 
+**Step 1: Downloading your assignment**
 
+To download content from your assignment remote repo, we can use the ```git pull``` command. 
+The ```git pull``` command is different to ```git fetch```as it immediately update the local repository to match that content. 
+The ```git pull``` command is actually a combination of two other commands, ```git fetch``` followed by ```git merge```. You can read more [here](https://www.atlassian.com/git/tutorials/using-branches/git-merge).
+
+First, navigate to the folder you want to save the assignment repo into. If you want to create a folder in the prompt, rather than navigating to one that already exists, you can use ``` mkdir``` followed by the name of the folder, such as ```mkdir assignment-1```. You can also use ```ls``` to list all the files and folders in the current directory (folder).
+
+```
+# Moving the the folder we want our assignment in
+cd C:\Users\BrookeSJ\Documents\Teaching\2021-2022\MY470\GitHub\assignment-1
+```
+You then need to initalise, Git creates a hidden directory called ". git". That directory stores all of the objects and refs that Git uses and creates as a part of your project's history. ```git init``` is one way to start a new project with Git. To start a repository, use either ```git init``` or ```git clone``` - not both.
+
+If you have used ```git init``` you can then use ```git pull``` to copy your assignment repo.
+```
+# Initalise
+git init
+```
+Output is:
+```
+Initialized empty Git repository in C:\Users\BrookeSJ\Documents\Teaching\2021-2022\MY470\GitHub\assignment-1\.git\
+```
+Using the HTTPs for the repo (in the same manner as with the lectures repo, in the Code menu) we can pull a copy of the assignment onto our local machine.
+```
+# Pull from assignment repo
+git pull https://github.com/lse-my470/assignment-1-SianJMBrooke.git
+
+```
+Output:
+```
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 0), reused 2 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 1.95 KiB | 60.00 KiB/s, done.
+From https://github.com/lse-my470/assignment-1-SianJMBrooke
+ * branch            HEAD       -> FETCH_HEAD
+```
+You now have a copy of your assignment on your computer, ready to work with.
+
+**Step 2: Submitting your assignment**
+
+To submit our assignment we use ```git push```, which uploads you local repo (work) content to the remote repo on GitHub to be marked. u Pushing has the potential to overwrite changes, caution should be taken when pushing when working in teams. 
+
+After working with files, you can use the ```git status``` command in your assignment repo to see which files git knows exist.
+
+```
+# Check the status of files in the repo
+git status
+```
+Ouput 
+```
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MY470_wk1_assign.ipynb/
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+The output here tells us exactly what we need to do to makesure these files are tracked by git and uploaded to the repo - we need to use ```git add```. Rather than listing each file individually we can use "```.```" to mean "track all of these files", as shown below.
+```
+git add .
+```
+Ouput:
+```
+
+```
+
+What this basically says is, "Hey, we noticed you created a new file called hello_world.txt, but unless you use the 'git add' command we aren't going to do anything with it."
