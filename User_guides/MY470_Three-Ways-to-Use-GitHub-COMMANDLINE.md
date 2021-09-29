@@ -129,10 +129,42 @@ git status
 git clone
 ```
 
+If you aren't sure if you have successfully installed on your computer, simply type ```git``` into the command line (Windows) or terminal (Mac) press enter/return and you should see the larger version output below, which details the different things you can do with GutHub. If the command git is not recognised, you should return to the start of the intructures for installing Git and try again.
+
+```
+C:\Users\BrookeSJ> git
+
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+[...]
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+```
+
+
 ### Configuring Git
 **Read: Telling git/GitHub who you are**
 
-When you start working with git on the command line, you might recive the message "\*\*\*Please tell me who you are.". This slightly odd meseage is just git asking for your GitHub credentials so that you can login and uploaded (push) changes to the right location, with the appropiate permissions. **If you run the commands below, you will only need to configure the details for git once.**
+When you start working with git on the command line, you might receive the message "\*\*\*Please tell me who you are.". This slightly odd message is just git asking for your GitHub credentials so that you can login and uploaded (push) changes to the right location, with the appropriate permissions. **If you run the commands below, you will only need to configure the details for git once.**
 
 ``` bash
 git config --global user.email "insert your GitHub email here"
@@ -148,7 +180,77 @@ git config --global user.name SianJMBrooke
 git config --global user.email s.j.brooke@lse.ac.uk
 git config --global user.name "Sian Brooke"
 ```
+**Using GitHub's Credential Manager** *(Updated: August 2021)*
+If you're cloning (downloading) GitHub repositories using HTTPS (see below), you can use GitHub CLI. The steps needed to clone a repo using HTTPS, is outlined in the next section, but first we need to let GitHub know who we are.
 
+<img src="Images/download_ssh.PNG" height=300>
+
+When we use GitHub on the command line (GitHub CLI), we use ```gh``` instead of ```git```. This means that we don't need an extra step in using git to connect our computers to GitHub. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with git and your code. Here, we will focus on installing GitHub CLI using Anaconda Prompt, as the steps you need to this will be the same across all machines. To open Anaconda Prompt (anaconda3), simply search for it as you would any other program using the Windows Menu or Spotlight on Mac.
+
+If you are interested in other methods of installing GitHub CLI, [more information can be found on the ]
+
+*Step 1: Download and Install GitHub CLI*
+Open Anaconda Prompt and copy and paste (left click) or type the line below into the terminal. Press return/enter.
+```
+conda install gh --channel conda-forge	
+```
+NOTE: If you need to update GitHub CLI use ```conda update gh --channel conda-forge```
+After a few seconds you will be asked if you wish to proceed with installing ```gh```. Type ```y``` and press enter to install. 
+
+*Step 2: Configuring GitHub CLI*
+
+When the install is finished, we can begin setting up GitHub CLI to work on our computer. Don’t worry if you’ve closed the Anaconda Prompt, just open in again and carry on with these steps – you don’t need to install again. 
+
+Still in the Anaconda Prompt, type ``` gh auth login``` and press enter. You will now be presented with a series of questions to set up GitHub CLI on your computer, as shown below.
+
+```
+(base) C:\Users\BrookeSJ> gh auth login
+
+? What account do you want to log into?  [Use arrows to move, type to filter]
+> GitHub.com
+  GitHub Enterprise Server
+```
+We can use the cursor (```>```) to select the option that we want. We will use GitHub.com, so we can just press enter to select this. Next, we will be asked what our preferred protocol is, meaning the set of rules, conventions, and data structures that dictate how devices exchange data across networks. Again, the option we want (HTTPS) is already selected, so we can just press enter.
+
+```
+? What is your preferred protocol for Git operations?  [Use arrows to move, type to filter]
+> HTTPS
+  SSH
+```
+You will be asked if you would like to authenticate Git with your GitHub credentials. Type ```Y``` and press enter.
+
+```
+? Authenticate Git with your GitHub credentials? (Y/n)
+```
+You will then choose how you would like to authenticate (log in with) GitHub CLI. The easiest way is with the web browser option. To choose this, just press enter.
+```
+? How would you like to authenticate GitHub CLI?  [Use arrows to move, type to filter]
+> Login with a web browser
+  Paste an authentication token
+```
+You will then be shown the massage below. Follow the instructions and copy to code. You then to enter. you may need to press it twice before a GitHub “device activation” window opens in your browser.
+```
+! First copy your one-time code: D67B-2FSF
+- Press Enter to open github.com in your browser...
+```
+If you can’t copy the one-time code, you can just type it in the GitHub device activation window directly (but remember to use caps).
+
+<img src="Images/githubcli_device_activation.png" height=400>
+
+
+You will then be asked to authorise the application.
+ 
+Click the “Authorize github” button and then enter your password. Note that if you are prompted to log into you GitHub account, then do so. You will then be shown a screen that says “Congratulations, you're all set!” and confirms that your device is now connected to GitHub. 
+
+<img src="Images/githubcli_authorize.png" height=400>
+
+Returning to your Anaconda Prompt window, you should now see a message that confirms you are logged in. Note that the output will display your own username.
+```
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as SianJMBrooke
+```
+To check GitHub CLI has been installed successfully, you can type ```gh``` in Anaconda prompt to see information on usage and commands. You can do this at any point to see what you can do with GitHub CLI.
 
 ## 2. Cloning a Existing Repository
 **Read: Downloading Github Repo to my Computer**
