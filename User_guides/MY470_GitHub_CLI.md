@@ -5,6 +5,8 @@ When we use GitHub CLI, we use ```gh``` instead of ```git``` **for some, but not
 GitHub CLI brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with git and your code. 
 In this guide, we will focus on installing GitHub CLI and Git using Anaconda Prompt, as the steps you need to this will be the same across all machines. 
 
+### You can just download/upload assignments and lectures throughout the course. You will not loose marks for this.
+
 To open Anaconda Prompt (anaconda3), simply search for it as you would any other program using the Windows Menu or Spotlight on Mac.
 
 If you're cloning (downloading) GitHub repositories using HTTPS, you can use GitHub CLI. 
@@ -12,7 +14,7 @@ This means that when we are cloning a repo we need to use the "HTTPS" option as 
 
 <img src="Images/download_ssh.PNG" height=300>
 
-What we will go over in this tutorial is the bascis needed for the course, with addtional resources provided at the end.
+What we will go over in this tutorial is the basics needed for the course, with additional resources provided at the end.
 
 1. Getting Started with GitHub CLI
 2. Accessing Lectures
@@ -85,7 +87,7 @@ If you can’t copy the one-time code, you can just type it in the GitHub device
 
 You will then be asked to authorise the application.
  
-Click the “Authorize github” button and then enter your password. Note that if you are prompted to log into you GitHub account, then do so. You will then be shown a screen that says “Congratulations, you're all set!” and confirms that your device is now connected to GitHub. 
+Click the “Authorize GitHub” button and then enter your password. Note that if you are prompted to log into you GitHub account, then do so. You will then be shown a screen that says “Congratulations, you're all set!” and confirms that your device is now connected to GitHub. 
 
 <img src="Images/githubcli_authorize.png" height=400>
 
@@ -117,7 +119,7 @@ indicated by the filepath ```C:\Users\BrookeSJ>```) to the location where you wa
 # within the current directory (C:\Users\BrookeSJ).
 cd Documents
 
-# You can also navigate directly to a sub-directory in one go. My sub-directory is called "GitHub_SDS" which stands for Social Data Science.
+# You can also navigate directly to a sub-directory in one go. My sub-directory is called "MY470" which is the course code.
 cd Users\BrookeSJ\Documents\Teaching\MY470
 
 # If your file path has a space in it, wrap the file path in quotes.
@@ -148,7 +150,7 @@ Receiving objects: 100% (1398/1398), 57.33 MiB | 3.30 MiB/s, done.
 Resolving deltas: 100% (720/720), done.
 ```
 
-That's it! All of the lecture files are now avaliable on your personal computer.
+That's it! All of the lecture files are now available on your personal computer.
 
 ### Updating Lecture Materials
 So cloning is how you get a local copy of an existing repository to work on. It's usually only used once for a given repository, unless we want to have multiple working copies of it around. (Or want to get a clean copy after messing up your local one...). We will use ```gh``` for cloning.
@@ -165,7 +167,7 @@ Producing the output:
 remote: Enumerating objects: 1403, done.
 remote: Counting objects: 100% (124/124), done.
 remote: Compressing objects: 100% (105/105), done.
-Rremote: Total 1403 (delta 59), reused 54 (delta 19), pack-reused 1279
+Remote: Total 1403 (delta 59), reused 54 (delta 19), pack-reused 1279
 Receiving objects: 100% (1403/1403), 57.34 MiB | 2.74 MiB/s, done.
 Resolving deltas:  51% (369/723)
 Resolving deltas: 100% (723/723), done.
@@ -175,7 +177,7 @@ From https://github.com/lse-my470/lectures
 These files should now be copied to your local directory (folder). You can read more on ```git fetch ``` [here](https://www.atlassian.com/git/tutorials/syncing/git-fetch).
 
 ## 3. Working on Assignments
-Each week you will recieve a email that provides you with a GitHub Classoom link. When you click on this link you will be directed to a page to accept the assignment 
+Each week you will receive a email that provides you with a GitHub Classroom link. When you click on this link you will be directed to a page to accept the assignment 
 and create your repo with your GitHub name (i.e. assignment-1-SianJMBrooke) in the [MY470 Organisation](https://github.com/lse-my470). In this repo will be your own copy of the assignment to work with, answer, and submit.
 
 **Step 1: Downloading your assignment**
@@ -187,14 +189,14 @@ The ```git pull``` command is actually a combination of two other commands, ```g
 First, navigate to the folder you want to save the assignment repo into. If you want to create a folder in the prompt, rather than navigating to one that already exists, you can use ``` mkdir``` followed by the name of the folder, such as ```mkdir assignment-1```. You can also use ```ls``` to list all the files and folders in the current directory (folder).
 
 ```
-# Moving the the folder we want our assignment in
+# Moving the folder we want our assignment in
 cd C:\Users\BrookeSJ\Documents\Teaching\2021-2022\MY470\GitHub\assignment-1
 ```
-You then need to initalise, Git creates a hidden directory called ". git". That directory stores all of the objects and refs that Git uses and creates as a part of your project's history. ```git init``` is one way to start a new project with Git. To start a repository, use either ```git init``` or ```git clone``` - not both.
+You then need to initialise, Git creates a hidden directory called ". git". That directory stores all of the objects and refs that Git uses and creates as a part of your project's history. ```git init``` is one way to start a new project with Git. To start a repository, use either ```git init``` or ```git clone``` - not both.
 
 If you have used ```git init``` you can then use ```git pull``` to copy your assignment repo.
 ```
-# Initalise
+# Initialize
 git init
 ```
 Output is:
@@ -229,7 +231,7 @@ After working with files, you can use the ```git status``` command in your assig
 # Check the status of files in the repo
 git status
 ```
-Ouput 
+Output 
 ```
 On branch master
 Untracked files:
@@ -239,13 +241,35 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-The output here tells us exactly what we need to do to makesure these files are tracked by git and uploaded to the repo - we need to use ```git add```. Rather than listing each file individually we can use "```.```" to mean "track all of these files", as shown below.
+The output here tells us exactly what we need to do to make sure these files are tracked by git and uploaded to the repo - we need to use ```git add```. Rather than listing each file individually we can use "```.```" to mean "track all of these files", as shown below.
 ```
 git add .
 ```
-Ouput:
-```
+When you are ready you can ```commit``` you changes, ready to upload them to GitHub. When committing, it is good practise to include a message with the commit that will show up on your repo page. You can do this, as illustrated below, using the "```-m```" flag.
 
 ```
-
-What this basically says is, "Hey, we noticed you created a new file called hello_world.txt, but unless you use the 'git add' command we aren't going to do anything with it."
+git commit -m "Submitting assignment"
+```
+You will then get a output that shows these changes are staged, ready to be pushed.
+```
+[master 58eb03b] submit
+ 1 files changed, 0 insertion(+)
+ create mode 160000 MY470_wk1_assign.ipynb
+ ```
+Finally, we can use ```git push``` to upload our assignment to GitHub to be marked, ensuring that we specify the where we are pushing too.
+```
+git push 
+```
+Output:
+```
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/lse-my470/assignment-1-SianJMBrooke.git
+   11bbee1..58eb03b  master -> master
+```
+The final step, is to open up GitHub in your browser and check you can see the files on the repo, ready to be marked. REMEMBER, if you can't see them, neither can we!
