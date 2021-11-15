@@ -1,0 +1,747 @@
+---
+title: "MY470: Class Exercises Week 8"
+author: "Siân Brooke"
+date: "12/11/2021"
+output: html_document
+---
+
+```{r, echo=FALSE}
+knitr::opts_chunk$set(error = TRUE)
+```
+
+# Computer Programming: Beyond Python
+
+This is a course on computer programming, not on python. This is because we use python in order to learn the logic, structure, and language of coding.
+
+Today, we will be switching to looking at R. 
+
+**DON'T PANIC!** R and python are very similar open-source languages. Free to download for everyone, both languages are well suited for data science tasks — from data manipulation and automation to business analysis and big data exploration. The main difference is that Python is a general-purpose programming language, while R has its roots in statistical analysis. 
+
+_The question isn’t whether to choose python or R, but how to make the best use of both programming languages for your_ **specific use cases.**
+
+## What is R Markdown? (.Rmd)
+R Markdown provides an unified authoring framework for data science, combining your code, its results, and your prose commentary. R Markdown documents are fully reproducible and support dozens of output formats, like PDFs, Word files, slideshows, and more.
+
+R Markdown files are designed to be used in three ways:
+
+1. For communicating to decision makers, who want to focus on the
+conclusions, not the code behind the analysis.
+
+2. For collaborating with other data scientists, who are interested 
+in both your conclusions, and how you reached them (i.e. the code).
+
+3. As an environment in which to do data science, as a modern 
+day lab notebook where you can capture not only what you did, 
+but also what you were thinking.
+
+#### Is R Markdown same as Jupyter notebook?
+Rmarkdown is based on markdown, a human readable markup language, Jupyter notebooks are based on JSON, a data interchange format common on the web. This means that Rmarkdown files can be easily edited using any text editor you 
+like. The same is not true of Jupyter notebooks. Whilst they are different, we will use them in largely the same way.
+
+#### How does Rmd work?
+Like in .ipynb in Rmd we define cells or chunks of code. in R we do this with ``` and with \{r\}
+
+When you open an .Rmd, you get a notebook interface where code and output are interleaved. You can run each code chunk by clicking the Run icon (it looks like a play button at the top of the chunk), or by pressing Cmd/Ctrl + Shift + Enter. RStudio executes the code and displays the results inline with the code.
+
+A example of a empty code cell is below
+
+```{r}
+# This is a code chunk.
+
+print("hello world!")
+
+```
+
+When you are in a code chunk, using the keyboard shortcuts to run code will only run the line you have currently selected.
+
+# Translating Between Python and R
+
+When you first learn to code, repetition and contextualizing are essential. Through consistent repetition, you start to memorize the specifics of vocabulary and syntax. As you begin seeing the code used in different contextual environments and for different purposes throughout the course you are able to understand how and why different functions and techniques are used. 
+
+But there isn’t necessarily an easy way to connect the new way of thinking to the language you speak, which means that you aren’t just memorizing a word but, instead you have to develop a new understanding of each programming concept. Even the first line of code you write, `print(“Hello World!”)` requires you to learn how the print function works, how the editor returns a print statement, and when to use quotation marks to define a string. **When you learn a second programming language, you have the benefit of translating concepts from the language you know to the new language to learn more efficiently and quickly.**
+
+This R markdown script provides a description of some of the building blocks we will rely on throughout this course. 
+
+## Important Differences
+The language of `data.frames`, `matrixes`, `lists` and `vectors` are different between python and R.
+
+In R, it’s common to use periods in variable names (like: `my.list`). There are many syntax differences between R and Python, but for some reason people really struggle with this one – periods are an operator in Python, so we don’t use them in names! The convention is to use underscores, like: `my_list`.
+
+In R we count starting at 1, not 0. For example, to get the first entry in a list, you type `my_list[1]`, not `my_list[0]`. `my_list[0]` will raise a error.
+
+## Installing R.
+
+Generally, Anaconda comes with it's own version of RStudio. This is the Integrated Developer Environment (IDE) that we will be using in today's class and the assignment. You can use the default install of RStudio (+ R) in Anaconda Navigator, or you can use the instructions below in order to install.
+
+### Mac Users
+#### 1. To Install R
+
+1. Open an internet browser and go to www.r-project.org.
+2. Click the "download R" link in the middle of the page under "Getting Started."
+3. Select a CRAN location (a mirror site) and click the corresponding link.
+4. Click on the "Download R for (Mac) OS X" link at the top of the page.
+5. Click on the file containing the latest version of R under "Files."
+6. Save the .pkg file, double-click it to open, and follow the installation instructions.
+7. Now that R is installed, you need to download and install RStudio.
+
+#### 2. To Install RStudio
+
+1. Go to www.rstudio.com and click on the "Download RStudio" button.
+2. Click on "Download RStudio Desktop."
+3. Click on the version recommended for your system, or the latest Mac version, save the .dmg file on your computer, double-click it to open, and then drag and drop it to your applications folder.
+
+### Windows Users
+
+#### 1. To Install R
+
+1. Open an internet browser and go to www.r-project.org.
+2. Click the "download R" link in the middle of the page under "Getting Started."
+3. Select a CRAN location (a mirror site) and click the corresponding link.  
+4. Click on the "Download R for Windows" link at the top of the page.  
+5. Click on the "install R for the first time" link at the top of the page.
+6. Click "Download R for Windows" and save the executable file somewhere on your computer.  Run the .exe file and follow the installation instructions.  
+Now that R is installed, you need to download and install RStudio.
+
+#### 2. To Install RStudio
+
+1. Go to www.rstudio.com and click on the "Download RStudio" button.
+2. Click on "Download RStudio Desktop."
+3. Click on the version recommended for your system, or the latest Windows version, and save the executable file.  Run the .exe file and follow the installation instructions.
+
+### Interfacing with Python
+
+You can run python directly in R Markdown files. R can also be ran directly in Jupyter Notebook and other IDEs.
+
+```{r}
+# Install the packages to run python
+# You should comment this out to knit.
+# install.packages("reticulate")
+
+# Load the Interface to python
+# Note the differences with the cell below in loading python libraries.
+library(reticulate)
+
+```
+
+Now we have set this up, we can run python directly in this Markdown file. Note that we change the language in the `{}` in order to switch the language of the cells. When the console is running python, lines will be prefaced by `>>>` and when we are working with R we will see `>`
+
+We can set the language of a code chunk, by specifying "r" or "python" in the curly brackets.
+
+```{python}
+# Importing modules.
+
+import pandas as pd
+import numpy as np
+import random
+
+```
+
+Note that when we change what language we are using, the variables and objects we see in the Enviroment panel change.
+
+### Working with the basic functionality of R
+
+#### Using R as a calculator
+
+The most basic functionality of R is using it as a calculator.
+
+```{r}
+# Division
+10 / 2
+# Square root
+sqrt(100) + sqrt(9)
+# Exponent
+exp(1)
+# Power
+2^3
+```
+
+#### Objects and operators
+
+What makes R very powerful is that you can store results as "objects". 
+
+Instead of using `=` in R we use `<-` as the assignment operator, although a equals woulds still work, the `<-` is preferred. 
+
+```{r}
+x <- 5
+y <- 10
+```
+
+If you look at the `Environment` panel in your RStudio session, you can see that these numbers are stored in memory. If you click on the widow, or double-click, can can even see entire .csv's. 
+
+Then you can do operations with them, the same way you would do with numbers:
+
+```{r}
+x * y
+```
+
+You can also save combinations of objects as new objects
+
+```{r}
+z <- x * y
+```
+
+You can also modify existing objects.
+
+```{r}
+x <- x + 1
+```
+
+There's a  technical explanation for the preference of `<-`, but another is that this way you avoid getting confused with `==`, which is used to compare objects:
+
+```{r}
+2 == 2
+
+# Combine values into a vector or list
+c(1, 2, 3) == 2
+```
+
+Like in python, `==` is a *logical operator*, meaning it outputs `TRUE` or `FALSE`. Other logical operators are:
+
+```{r}
+1 != 2 # not equal to
+2 < 2 # less than
+2 <= 2 # less than or equal to
+2 > 2 # greater than
+2 >= 2 # greater than or equal to
+
+# We can use brackets to group
+(2 < 2) | (2 <= 2) # or
+(2 < 2) & (2 <= 2) # and
+```
+The big conceptual difference between Python and R is the variable / object distinction.
+
+In R, there’s no difference between a variable (`my.list`) and the object associated with it (the list `1, 2, 3`). But this is actually a slight of hand used by R to hide something fundamental about how computers work, and it does not happen in Python.
+
+In Python, variables and the objects they point two actually live in two different places in your computer. As a result, in Python it’s best to think of variables as pointing to the objects they’re associated with, rather than being those objects
+
+The reason this matters is that it’s possible for multiple variables to be pointed at the same object. As a result, changes made to an object though one variable will impact what you get if you call the other variables pointed at that object!
+
+
+### Data types
+
+R has many data types, but the most common ones we'll use are:
+
+1. numeric: `1.1`, `3`, `317`, `Inf`...
+2. logical: `TRUE` or `FALSE`
+3. character: `this is a character`, `hello world!`...
+4. factor: `Democrat`, `Republican`, `Socialist`, ...
+
+_ Factors are used to represent categorical data. Factors can be ordered or unordered and are an important class for statistical analysis and for plotting.Factors are stored as integers, and have labels associated with these unique integers. While factors look (and often behave) like character vectors, they are actually integers under the hood, and you need to be careful when treating them like strings._
+
+A small trick regarding logical values is that they correspond to `1` and `0`, which is the same in python. This will come in hand to count the number of `TRUE` values in a vector.
+
+```{r}
+x <- c(TRUE, TRUE, FALSE)
+x * 2
+sum(x)
+```
+
+There are a few special values: `NA`, which denotes a missing value, and `NaN`, which means Not a number. The values `Inf` and `-Inf` are considered numeric. `NULL` denotes a value that is undefined.
+
+```{r}
+0 / 0 # NaN
+1 / 0 # Inf
+x <- c(1, NA, 0)
+```
+
+Probably one of the most useful functions in R is `str`. It displays the internal structure of an object. Be careful here as `str` in python refers to string datatypes.
+
+```{r}
+str(x)
+
+str(as.factor(c("Blue", "Blue", "Red")))
+```
+
+Of course you can always print the object in the console:
+
+```{r}
+print(x)
+```
+
+Note that `print` here is a function: it takes a series of arguments (in this case, the object `x`) and returns a value (`50`).
+
+This is equivalent to just typing the name of the object in the console. (What's going on behind the scenes is that R is calling the default function to print this object; which in this case is just `print`).
+
+```{r}
+x
+```
+
+
+You can find out the data type for each object in `R` using the function `class` (simular to `type()`), or functions that start with `is.` and then the data type:
+
+```{r}
+class("hello world!")
+is.numeric("hello world!")
+is.character("hello world")
+class(c(1, NA, 0))
+is.numeric(c(1, NA, 0))
+```
+
+### Data structures
+
+Building off of the data types we've learned, *data structures* combine multiple values into a single object. Some common data structures in `R` include:
+
+1. vectors: sequence of values of a certain type (single dimension)
+2. matrix: table of values of a certain type (multiple dimension)
+3. data.frame: a table of vectors, all of the same length (can be different types)
+4. list: collection of objects of different types
+
+#### Vectors
+
+We've already seen vectors created by **c**ombining multiple values with the `c` command:
+
+```{r}
+student_names <- c("Bill", "Jane", "Sarah", "Fred", "Paul")
+math_scores <- c(80, 75, 91, 67, 56)
+verbal_scores <- c(72, 90, 99, 60, 68)
+```
+
+There are shortcuts for creating vectors with certain structures, for instance:
+
+```{r}
+nums1 <- 1:100
+nums2 <- seq(-10, 100, by=5) # -10, -5, 0, ..., 100
+nums3 <- seq(-10, 100, length.out=467) # 467 equally spaced numbers between -10 and 100
+```
+
+Notice that we used `seq` to generate both `nums1` and `nums2`. The different behavior is controlled by which arguments (e.g. `by`, `length.out`) are supplied to the function `seq`.
+
+With vectors we can carry out some of the most fundamental tasks in data analysis, such as descriptive statistics
+
+```{r}
+mean(math_scores)
+min(math_scores - verbal_scores)
+
+# Multiple statistics
+summary(verbal_scores)
+```
+
+R has some advanced and useful plotting functionally. The most famous/popular is ggplot2, an open-source data visualization package for the statistical programming language R. Here we will just use the regular plotting library, which ggplot2 builds on.
+
+```{r}
+plot(x=math_scores, y=verbal_scores)
+text(x=math_scores, y=verbal_scores, labels=student_names)
+```
+
+It's easy to pull out specific entries in a vector using `[]`. For example,
+
+```{r}
+# Indexing
+math_scores[3]
+# Slicing (Inclusive)
+math_scores[1:3]
+# Remove by index
+math_scores[-(4:5)]
+# Filter by a condition
+math_scores[which(verbal_scores >= 90)]
+# Set a value
+math_scores[3] <- 92
+
+# Result
+math_scores
+```
+
+#### Data frames
+
+Data frames allow us to combine many vectors of the same length into a single object.
+
+```{r}
+# Combine vectors into a data frame
+students <- data.frame(student_names, math_scores, verbal_scores)
+students
+
+# Descriptive stats of entire data.frame
+summary(students)
+```
+
+Notice that `student_names` is a different class (character) than `math_scores` (numeric), yet a data frame combines their values into a single object. We can also create data frames that include new variables:
+
+```{r}
+students$final_scores <- 0
+
+# Fill column based on corresponding row values
+students$final_scores <- (students$math_scores + students$verbal_scores)/2
+
+# vector of ages
+age <- c(18, 19, 20, 21, 22)
+
+# Add vector 
+students2 <- data.frame(student_names, age)
+
+# merge different data frames
+students3 <- merge(students, students2)
+
+students3
+```
+
+#### Lists
+
+Lists are an even more flexible way of combining multiple objects into a single object. As you will see throughout the course, we will use lists to store the output of our scraping steps. Using lists, we can combine together vectors of different lengths:
+
+```{r}
+list1 <- list(some_numbers = 1:10, some_letters = c("a", "b", "c"))
+list1
+```
+
+or even vectors and data frames, or multiple data frames:
+
+```{r}
+schools <- list(school_name = "LSE", students = students, 
+                    faculty = data.frame(name = c("Kelly Jones", "Matt Smith"), 
+                                         age = c(41, 55)))
+schools
+```
+
+You can access a list component in several different ways:
+
+```{r}
+# Index
+schools[[1]]
+# Label
+schools[['faculty']]
+# Attribute
+schools$students
+```
+
+
+### Control Flow and Functions 
+
+You have now explored control flow in dept in python. In R the loop constructs are `for`, `while` and `repeat`, with the additional clauses `break` and `next`. Remember that control flow commands are the commands that enable a program to branch between alternatives. You can always see these control flow commands by invoking `?Control` at the RStudio command line.
+
+```{r}
+# ?Control
+```
+
+ Like in python, a for loop is used for iterating. Below we can see the same output but in the two languages.
+
+```{python}
+
+for i in range(1,11):
+  print(i)
+```
+
+```{r}
+# Expression in brackets and code block in curly braces.
+# we also don't use the colon.
+for (x in 1:10) {
+  print(x)
+}
+```
+
+ In R you can also puth this on a singular line.
+ 
+```{r}
+
+dice <- 1:6
+
+for (x in dice) { print(x) }
+```
+
+Much terminology is shared between python and R, such as `break``. With the break statement, we can stop the loop before it has looped through all the items.
+ 
+```{r}
+
+teachers <- list("Milena", "Patrick", "Sian")
+
+for (x in teachers) {
+  if (x == "Sian") {
+    break
+  }
+  print(x)
+}
+
+```
+
+The loop will stop at `Sian` because we have chosen to finish the loop by using the break statement when x is equal to `Sian`(x == `Sian`). We can also use if / else.
+ 
+```{r}
+# Whilst R does not enforce structure/indents in the same way python does,
+# it's imported our code is as legible as possible. 
+
+for(x in teachers) {
+  if (x == "Sian") {
+    print(paste("The teacher today is", x, "disappointing!"))
+  } else {
+    print(paste("The teacher today is", x, "Great!"))
+  }
+}
+```
+ 
+The syntax for functions in R is similar to python. By default, R functions will return the last evaluated object inside it, rather than `None`. 
+ 
+You can also make use of the return function, which is especially important when you want to return one object or another, depending on certain conditions, or when you want to execute some code after the object you want to return. 
+ 
+```{r}
+# This cell won't run
+function_name <- function(arg1, arg2, ... ) {
+  
+  # Code
+}
+```
+ 
+Let's look at a more practical example.
+
+```{r}
+addPercent <- function(x){
+  
+  # Takes the raw numeric material and returns a percentages.
+  
+ percent <- round(x * 100, digits = 1)
+ result <- paste(percent, "%")
+ 
+ return(result)
+}
+```
+
+The steps here are:
+1. The keyword `function` always must be followed by parentheses. It tells R that what comes next is a function (like `def`).
+2. The parentheses after function are the argument list, of your function. B In this case, there’s only one argument, named x.
+3. The curly braces, `{}`, can be seen as the walls of your function. Everything between the braces is part of function code block.
+4. The `return()` statement is returned from inside the function to your work space. You can put only one object between the parentheses.
+5. If you put all this together, you get a complete function, You use the assignment operator `<-` to put this complete function into an object named `addPercent`.
+
+Using the function:
+```{r}
+# Normally distributed positive values
+n <- abs(rnorm(100))
+
+# Calling our function
+addPercent(n)
+```
+
+#### Loop Exercises
+
+Below are the for loops from class in Week 03. For each loop, create a chuck in R and translate the python code into R.
+
+```{python}
+# Exercise 1: We create an empty list. Then use a for-loop and range(1, 101) 
+# to iterate over the numbers and if-statement to determine what to add to the list.
+
+# Lets change this exercise so that if a multiple of 3, replace with None
+
+ls = []
+for i in range(1, 101):
+    if i%3 == 0:
+        ls.append(None)
+    else:
+        ls.append(i)
+print(ls)
+```
+
+_Your cell here._
+
+```{python}
+# Exercise 2: Use a for-loop with if-statement to identify the even integers.
+
+lst = [1, 3, 2, 4.5, 7, 8, 10, 3, 5, 4, 7, 3.33]
+
+summ = 0
+for i in lst:
+    if i%2 == 0:
+        summ += i
+        
+print(summ)
+
+```
+
+_Your cell here._
+
+#### Functions Exercises
+
+In Week 04, we looked at at defining our own functions. Translate the functions from the class exercises (below) into R.
+
+```{python}
+# Exercise 3: We debugged the function below.
+
+def zero_list(alist):
+    """Takes a list and returns another list of the same length 
+    that looks like [0, 0, 0, ...].
+    """
+    # Don't use the same name as the argument to avoid confusion
+    newlist = [0]*len(alist)  
+    return newlist
+
+mylist = [1, 2, 3]
+
+# You need to save the list the function returns in a variable
+zerolist = zero_list(mylist)  
+
+print(mylist) # Original list is not modified
+print(zerolist)
+
+```
+
+_Your cell here._
+
+```{python}
+
+# Exercise 4: Used a dictionary to store the data and a function 
+# that read in the dictionary and printed each sentence. 
+
+scientists = {'Alan Turing': 'mathematician', 'Richard Feynman': 'physicist',
+              'Marie Curie': 'chemist', 'Charles Darwin': 'biologist',
+              'Ada Lovelace': 'mathematician', 'Werner Heisenberg': 'physicist'}
+
+def print_professions(dic):
+    """Takes a dictionary of {Name: profession} and prints
+    'Name was a profession.'
+    """
+    for i in dic:
+        print(i + ' was a ' + dic[i] + '.')
+        
+print_professions(scientists)
+
+```
+
+_Your cell here._
+
+### Vectorizing
+
+Vectorizing is a efficient alternative to for loops in R. Vectorization is the operation of converting repeated operations on simple numbers (“scalars”) into single operations on vectors or matrices. 
+
+As we covered earlier, a vector is the elementary data structure in R and is “a single entity consisting of a collection of things”,
+
+If you combine vectors (of the same length), you obtain a matrix. You can do this vertically or horizontally, using different R instructions. Thus in R, a matrix is seen as a collection of horizontal or vertical vectors. By extension, you can vectorize repeated operations on vectors.
+
+Like **list comprehensions** in python many of the above loop constructs can be made more efficient by using vectorization. At a lower level, the alternative vectorized form translates into code which will contain one or more loops in the lower level language the form was implemented and compiled (Fortran, C, or C++ ). 
+
+**We can vectorize in python too**, particularly through the map() function which applies a given function to ach item of a given iterable.
+
+
+The most elementary case you can think of is the addition of two vectors v1 and v2 into a vector v3, which can be done either element-by-element with a for loop. Below is the for loop.
+
+```{r}
+n <- 50
+
+# Normal distribution
+v1 <- rnorm(50)
+# Inclusive 
+v2 <- 100:149
+
+# Replicate
+v3 <- rep(0)
+# loop through first 10 values
+for (i in 1:n) { 
+	v3[i] <-v1[i] + v2[i] 
+}
+
+v3
+```
+
+The *native* vectorized form of the code above is:
+ 
+```{r}
+v4 = v1 + v2
+v4
+ 
+```
+It is *native* because R can recognize all the arithmetic operators as acting on vectors and matrices. Doesn't this look a lot simpler to code than list comprehensions in python. 
+
+\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} + 
+\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} =
+\begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix}
+
+#### Vectorizing Exercises
+
+Below we have the list comprehensions that we wrote in python in class in Week 03. For each python snippet, create a chuck in R and translate the python code into R.
+
+```{python}
+#  Exercise 5: Using the type() function to determine which element is an 
+# whole number (integer)
+
+lst = [1, 3, 2, 4.5, 7, 8, 10, 3, 5, 4, 7, 3.33]
+ans = [i**2 for i in lst if type(i) == int] 
+
+```
+
+_Your cell here._
+
+```{python}
+# Exercise 6: Using the function ifelse(), replicate the list
+# comprehension below
+
+import numpy as np
+
+x = np.random.normal(0, 1, 100)
+y = ["Positive" if i > 0 else "Neagtive" for i in x]
+```
+
+_Your cell here._
+
+Let’s look at the idea of “growing data”, a typically inefficient way of “updating” a data frame.
+
+First you create an m x n matrix with `replicate(m, rnorm(n))` with 10 column vectors of 10 elements each, constructed with `rnorm(n)`, which creates random normal numbers.
+
+Then you transform it into a data frame (10 observations/rows of 10 variables/columns) and perform an algebraic operation on each element using a nested for loop: at each iteration, a sinusoidal function increments every element that is referred by the two indexes. This allows us to add some noice to the data, which is a common practice in modelling.
+
+The following example is a bit artificial, but it could represent the addition of a signal to some random noise.
+
+```{r}
+
+# Exercise 7: Vectorize the code below. This is a bad loop with 'growing' data
+
+# Set seed to compare the results
+set.seed(42)
+
+m <- 10
+n <- 10
+
+# Create matrix of normal random numbers
+# replicate(num_of_replications, expression to evaluate)
+# 10 x 10 normally distributed matrix.
+mymat <- replicate(m, rnorm(n))
+
+# Transform into data frame
+mydframe <- data.frame(mymat)
+
+# for i in 1-10
+for (i in 1:m) {
+  # for j in 1-10
+  for (j in 1:n) {
+    # For row, column, add some noise.
+    mydframe[i,j] <- mydframe[i,j] + 10*sin(0.75*pi)
+    
+    print(mydframe)
+  }
+}
+```
+
+_Your cell here._
+
+
+# BONUS
+The apply family functions in R are a well-known set of R functions that allows you to perform complex tasks over arrays, avoiding the use of for loops. They run a loop in C (a lower level language) means they are pretty quick. You can do this in several ways, depending on the value you specify to the MARGIN argument, that can be normally set to 1, 2 or c(1, 2). 
+
+The syntax of the apply command is:
+
+```{r}
+apply(X,       # Array, matrix or data frame
+      MARGIN,  # 1: columns, 2: rows, c(1, 2): rows and columns
+      FUN,     # Function to be applied
+      ...)     # Additional arguments to FUN
+```
+
+
+### Apply() Exercises
+
+Using the sample data specified below, use `?` with `apply()` to complete the steps below:
+
+1. Create a column which is the mean of each row.
+2. Create a row which is the sum of each column.
+3. Create a function named `fun` that calculates the square of a number and convert the output to character if the character argument is set to `TRUE`.
+
+```{r}
+
+# Data frame
+sample.df <- data.frame(x = 1:4, y = 5:8, z = 10:13)
+
+```
+
+_Your cell here._
+
+
+
+
+
+
+
