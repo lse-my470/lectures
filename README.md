@@ -5,23 +5,21 @@
 
 ## Instructors
 
-* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 14:00–16:00, COL.8.06 or Zoom
-* [Sian Brooke](s.j.brooke@lse.ac.uk), *Office hours*: Fridays 10:00–12:00, COL.7.07 or Zoom
-* [Patrick Gildersleve](p.gildersleve@lse.ac.uk), *Office hours*: Tuesdays 14:00–15:00 and Fridays 15:00–16:00, COL.7.07 or Zoom
-* Yuanmo He (GTA)
+* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 14:00–16:00, CON.2.11 or Zoom
+* [Patrick Gildersleve](p.gildersleve@lse.ac.uk), *Office hours*: Tuesdays 14:00–15:00 and Fridays 15:00–16:00, CON.1.04 or Zoom
 
 ## Course Information
 
-* Interactive lecture session takes place online (Zoom link on Moodle) on:
-  * Mondays 13:00–14:00
+* Lectures take place on:
+  * Mondays 13:00–15:00 in NAB.2.04
 
 * Seminars take place on:
   * Tuesdays 10:00–11:30 in NAB.2.13
-  * Tuesdays 11:30–13:00 on Zoom in weeks 1–4, then in NAB.2.13
-  * Tuesdays 15:00–16:30 in CLM.4.02
-  * Tuesdays 16:30–18:00 in CLM.4.02
+  * Tuesdays 11:30–13:00 in NAB.2.13
+  * Tuesdays 15:00–16:30 in 32L.LG.18
+  * Tuesdays 16:30–18:00 in 32L.LG.18
 
-No lecturer session or classes will take place during School Reading Week 6.
+No lecture or classes will take place during School Reading Week 6.
 
 
 ## Course Description
@@ -44,7 +42,7 @@ The course will use Python. We will use the Anaconda distribution to install Pyt
 
 The main course texts will be:
 * Guttag, John V. *Introduction to Computation and Programming Using Python: With Application to Understanding Data*. MIT Press, 2016.
-* Miller, Bradley N. and David L. Ranum. [*Problem Solving with Algorithms and Data Structures Using Python*](http://interactivepython.org/runestone/static/pythonds/index.html).
+* Miller, Bradley N. and David L. Ranum. [*Problem Solving with Algorithms and Data Structures Using Python*](https://runestone.academy/ns/books/published/pythonds/index.html).
 * Grolemund, Garrett and Hadley Wickham. [*R for Data Science*](http://r4ds.had.co.nz). O’Reilly, 2016.
 
 Additional resources include:
@@ -60,7 +58,7 @@ Doctoral students registered for MY570 will be required to complete a substantiv
 
 Problem sets will be distributed by Tuesday evening and due at 12:00 noon the following Monday.
 
-The take home exam will be distributed on Monday, December 6, 2021 and due at 12:00 noon on Monday, January 17, 2022.
+The take home exam will be distributed on Monday, December 5, 2022 and due at 12:00 noon on Monday, January 16, 2023.
 
 Please note that the deadlines are final. Late submissions for the weekly problem sets will automatically receive score 0, except in the case of an extension requested in advance for valid documented legal or medical reasons. Late submissions for the final take home exam will be penalized according to LSE's standard assessment rules. More information can be found [here](https://info.lse.ac.uk/current-students/services/assessment-and-results/exceptional-circumstances/extension-policy).
 
@@ -96,14 +94,14 @@ Violation of the plagiarism policy for the course will be dealt with in accordan
 
 **Questions about the content:**
 * Ask during the lecture sessions or your seminar
-* Schedule office hours with Milena, Sian, or Patrick
+* Schedule office hours with Milena or Patrick
 
 **Questions about the upcoming assignment:**
 * Post a question on the Moodle forum "Clarifying questions about assignments" (no code allowed!)
 
 **Questions about your marked assignment:**
 * See the example answers to help you understand the comments
-* Schedule office hours with Milena, Sian, or Patrick
+* Schedule office hours with Milena or Patrick
 
 **Personal emergencies (e.g. cannot access assignment, cannot meet a deadline):**
 * E-mail Milena
