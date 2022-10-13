@@ -59,7 +59,7 @@ Doctoral students registered for MY570 will be required to complete a substantiv
 
 Problem sets will be distributed by Tuesday evening and due at 12:00 noon the following Monday.
 
-The take home exam will be distributed on Monday, December 5, 2022 and due at 12:00 noon on Monday, January 16, 2023.
+The take home exam will be distributed on Monday, December 5, 2022 and due at 12:00 noon on Monday, January 23, 2023.
 
 Please note that the deadlines are final. Late submissions for the weekly problem sets will automatically receive score 0, except in the case of an extension requested in advance for valid documented legal or medical reasons. Late submissions for the final take home exam will be penalized according to LSE's standard assessment rules. More information can be found [here](https://info.lse.ac.uk/current-students/services/assessment-and-results/exceptional-circumstances/extension-policy).
 
