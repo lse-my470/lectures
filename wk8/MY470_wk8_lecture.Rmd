@@ -992,7 +992,7 @@ knitr::include_graphics("figs/base_r_plot_formatted.png")
 - Great website with `ggplot2` sample code for many different types of plots: https://www.r-graph-gallery.com/ggplot2-package.html
 
 ```{r, out.width = "30%", fig.align="center", echo = FALSE}
-knitr::include_graphics(c("figs/tweet_map.png", "figs/us_cities.png"))
+knitr::include_graphics(c("figs/ggridges.png", "figs/spark_plot_new_trans.png"))
 ```
 
 ## Statistical Machine Learning with R
