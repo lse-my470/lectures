@@ -5,8 +5,8 @@
 
 ## Instructors
 
-* [Milena Tsvetkova](m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 14:00–16:00, CON.2.11 or Zoom
-* [Patrick Gildersleve](p.gildersleve@lse.ac.uk), *Office hours*: Tuesdays 12:45–14:45, CON.1.04 or Zoom
+* [Milena Tsvetkova](mailto:m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 14:00–16:00, CON.2.11 or Zoom
+* [Patrick Gildersleve](mailto:p.gildersleve@lse.ac.uk), *Office hours*: Fridays 11:00–12:00 & 13:30-14:30, CON.1.07G or Zoom
 * Alexander Soldatkin (GTA)
 
 ## Course Information
