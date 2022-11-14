@@ -201,7 +201,7 @@ math_scores
 ```
 
 
-## Dataframes
+## Data Frames
 
 ```{r}
 my_dataframe <- data.frame(title = c("Dr", "Prof", "Prof"),
@@ -268,6 +268,14 @@ for (i in 1:length(chr_vec)) { # for i in range(0, len(chr_vec))
 ```{r}
 # Functions also make use of different brackets
 
+# To read more about function documenantion in R, see:
+# https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html
+# https://cran.r-project.org/web/packages/docstring/vignettes/docstring_intro.html
+# https://josephcrispell.github.io/2021/07/26/creating-R-docstring.html
+
+#' Short title for function
+#'
+#' Longer description of the function
 class_fits <- function(num_teachers = 1, num_students, room_size) {
     if (num_teachers + num_students < room_size) {
         print("Hooray! The room is big enough")
@@ -466,7 +474,7 @@ mydframe
 
 ## Apply Functions
 
-The apply family functions in R are a well-known set of R functions that allows you to perform complex tasks over arrays, avoiding the use of for-loops. They run a loop in C (a lower level language) means they are pretty quick. You can do this in several ways, depending on the value you specify to the MARGIN argument, that can be normally set to 1, 2 or c(1, 2). 
+The apply family functions in R are a well-known set of R functions that allows you to perform complex tasks over arrays, avoiding the use of for-loops. They run a loop in C (a lower level language), which means they are pretty quick. You can do this in several ways, depending on the value you specify to the MARGIN argument, that can be normally set to 1, 2 or c(1, 2). 
 
 The syntax of the apply command is:
 
@@ -493,13 +501,13 @@ sapply(some_vector, my_function)
 sapply(some_vector, function(y) y + 5)
 ```
 
-### `apply()` Exercises
+### Apply Exercises
 
 Using the sample data specified below, use `?` with `apply()` to complete the steps below:
 
-1. Create a column which is the mean of each row.
-2. Create a row which is the sum of each column.
-3. Create a function named `fun` that calculates the square of a number and convert the output to character if the character argument is set to `TRUE`.
+- Exercise 8: Create a column which is the mean of each row.
+- Exercise 9: Create a row which is the sum of each column.
+- Exercise 10: Create a function named `fun` that calculates the square of a number and convert the output to character if the character argument is set to `TRUE`.
 
 ```{r}
 
