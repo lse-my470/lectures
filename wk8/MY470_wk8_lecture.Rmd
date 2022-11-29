@@ -3,9 +3,9 @@ title: "MY470 Computer Programming: The R Language"
 author: "Main contributors: Friedrich Geiecke, Pablo Barbera, Ken Benoit"
 date: "Week 8 Lecture"
 output:
+  beamer_presentation: default
   ioslides_presentation:
     widescreen: yes
-  beamer_presentation: default
 ---
 
 <style>
