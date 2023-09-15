@@ -5,18 +5,18 @@
 
 ## Instructors
 
-* [Milena Tsvetkova](mailto:m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 14:00–16:00, CON.2.11 or Zoom
-* [Patrick Gildersleve](mailto:p.gildersleve@lse.ac.uk), *Office hours*: Fridays 11:00–12:00 & 13:30-14:30, CON.1.07G or Zoom
-* Alexander Soldatkin (GTA)
+* [Milena Tsvetkova](mailto:m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 14:30–16:30, CON.2.11 or Zoom
+* [Patrick Gildersleve](mailto:p.gildersleve@lse.ac.uk), *Office hours*: Tuesdays 12:45–14:45, CON.1.07G or Zoom
+* Wendy Wang (GTA)
 
 ## Course Information
 
 * Lectures take place on:
-  * Mondays 13:00–15:00 in NAB.2.04
+  * Mondays 13:00–15:00 in CKK.2.04
 
 * Seminars take place on:
-  * Tuesdays 10:00–11:30 in NAB.2.13
-  * Tuesdays 11:30–13:00 in NAB.2.13
+  * Tuesdays 10:00–11:30 in CKK.2.13
+  * Tuesdays 11:30–13:00 in CKK.2.13
   * Tuesdays 15:00–16:30 in 32L.LG.18
   * Tuesdays 16:30–18:00 in 32L.LG.18
 
@@ -37,7 +37,7 @@ This is an introductory class and no prior experience with programming is requir
 
 ## Software
 
-The course will use Python. We will use the Anaconda distribution to install Python and manage packages and Jupyter Notebook to write code. We will further use RStudio to write code in R. Lectures and assignments will be posted on GitHub. Students are expected to use GitHub also to submit problem sets and final exam.
+The course will use Python. We will use the Anaconda distribution to install Python and manage packages and Visual Studio Code to write code. We will further use RStudio to write code in R. Lectures and assignments will be posted on GitHub. Students are expected to use GitHub also to submit problem sets and final exam.
 
 ## Materials
 
@@ -53,13 +53,13 @@ Additional resources include:
 
 ## Assessment
 
-Take home exam (50%) and in-class assessment (50%). Students will be expected to produce 9 weekly problem sets in the MT. The first problem set is formative. The remaining 8 problem sets will be marked, and will provide 50% of the mark.
+Take home exam (50%) and in-class assessment (50%). Students will be expected to produce 6 weekly problem sets in the MT. The first problem set is formative. The remaining 5 problem sets will be marked, and will provide 50% of the mark.
 
 Doctoral students registered for MY570 will be required to complete a substantive project of their own choice in place of the take home exam. You will be required to develop Python software that addresses a sufficiently complex computational social science task. Examples of possible projects include a software package that collects and analyses online data, an experimental game, or an agent-based model. The project should be approved by the instructors, so please get in touch with us well in advance.
 
 Problem sets will be distributed by Tuesday evening and due at 12:00 noon the following Monday.
 
-The take home exam will be distributed on Monday, December 5, 2022 and due at 12:00 noon on Monday, January 23, 2023.
+The take home exam will be distributed on Monday, December 4, 2023 and due at 12:00 noon on Monday, January 15, 2024.
 
 Please note that the deadlines are final. Late submissions for the weekly problem sets will automatically receive score 0, except in the case of an extension requested in advance for valid documented legal or medical reasons. Late submissions for the final take home exam will be penalized according to LSE's standard assessment rules. More information can be found [here](https://info.lse.ac.uk/current-students/services/assessment-and-results/exceptional-circumstances/extension-policy).
 
@@ -83,6 +83,7 @@ Weekly assignments and the final take home exam are individual unless we instruc
 * View and copy code from other students (current or past)
 * View and copy example solutions that may have leaked
 * Ask friends, family, or roommates for help with assignments
+* Use Generative AI tools such as ChatGPT and Copilot to solve the assignments
 * Post questions related to the assignments on Q&A sites such as Stack Overflow
 
 **You may:**
@@ -122,7 +123,7 @@ In the first week, we will introduce the basic concepts in computer programming:
 * [*Lecture*](wk1/MY470_wk1_lecture.ipynb)
 * [*Lab*](wk1/MY470_wk1_class.ipynb)
   * Installing Python with Anaconda
-  * Introduction to Jupyter and other IDEs
+  * Introduction to Jupyter notebooks and Visual Studio Code
   * Submitting assignments on GitHub
 
 ---
