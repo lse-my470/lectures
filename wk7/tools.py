@@ -7,8 +7,9 @@ def main():
     print('Running sum of [1, 2, 3] is:', ls)
 
 def running_sum(ls):
-    '''Modify ls so that it contains the running sums of its original items.
-    E.g., running_sum([1, 2, 3]) becomes [1, 3, 6].'''
+    """Modify ls so that it contains the running sums of its original items.
+    E.g., running_sum([1, 2, 3]) updates the list to [1, 3, 6].
+    """
     for i in range(len(ls)):
         ls[i] = ls[i - 1] + ls[i]
 
