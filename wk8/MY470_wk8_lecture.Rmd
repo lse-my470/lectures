@@ -45,46 +45,26 @@ pre {
 
 ## Installing R and RStudio
 
-- R 4.2.2 – Install from https://www.r-project.org/
+- R 4.3.2 – Install from https://www.r-project.org/
 - RStudio – Install afterwards from https://www.rstudio.com/products/rstudio/download/
-
-
-## Running R Interactively: Terminal
-
-- Type `R` into terminal. The window that appears is called the R console. Any command you type into this prompt is interpreted by the R kernel.
-
-```{r, out.width = "60%", fig.align="center", echo = FALSE}
-knitr::include_graphics("figs/RTerminal.png")
-```
-
-## Running R Interactively: R GUI Console
-
-- Plain R programme after installation (also has a text editor window)
-
-```{r, out.width = "60%", fig.align="center", echo = FALSE}
-knitr::include_graphics("figs/RGUI.png")
-```
 
 
 ## Running R Interactively: RStudio (Preferred)
 
 - IDE (Integrated Development Environment) that makes many things easier
+- [R Markdown](https://rmarkdown.rstudio.com/) is the R equivalent to Jupyter Notebooks
 
 ```{r, out.width = "70%", fig.align="center", echo = FALSE}
 knitr::include_graphics("figs/RStudio.png")
 ```
 
 
-## Running R Interactively: Jupyter
+## Running R Interactively: VS Code
 
-- First, install R in Anaconda Navigator
-- Change the kernel to R
-- May cause problems if R already installed
-- [R Markdown](https://rmarkdown.rstudio.com/) is the more natural option in R (great integration with RStudio)
+- Install the R extension in VS Code
+- You may also be prompted to install an R package "languageserver"
+- Note that currently VS Code is not as well integrated with R Markdown as RStudio
 
-```{r, out.width = "70%", fig.align="center", echo = FALSE}
-knitr::include_graphics("figs/RJupyter.png")
-```
 
 ## Installing and Managing Packages in R
 
@@ -241,18 +221,6 @@ ls()
 rm(list = ls())    # Remove all
 ```
 
-
-## Object Oriented Programming (OOP) in R
-
-- "Everything that exists in R is an object" (John Chambers)
-
-- However, **object oriented programming (OOP)** is much less important in the daily use of R than functional programming
-
-- Functional programming treats computation as the evaluation of mathematical functions avoiding mutable data 
-
-- OOP is also more challenging in R as there are multiple OOP systems called S3, R6, S4, etc.
-
-- If you would like to learn about object oriented programming in R (e.g. to write packages), see [here](https://adv-r.hadley.nz/oo.html)
 
 
 ## Common Data Structures in R
@@ -841,6 +809,19 @@ apply(X = x, MARGIN = 2, FUN = max)
 - Other options
   - `sapply` to apply function to every element of a vector
   - `lapply` to apply function to every element of list
+
+
+## Object Oriented Programming in R
+
+- "Everything that exists in R is an object" (John Chambers)
+
+- However, **object oriented programming (OOP)** is much less important in the daily use of R than functional programming
+
+- Functional programming treats computation as the evaluation of mathematical functions avoiding mutable data 
+
+- OOP is also more challenging in R as there are multiple OOP systems called S3, R6, S4, etc.
+
+- If you would like to learn about object oriented programming in R (e.g. to write packages), see [here](https://adv-r.hadley.nz/oo.html)
 
 
 ## Functional Programming and R
