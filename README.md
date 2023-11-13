@@ -53,13 +53,13 @@ Additional resources include:
 
 ## Assessment
 
-Take home exam (50%) and in-class assessment (50%). Students will be expected to produce 6 weekly problem sets in the MT. The first problem set is formative. The remaining 5 problem sets will be marked, and will provide 50% of the mark.
+Take home exam (50%) and in-term assessment (50%). Students will be expected to produce six weekly problem sets in AT. The first problem set is formative. The remaining five problem sets will be marked, and will provide 50% of the mark.
 
-Doctoral students registered for MY570 will be required to complete a substantive project of their own choice in place of the take home exam. You will be required to develop Python software that addresses a sufficiently complex computational social science task. Examples of possible projects include a software package that collects and analyses online data, an experimental game, or an agent-based model. The project should be approved by the instructors, so please get in touch with us well in advance.
-
-Problem sets will be distributed by Tuesday evening and due at 12:00 noon the following Monday.
+The foramtive and first four summative problem sets will be distributed by Tuesday evening and due at 12:00 noon the following Monday. The last problem set will be completed in class.
 
 The take home exam will be distributed on Monday, December 4, 2023 and due at 12:00 noon on Monday, January 15, 2024.
+
+Doctoral students registered for MY570 will be required to complete a substantive project of their own choice in place of the take home exam. You will be required to develop Python software that addresses a sufficiently complex computational social science task. Examples of possible projects include a software package that collects and analyses online data, an experimental game, or an agent-based model. The project should be approved by the instructors, so please get in touch with us well in advance.
 
 Please note that the deadlines are final. Late submissions for the weekly problem sets will automatically receive score 0, except in the case of an extension requested in advance for valid documented legal or medical reasons. Late submissions for the final take home exam will be penalized according to LSE's standard assessment rules. More information can be found [here](https://info.lse.ac.uk/current-students/services/assessment-and-results/exceptional-circumstances/extension-policy).
 
@@ -179,7 +179,7 @@ Object-oriented programming is a programming paradigm that helps increase modula
 ---
 ### Week 7. Testing and Debugging in Python
 
-Writing computer programs is easy but making them work properly is hard. We test programs to check if they work as intended and we debug them when we find out that they don’t. In this lecture, we will discuss different ways to test and debug programs. We will cover common error messages and how to catch them with `try`, `except`, `raise`, and `assert`.
+Writing computer programs is easy but making them work properly is hard. We test programs to check if they work as intended and we debug them when we find out that they don’t. In this lecture, we will discuss different ways to test and debug programs. We will cover common error messages and how to catch them with `try`, `except`, `raise`, and `assert`. We will also introduce GitHub Copilot as a useful tool for writing code.
 
 * *Readings*
   * Guttag. Chapters 6–7, pp.85–108.
