@@ -1,7 +1,7 @@
 # MY470 Computer Programming
 
 
-## Michaelmas Term 2022
+## Autumn Term 2023
 
 ## Instructors
 
