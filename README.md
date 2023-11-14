@@ -199,10 +199,9 @@ This week, we will review many concepts studied until now by learning how they a
   * The [Introduction to R handout](wk8/Introductory_R.pdf).
   * (optional, but recommended) Zuur, A., Ieno, E. N., & Meesters, E. (2009). _A Beginner's Guide to R_. Springer Science & Business Media.
   * (optional) Patrick Burns.  2011.  _The R Inferno_.  http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
-* [*Lecture*](wk8/my470-week08-r.pdf)
-* *Lab*
-  * [R Markdown intro](wk8/01-rmarkdown.Rmd)
-  * [Exercises](wk8/02-exercises.Rmd)
+* [*Lecture*](wk8/MY470_wk8_lecture.Rmd)
+* [*Lab*](wk8/MY470_wk8_class.Rmd)
+  * Translating Python code into R
 
 ---
 ### Week 9. Algorithms and Order of Growth
