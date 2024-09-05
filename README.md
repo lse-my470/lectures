@@ -1,13 +1,13 @@
 # MY470 Computer Programming
 
 
-## Autumn Term 2023
+## Autumn Term 2024
 
 ## Instructors
 
 * [Milena Tsvetkova](mailto:m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 14:30–16:30, CON.2.11 or Zoom
-* [Patrick Gildersleve](mailto:p.gildersleve@lse.ac.uk), *Office hours*: Tuesdays 12:45–14:45, CON.1.07G or Zoom
-* Wendy Wang (GTA)
+* [Daniel De Kadt](mailto:d.n.de-kadt@lse.ac.uk), *Office hours*: TBD, CON.2.13 or Zoom
+* Sia Shahrizad (GTA)
 
 ## Course Information
 
@@ -15,10 +15,10 @@
   * Mondays 13:00–15:00 in CKK.2.04
 
 * Seminars take place on:
-  * Tuesdays 10:00–11:30 in CKK.2.13
-  * Tuesdays 11:30–13:00 in CKK.2.13
-  * Tuesdays 15:00–16:30 in 32L.LG.18
-  * Tuesdays 16:30–18:00 in 32L.LG.18
+  * Tuesdays 10:00–11:30 in CKK.1.09
+  * Tuesdays 11:30–13:00 in CKK.1.09
+  * Tuesdays 15:00–16:30 in CBG.2.02
+  * Tuesdays 16:30–18:00 in CBG.2.02
 
 No lecture or classes will take place during School Reading Week 6.
 
@@ -55,9 +55,9 @@ Additional resources include:
 
 Take home exam (50%) and in-term assessment (50%). Students will be expected to produce six weekly problem sets in AT. The first problem set is formative. The remaining five problem sets will be marked, and will provide 50% of the mark.
 
-The foramtive and first four summative problem sets will be distributed by Tuesday evening and due at 12:00 noon the following Monday. The last problem set will be completed in class.
+The formative and first four summative problem sets will be distributed by Monday evening and due at 12:00 noon the following Monday. The last problem set will be completed in class.
 
-The take home exam will be distributed on Monday, December 4, 2023 and due at 12:00 noon on Monday, January 15, 2024.
+The take home exam will be distributed on Monday, December 9, 2024 and due at 12:00 noon on Monday, January 20, 2025.
 
 Doctoral students registered for MY570 will be required to complete a substantive project of their own choice in place of the take home exam. You will be required to develop Python software that addresses a sufficiently complex computational social science task. Examples of possible projects include a software package that collects and analyses online data, an experimental game, or an agent-based model. The project should be approved by the instructors, so please get in touch with us well in advance.
 
@@ -96,14 +96,14 @@ Violation of the plagiarism policy for the course will be dealt with in accordan
 
 **Questions about the content:**
 * Ask during the lecture sessions or your seminar
-* Schedule office hours with Milena or Patrick
+* Schedule office hours with Milena or Daniel
 
 **Questions about the upcoming assignment:**
 * Post a question on the Moodle forum "Clarifying questions about assignments" (no code allowed!)
 
 **Questions about your marked assignment:**
 * See the example answers to help you understand the comments
-* Schedule office hours with Milena or Patrick
+* Schedule office hours with Milena or Daniel
 
 **Personal emergencies (e.g. cannot access assignment, cannot meet a deadline):**
 * E-mail Milena
