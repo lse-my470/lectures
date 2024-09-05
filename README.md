@@ -7,6 +7,7 @@
 
 * [Milena Tsvetkova](mailto:m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 14:30–16:30, CON.2.11 or Zoom
 * [Daniel De Kadt](mailto:d.n.de-kadt@lse.ac.uk), *Office hours*: TBD, CON.2.13 or Zoom
+* [Yuanmo He](mailto:y.he54@lse.ac.uk), *Office hours*: TBD, Zoom
 * Sia Shahrizad (GTA)
 
 ## Course Information
@@ -96,14 +97,14 @@ Violation of the plagiarism policy for the course will be dealt with in accordan
 
 **Questions about the content:**
 * Ask during the lecture sessions or your seminar
-* Schedule office hours with Milena or Daniel
+* Schedule office hours with Milena, Daniel, or Yuanmo
 
 **Questions about the upcoming assignment:**
 * Post a question on the Moodle forum "Clarifying questions about assignments" (no code allowed!)
 
 **Questions about your marked assignment:**
 * See the example answers to help you understand the comments
-* Schedule office hours with Milena or Daniel
+* Schedule office hours with Milena, Daniel, or Yuanmo
 
 **Personal emergencies (e.g. cannot access assignment, cannot meet a deadline):**
 * E-mail Milena
