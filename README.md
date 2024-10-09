@@ -7,7 +7,7 @@
 
 * [Milena Tsvetkova](mailto:m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 15:00–17:00, CON.2.11 or Zoom
 * [Daniel De Kadt](mailto:d.n.de-kadt@lse.ac.uk), *Office hours*: TBD, CON.2.13 or Zoom
-* [Yuanmo He](mailto:y.he54@lse.ac.uk), *Office hours*: TBD, Zoom
+* [Yuanmo He](mailto:y.he54@lse.ac.uk), *Office hours*: Thursdays 15:00-17:00, CON.1.07G or Zoom
 * Sia Shahrizad (GTA)
 
 ## Course Information
