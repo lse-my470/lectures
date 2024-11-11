@@ -40,21 +40,21 @@ class TestRunningSum(unittest.TestCase):
         inputted = [0, 0, 0, 0]
         tools.running_sum(inputted)
         output_expected = [0, 0, 0, 0]
-        self.assertEqual(output_expected, inputted, "Not working with zeros.")
+        self.assertEqual(output_expected, inputted, "The list contains only zeros.")
 
     def test_running_sum_multi_pos(self):
         """Test a list of positive values."""
         inputted = [4, 2, 3, 6]
         tools.running_sum(inputted)
         output_expected = [4, 6, 9, 15]
-        self.assertEqual(output_expected, inputted, "Not working with positive values.")
+        self.assertEqual(output_expected, inputted, "The list contains only positive values.")
 
     def test_running_sum_multi_mix(self):
         """Test a list of mixed values."""
         inputted = [4, 0, 2, -5]
         tools.running_sum(inputted)
         output_expected = [4, 4, 6, 1]
-        self.assertEqual(output_expected, inputted, "Not working with mixed values.")
+        self.assertEqual(output_expected, inputted, "The list contains mixed values.")
 
 if __name__ == '__main__':
     unittest.main()
