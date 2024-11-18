@@ -23,8 +23,8 @@ R and Python are two languages that you will often hear talked about in Data Sci
 **R**
 
 - Oriented to statistical analysis and data processing on small scale 
-- Functional programming (uses functions)
-- It has a very huge collection of packages to do almost anything you might imagine with data (they are easy to install)
+- Functional programming (focuses on functions)
+- Geared toward data analysis, with a vast collection of packages to do almost anything you might imagine with data (they are easy to install)
 - As a general programming language, it is much slower than Python and the syntax is arguably not as clear
 
 ## Python to R
