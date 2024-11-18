@@ -1,6 +1,7 @@
 ---
 title: "MY470 Computer Programming: The R Language"
-author: "Main contributors: Friedrich Geiecke, Pablo Barbera, Ken Benoit"
+author: ""
+#Main contributors: Friedrich Geiecke, Pablo Barbera, Ken Benoit, Daniel de Kadt
 date: "Week 8 Lecture"
 output:
   ioslides_presentation:
@@ -19,6 +20,10 @@ pre {
 }
 </style>
 
+```{r setup, include=FALSE}
+library(pryr)
+```
+
 ## Outline
 
 1. Introduction
@@ -33,15 +38,15 @@ pre {
 
 - Open source programming language under [GPL][GPL]
 - Inspired by the programming language [S][S]
-- Useful for statistics and data science, graphics, network analysis, machine learning, web scraping, general purpose programming...
-- Superior (if not just comparable) to commercial alternatives. R has over 10,000 user contributed packages (CRAN) and many more elsewhere
+- Useful for statistics and data science, graphics, network analysis, machine learning, web scraping, general purpose programming (to a degree)...
+- R has over 10,000 user contributed packages on The Comprehensive R Archive Network ([CRAN][CRAN]) and many more elsewhere and in development
 - Available on all platforms
-- Object oriented, but at its core a functional language
-- Interpreted — can be run interactively or as scripts
+- High level, object oriented, but at its core a functional language
+- Interpreted — can be run interactively or as scripts, like python
 
 [S]: https://en.wikipedia.org/wiki/S_(programming_language)
 [GPL]: https://www.gnu.org/licenses/gpl.html
-
+[CRAN]: https://cran.r-project.org/
 
 ## Installing R and RStudio
 
@@ -49,32 +54,45 @@ pre {
 - RStudio – Install afterwards from https://www.rstudio.com/products/rstudio/download/
 
 
-## Running R Interactively: RStudio (Preferred)
+## Running R Interactively: RStudio 
 
-- IDE (Integrated Development Environment) that makes many things easier
-- [R Markdown](https://rmarkdown.rstudio.com/) is the R equivalent to Jupyter Notebooks
+- The classic IDE (Integrated Development Environment) for R, makes everything easier
+- [R Markdown](https://rmarkdown.rstudio.com/) and [Quarto](https://quarto.org/) are the R equivalents to Jupyter Notebooks (Quarto is multi-language -- can use both R and Python in the same document)
 
 ```{r, out.width = "70%", fig.align="center", echo = FALSE}
 knitr::include_graphics("figs/RStudio.png")
 ```
 
-
 ## Running R Interactively: VS Code
 
 - Install the R extension in VS Code
 - You may also be prompted to install an R package "languageserver"
-- Note that currently VS Code is not as well integrated with R Markdown as RStudio
 
+```{r, out.width = "70%", fig.align="center", echo = FALSE}
+knitr::include_graphics("figs/vscode_r.png")
+```
+
+## Running R Interactively: Positron 
+
+- A new multi-language IDE forked from VS Code by the team behind RStudio
+- Still in beta-testing, so use with caution!
+
+```{r, out.width = "70%", fig.align="center", echo = FALSE}
+knitr::include_graphics("figs/positron_r.png")
+```
 
 ## Installing and Managing Packages in R
 
-- R has over 10,000 user-contributed packages on CRAN (The Comprehensive R Archive Network) and many more elsewhere
+- What makes R particularly useful to data scientists is its community
+
+- Over 10,000 user-contributed (and maintained) packages on CRAN and many more elsewhere
 
 - CRAN "is a network of ftp and web servers around the world that store identical, up-to-date, versions of code and documentation for R", see [CRAN](https://cran.r-project.org/)
 
-- To install a package, run directly in R `install.packages("packagename")` (similar to `pip install` and `conda install`, which you run from the terminal, however) 
+- To install a package for a given R installation, run directly in R `install.packages("packagename")` (similar to `pip install` and `conda install`, which you run from the terminal, however) 
+- To load a package in a specific workspace, include `library("packagename")` at the beginning of your script (similar to `import`)
 
-- To load a package, include `library("packagename")` at the beginning of your script (similar to `import`)
+- Packages are the best thing about R, and also one of the more annoying things about R. Wise to invest in package management solutions early, e.g.  [renv](https://rstudio.github.io/renv/articles/renv.html) or [groundhog](https://groundhogr.com/).
 
 ## Fundamentals and Data Structures
 
@@ -99,6 +117,8 @@ knitr::include_graphics("figs/RStudio.png")
 | `/`           |    `/`        |
 | `*`           |    `*`        |
 | `**`          |    **`^`**    |
+| `%`           |    **`%%`**   |
+| `//`          |    **`%/%`**  |
 
 <br>
 
@@ -123,12 +143,11 @@ sum(<numbers>)
 | `in`          |    **`%in%`** |
 
 
-
 ## Object Assignment
 
-- The assignment operator in R is `<-`
+- The assignment operator in R is `<-`. Assigns values on the right to objects on the left.
     
-- Assigns values on the right to objects on the left. Mostly similar to `=` but subtle differences. Use `<-` in R
+- Can also use `=` but subtle differences. Conventionally, use `<-` for assignments, and `=` for arguments in functions.
 
 - The `<-` notation also emphasises that `=` is not a mathematical equal sign when using it for assignments in programming, e.g.,`x = x + 1` ?
 
@@ -143,7 +162,7 @@ print(my_object - my_other_object)
 ```
 
 
-## Mutable/Immutable Objects and Memory Allocation
+## Mutable/Immutable Objects
 
 - A way to think about mutable vs immutable object is whether they are copied to a new address in memory when modified or kept in their old one
 
@@ -156,12 +175,10 @@ print(my_object - my_other_object)
 ## Mutable/Immutable Objects
 
 ```{r, message = FALSE}
-library(pryr)
 x <- c(3, 6, 9)
 x
 y <- x
-address(x)
-address(y)
+identical(pryr::address(x), pryr::address(y))
 ```
 
 ## Mutable/Immutable Objects
@@ -169,13 +186,12 @@ address(y)
 ```{r, message = FALSE}
 x[2] <- 4
 x
-address(x)
-address(y)
+identical(pryr::address(x), pryr::address(y))
 ```
 
 <br>
 
-- Can check this in Python as well with `id()`:
+- Can compare this to Python using `id()`:
 
 ```{Python}
 # Mutable          # Immutable
@@ -220,8 +236,6 @@ ls()
 ```{r, eval = FALSE}
 rm(list = ls())    # Remove all
 ```
-
-
 
 ## Common Data Structures in R
 
@@ -372,7 +386,7 @@ class(series)
 - **R indices start at 1**
 - **R slices include the last element**
 - So `myvector[1:3]` selects 1st, 2nd, and 3rd elements in R
-- In Python, it should be `mylist[0:3]` 
+- In Python, it would be `mylist[0:3]` 
 
 
 ## Implications for Indexing Characters
@@ -460,7 +474,7 @@ fib[1:7] + fib[2:8]
 ```{r}
 fib <- c(1, 1, 2, 3, 5, 8, 13, 21)
 fib_greater_five <- fib > 5
-print(fib_greater_five)
+fib_greater_five
 ```
 
 
@@ -470,7 +484,7 @@ print(fib_greater_five)
 - If it encounters two vectors of different lengths in a binary operation, it _replicates_ (recycles) the smaller vector until it is of the same length as the longer vector
 - Afterwards it does the operation
 - Related to "broadcasting" in numpy
-- Often helpful, but can lead to very hard to find bugs
+- Often helpful, but can lead to very hard-to-find bugs
 
 ## Recycling
 
@@ -479,6 +493,7 @@ print(fib_greater_five)
 ```{r}
 x <- c(1, 2, 3)
 y <- c(5, 10)
+
 x * y
 ```
 
@@ -502,6 +517,7 @@ x * c(1, 0)    # turns the even numbers to 0
 factor_vec <- as.factor(c("a", "b", "c", "a", "b", "c"))
 factor_vec
 as.numeric(factor_vec) # how it is processed in the background
+as.character(factor_vec) # how it is displayed
 ```
 
 - Note: Statistical models can require categorical variables to be stored as factors
@@ -558,7 +574,7 @@ my_list$another_thing
 
 ## Matrices
 
-- Next, we will discuss tabular data in more detail
+- Now let's turn to tabular data
 - A `matrix` arranges data from a vector into a tabular form, **all elements have to be of the same type**
 - `Arrays` have more than 2 dimensions
 
@@ -580,7 +596,7 @@ my_data_frame
 
 ## Matrix and Data Frame Subsetting
 
-- You can subset a `matrix` or `data.frame` with integers referring to rows and columns
+- You can subset a `matrix` or `data.frame` with integers referring to [rows, columns]
 
 ```{r}
 my_matrix[2, 2]
@@ -596,7 +612,7 @@ my_data_frame[, 1]
 # Adding some column names to the matrix
 colnames(my_matrix) = letters[1:10]
 
-# Works for matrices and data frames
+# Works for matrices and data frames with column names
 my_matrix[, "e"]
 my_data_frame[, "numbers"]
 my_data_frame[, c("numbers", "words")]
@@ -715,7 +731,7 @@ z <- x%*%y
 - For an in-depth discussion of measuring and improving performance in R: https://adv-r.hadley.nz/perf-measure.html and https://adv-r.hadley.nz/perf-improve.html
 
 
-## Calling Functions
+## Calling Functions {.smaller}
 
 ```{r, eval = FALSE}
 function_name(parameter_one, prameter_two, ...)
@@ -730,10 +746,11 @@ function_name(parameter_one, prameter_two, ...)
 
 ```{r, eval = TRUE}
 vec <- c(1, 2, 3, NA, 5)
-mean(x = vec, na.rm = TRUE)
+mean(x = vec) # returns NA 
+mean(x = vec, na.rm = TRUE) # this gives us what we're after
 ```
 
-## Defining Functions
+## Defining Functions 
 
 - Just like in Python and other programming languages, it is key to create own functions for a modular programme
 
@@ -763,10 +780,22 @@ my_demo_function(a = 20)
 a
 ```
 
+## But Functions Can Access Out-of-Scope Variables
+```{r}
+a <- 1
+
+my_demo_function <- function() {
+    a <- a * 2
+    return(a)
+}
+
+my_demo_function()
+```
+
 ## The Pipe Operator
 
-- Very often used in R code today
-- The pipe operator %>% simply indicates that the previous object is used as the first argument in the subsequent function
+- Very often used in R code today either as `%>%` from the `magrittr` package or `|>` from base R
+- The pipe operator indicates that the previous object is used as the first argument in the subsequent function
 
 ```{r, message = FALSE}
 library(tidyverse) # pipe operators are originally from the `magrittr` package by Stefan Milton Bache
@@ -775,6 +804,9 @@ mean(x)
 
 # Same but with the pipe operator
 x %>% mean()
+
+# And with base R pipe
+x |> mean()
 ```
 
 
@@ -819,7 +851,7 @@ apply(X = x, MARGIN = 2, FUN = max)
 
 - Functional programming treats computation as the evaluation of mathematical functions avoiding mutable data 
 
-- OOP is also more challenging in R as there are multiple OOP systems called S3, R6, S4, etc.
+- OOP is more challenging in R as there are multiple OOP systems called S3, R6, S4, etc.
 
 - If you would like to learn about object oriented programming in R (e.g. to write packages), see [here](https://adv-r.hadley.nz/oo.html)
 
@@ -830,7 +862,7 @@ apply(X = x, MARGIN = 2, FUN = max)
 
 Two stylised features of functional programming:
 
-1. First-class functions, i.e. functions that behave like any other data structure. In R, this means that you can do many of the things with a function that you can do with a vector: You can assign them to variables, store them in lists, pass them as arguments to other functions, create them inside functions, and even return them as the result of a function.
+1. First-class functions, i.e. functions that behave like any other object. In R, this means that you can do many of the things with a function that you can do with a vector: You can assign them to variables, store them in lists, pass them as arguments to other functions, create them inside functions, and even return them as the result of a function.
 
 2. "Pure" functions: The output only depends on the inputs, i.e. if you call it again with the same inputs, you get the same outputs. The function also has no side-effects, like changing the value of a global variable, writing to disk, or displaying to the screen. So, e.g., `y <- 4; my_function <- function(x) {return(y + x)}` is not a pure function.
 
