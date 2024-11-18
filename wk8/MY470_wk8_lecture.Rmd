@@ -22,6 +22,7 @@ pre {
 
 ```{r setup, include=FALSE}
 library(pryr)
+library(magrittr)
 ```
 
 ## Outline
@@ -32,6 +33,12 @@ library(pryr)
 4. Functions
 5. Reading data and plotting
 6. Resources
+
+## To Begin With
+
+```{r, out.width = "50%", fig.align="center", echo = FALSE}
+knitr::include_graphics("figs/superiority.png")
+```
 
 
 ## R in a Nutshell
@@ -794,19 +801,20 @@ my_demo_function()
 
 ## The Pipe Operator
 
-- Very often used in R code today either as `%>%` from the `magrittr` package or `|>` from base R
+- Very often used in R code today either as `|>` from base R or `%>%` from the `magrittr` package 
 - The pipe operator indicates that the previous object is used as the first argument in the subsequent function
 
 ```{r, message = FALSE}
-library(tidyverse) # pipe operators are originally from the `magrittr` package by Stefan Milton Bache
 x <- c(1,2,3,4,15)
 mean(x)
 
 # Same but with the pipe operator
+x |> mean()
+
+# And with the tidyverse/magrittr pipe
 x %>% mean()
 
-# And with base R pipe
-x |> mean()
+
 ```
 
 
@@ -982,11 +990,17 @@ knitr::include_graphics("figs/base_r_plot_formatted.png")
 
 - Programming in R programming
 
+  - _An Introduction to R_ by Douglas et al: https://intro2r.com/
   - _Advanced R_ by Hadley Wickham: https://adv-r.hadley.nz/
 
 - Applied data science in R
 
   - _R for Data Science_ by Hadley Wickham and Garrett Grolemund: https://r4ds.had.co.nz/
+
+- Reproducible data science in R
+
+  - _Building Reproducible Analytical Pipelines with R_ by Bruno Rodrigues: https://raps-with-r.dev/
+
 
 ## Data Processing with R
 
@@ -1007,6 +1021,16 @@ knitr::include_graphics("figs/base_r_plot_formatted.png")
 ```{r, out.width = "30%", fig.align="center", echo = FALSE}
 knitr::include_graphics(c("figs/ggridges.png", "figs/spark_plot_new_trans.png"))
 ```
+
+## Regression with R
+
+- Most regressions can be handled with `lm()` function for linear regression, `glm()` for generalised linear models
+- However, many improvements are possible (this is an incomplete list):
+  - `estimatr` for regression with robust standard errors: https://declaredesign.org/r/estimatr/
+  - `fixest` for fixed effects regression: https://lrberge.github.io/fixest/
+  - `lme4` for mixed effects models: https://github.com/lme4/lme4
+  - `broom` for tidying up regression output: https://broom.tidymodels.org/
+  - `modelsummary` for regression output and interpretation: https://vincentarelbundock.github.io/modelsummary/
 
 ## Statistical Machine Learning with R
 
@@ -1032,7 +1056,17 @@ knitr::include_graphics("figs/isl_cover.jpg")
 - Book by Douglas A. Luke: https://www.springer.com/de/book/9783319238821
 - LSE course **MY461 Social Network Analysis**
 
+## Causal Inference
 
+- Diff-in-diff:
+  - `fect`: https://yiqingxu.org/packages/fect/index.html
+  - `did`: https://bcallaway11.github.io/did/
+  - `synthdid`: https://synth-inference.github.io/synthdid/
+- Regression discontinuity:
+  - `rdrobust`: https://rdpackages.github.io/rdrobust/
+- Instrumental variables:
+  - `ivreg`: https://cran.r-project.org/web/packages/ivreg/vignettes/ivreg.html
+- LSE course **MY457 Causal Inference in Experimental and Observational Settings**
 
 
 
