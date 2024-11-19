@@ -57,7 +57,7 @@ knitr::include_graphics("figs/superiority.png")
 
 ## Installing R and RStudio
 
-- R 4.3.2 – Install from https://www.r-project.org/
+- R 4.X.X – Install from https://www.r-project.org/
 - RStudio – Install afterwards from https://www.rstudio.com/products/rstudio/download/
 
 
