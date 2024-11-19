@@ -1,6 +1,6 @@
 ---
 title: "MY470 Computer Programming: The R Language"
-author: "Main contributors: Siân Brooke, Friedrich Geiecke"
+# author: "Main contributors: Siân Brooke, Friedrich Geiecke"
 date: "Week 8 Lab"
 output: html_document
 ---
