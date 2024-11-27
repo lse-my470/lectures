@@ -211,7 +211,7 @@ Algorithms are recipes that consist of a sequence of simple steps, control flow,
 
 * *Readings*
   * Guttag. Chapter 9, pp.135–149.
-  * Bradley and Ranum. [Chapter 2](http://interactivepython.org/runestone/static/pythonds/AlgorithmAnalysis/toctree.html).
+  * Bradley and Ranum. [Chapter 3](https://runestone.academy/ns/books/published/pythonds/AlgorithmAnalysis/toctree.html).
 * [*Lecture*](wk9/MY470_wk9_lecture.ipynb)
 * [*Lab*](wk9/MY470_wk9_class.ipynb)
   * Reading programs written in Python and R and evaluating their time complexity
@@ -223,7 +223,7 @@ We will use the concepts and approaches introduced in the previous lecture to lo
 
 * *Readings*
   * Guttag. Chapter 10.1–10.2, pp.151–164.
-  * Bradley and Ranum. [Chapter 5](http://interactivepython.org/runestone/static/pythonds/SortSearch/toctree.html).
+  * Bradley and Ranum. [Chapter 6](https://runestone.academy/ns/books/published/pythonds/SortSearch/toctree.html).
 * [*Lecture*](wk10/MY470_wk10_lecture.ipynb)
 * [*Lab*](wk10/MY470_wk10_class.ipynb)
   * Functional programming in Python with `lambda`, `filter`, `map` and `reduce`
@@ -234,7 +234,7 @@ We will use the concepts and approaches introduced in the previous lecture to lo
 We will continue getting a better understanding of abstract data types and computational complexity by covering stacks, queues, trees, graphs, and algorithms for graphs. The lecture will end with an overview of what we have learned in the course and possible steps you can take to further develop your programming skills.
 
 * *Readings*
-  * Bradley and Ranum. [Chapter 4.1-4.14](https://runestone.academy/runestone/books/published/pythonds/BasicDS/toctree.html).
+  * Bradley and Ranum. [Chapter 4.1-4.14](https://runestone.academy/ns/books/published/pythonds/BasicDS/toctree.html).
   * Guttag. Chapter 12.2, pp.190–201.
 * [*Lecture*](wk11/MY470_wk11_lecture.ipynb)
 * [*Lab*](wk11/MY470_wk11_class.ipynb)
