@@ -59,7 +59,7 @@ Four problem sets (60%) and an in-class quiz (40%).
 
 Students will be expected to produce five problem sets in the AT, due at the beginning of weeks 3, 4, 5, 7, and 8. The first problem set is formative. The remaining four problem sets will be marked, and will provide 60% of the mark. The problem sets will be distributed by Monday evening and due at 12:00 noon the following Monday. 
 
-The quiz will be distributed and completed in class in week 10. 
+The quiz, worth 40% of the course mark, will be completed in class in week 10. 
 
 Doctoral students registered for MY570 have the option to complete a substantive project of their own choice in place of the take home exam. You will be required to develop Python software that addresses a sufficiently complex computational social science task. Examples of possible projects include a software package that collects and analyses online data, an experimental game, or an agent-based model. The project should be approved by the instructors, so please get in touch with us well in advance.
 
@@ -202,9 +202,9 @@ This week, we will review many concepts studied until now by learning how they a
   * (optional, but recommended) Zuur, A., Ieno, E. N., & Meesters, E. (2009). _A Beginner's Guide to R_. Springer Science & Business Media.
   * (optional) Patrick Burns.  2011.  _The R Inferno_.  http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 * [*Lecture*](wk8/MY470_wk8_lecture.Rmd)
-* [*Lab*](wk8/MY470_wk8_class.Rmd)
-  * Translating Python code into R
-  * Functional programming in Python with `lambda`, `filter`, `map` and `reduce`
+* *Lab*
+  * [Translating Python code into R](wk8/MY470_wk8_class.Rmd)
+  * [Functional programming in Python with `lambda`, `filter`, `map` and `reduce`](wk8/MY470_wk8_class.ipynb)
 
 ---
 ### Week 9. Algorithms and Order of Growth
