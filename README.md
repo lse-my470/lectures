@@ -7,8 +7,8 @@
 
 * [Milena Tsvetkova](mailto:m.tsvetkova@lse.ac.uk), *Office hours*: Fridays 15:00–17:00, CON.2.11 or Zoom
 * [Daniel De Kadt](mailto:d.n.de-kadt@lse.ac.uk), *Office hours*: TBD, CON.2.13 or Zoom
-* [Yuanmo He](mailto:y.he54@lse.ac.uk), *Office hours*: Thursdays 15:00-17:00, CON.1.07G or Zoom
-* Sia Shahrizad (GTA)
+* [Yuanmo He](mailto:y.he54@lse.ac.uk), *Office hours*: TBD, CON.2.16 or Zoom
+* Fadil Sumun (GTA)
 
 ## Course Information
 
@@ -20,6 +20,7 @@
   * Tuesdays 11:30–13:00 in CKK.1.09
   * Tuesdays 15:00–16:30 in CBG.2.02
   * Tuesdays 16:30–18:00 in CBG.2.02
+  * (Wednesdays 9:00–10:30 in CBG.2.02)
 
 No lecture or classes will take place during School Reading Week 6.
 
@@ -54,15 +55,15 @@ Additional resources include:
 
 ## Assessment
 
-Take home exam (50%) and in-term assessment (50%). Students will be expected to produce six weekly problem sets in AT. The first problem set is formative. The remaining five problem sets will be marked, and will provide 50% of the mark.
+Four problem sets (60%) and an in-class quiz (40%). 
 
-The formative and first four summative problem sets will be distributed by Monday evening and due at 12:00 noon the following Monday. The last problem set will be completed in class.
+Students will be expected to produce five problem sets in the AT, due at the beginning of weeks 3, 4, 5, 7, and 8. The first problem set is formative. The remaining four problem sets will be marked, and will provide 60% of the mark. The problem sets will be distributed by Monday evening and due at 12:00 noon the following Monday. 
 
-The take home exam will be distributed on Monday, December 9, 2024 and due at 12:00 noon on Monday, January 20, 2025.
+The quiz will be distributed and completed in class in week 10. 
 
-Doctoral students registered for MY570 will be required to complete a substantive project of their own choice in place of the take home exam. You will be required to develop Python software that addresses a sufficiently complex computational social science task. Examples of possible projects include a software package that collects and analyses online data, an experimental game, or an agent-based model. The project should be approved by the instructors, so please get in touch with us well in advance.
+Doctoral students registered for MY570 have the option to complete a substantive project of their own choice in place of the take home exam. You will be required to develop Python software that addresses a sufficiently complex computational social science task. Examples of possible projects include a software package that collects and analyses online data, an experimental game, or an agent-based model. The project should be approved by the instructors, so please get in touch with us well in advance.
 
-Please note that the deadlines are final. Late submissions for the weekly problem sets will automatically receive score 0, except in the case of an extension requested in advance for valid documented legal or medical reasons. Late submissions for the final take home exam will be penalized according to LSE's standard assessment rules. More information can be found [here](https://info.lse.ac.uk/current-students/services/assessment-and-results/exceptional-circumstances/extension-policy).
+Please note that the deadlines are final. Late submissions for the weekly problem sets will automatically receive score 0, except in the case of an extension requested in advance for valid documented legal or medical reasons. More information can be found [here](https://info.lse.ac.uk/current-students/services/assessment-and-results/exceptional-circumstances/extension-policy).
 
 ## Assessment Criteria
 Your code will be evaluated both on whether it completes the task and on the extent to which it is written using the concepts, paradigms, and best practices covered in the course, most notably, legibility, modularity, and optimization.
@@ -203,6 +204,7 @@ This week, we will review many concepts studied until now by learning how they a
 * [*Lecture*](wk8/MY470_wk8_lecture.Rmd)
 * [*Lab*](wk8/MY470_wk8_class.Rmd)
   * Translating Python code into R
+  * Functional programming in Python with `lambda`, `filter`, `map` and `reduce`
 
 ---
 ### Week 9. Algorithms and Order of Growth
@@ -225,10 +227,9 @@ We will use the concepts and approaches introduced in the previous lecture to lo
   * Guttag. Chapter 10.1–10.2, pp.151–164.
   * Bradley and Ranum. [Chapter 6](https://runestone.academy/ns/books/published/pythonds/SortSearch/toctree.html).
 * [*Lecture*](wk10/MY470_wk10_lecture.ipynb)
-* [*Lab*](wk10/MY470_wk10_class.ipynb)
-  * Functional programming in Python with `lambda`, `filter`, `map` and `reduce`
-
-
+* *Lab*
+  * In-class quiz
+  
 ---
 ### Week 11. Graph Algorithms
 We will continue getting a better understanding of abstract data types and computational complexity by covering stacks, queues, trees, graphs, and algorithms for graphs. The lecture will end with an overview of what we have learned in the course and possible steps you can take to further develop your programming skills.
