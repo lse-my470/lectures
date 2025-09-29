@@ -19,8 +19,7 @@
   * Tuesdays 10:00–11:30 in CKK.1.09
   * Tuesdays 11:30–13:00 in CKK.1.09
   * Tuesdays 15:00–16:30 in CBG.2.02
-  * Tuesdays 16:30–18:00 in CBG.2.02
-  * (Wednesdays 9:00–10:30 in CBG.2.02)
+  * Wednesdays 9:00–10:30 in CBG.2.02
 
 No lecture or classes will take place during School Reading Week 6.
 
