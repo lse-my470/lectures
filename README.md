@@ -13,7 +13,7 @@
 ## Course Information
 
 * Lectures take place on:
-  * Mondays 13:00–15:00 in CKK.2.04
+  * Mondays 13:00–15:00 in MAR.2.08
 
 * Seminars take place on:
   * Tuesdays 10:00–11:30 in CKK.1.09
