@@ -38,7 +38,7 @@ This is an introductory class and no prior experience with programming is requir
 
 ## Software
 
-The course will use Python. We will use the Anaconda distribution to install Python and manage packages and Visual Studio Code to write code. We will further use RStudio to write code in R. Lectures and assignments will be posted on GitHub. Students are expected to use GitHub also to submit problem sets and final exam.
+The course will use Python. We will use the Anaconda distribution to install Python and manage packages and Visual Studio Code to write code. We will further use RStudio to write code in R. Lectures, class materials, and problem sets will be posted on GitHub. Students are expected to use GitHub also to submit problem sets.
 
 ## Materials
 
@@ -76,20 +76,20 @@ Your code will be evaluated both on whether it completes the task and on the ext
 
 ## Collaboration and Plagiarism Policy
 
-Weekly assignments and the final take home exam are individual unless we instruct you otherwise. For all summative assessment, you need to write the code entirely by yourself (or together with your partner if you have been assigned one).
+In-term problem sets and the final quiz are individual unless we instruct you otherwise. For all summative assessment, you need to write the code entirely by yourself (or together with your partner if you have been assigned one).
 
 **You are NOT ALLOWED to:**
-* Talk about solutions to the assignments with others
+* Talk about solutions to the problem sets and quiz with others
 * Show your solutions to other students
 * View and copy code from other students (current or past)
 * View and copy example solutions that may have leaked
-* Ask friends, family, or roommates for help with assignments
-* Use Generative AI tools such as ChatGPT and Copilot to solve the assignments
-* Post questions related to the assignments on Q&A sites such as Stack Overflow
+* Ask friends, family, or roommates for help with problem sets
+* Use Generative AI tools such as ChatGPT and Copilot to solve the problem sets (unless we instruct you otherwise)
+* Post questions related to the problem sets on Q&A sites such as Stack Overflow
 
 **You may:**
 * Use general online resources such as Stack Overflow or Python documentation for general queries (e.g. "how to unpack a tuple"). However, if you borrow substantive blocks of code or specific solutions from online forums or blogs, you need to cite your source in the comments.
-* Use the forum "Clarifying Questions about Assignments" on the course Moodle site to ask and answer questions about the instructions in the assignments.
+* Use the forum "Clarifying Questions about Assignments" on the course Moodle site to ask and answer questions about the instructions in the problem sets.
 
 Violation of the plagiarism policy for the course will be dealt with in accordance with the [LSE Regulations on Assessment Offences](https://info.lse.ac.uk/Staff/Divisions/Academic-Registrars-Division/Teaching-Quality-Assurance-and-Review-Office/Assets/Documents/Calendar/RegulationsAssessmentOffences-Plagiarism.pdf).
 
@@ -99,14 +99,14 @@ Violation of the plagiarism policy for the course will be dealt with in accordan
 * Ask during the lecture sessions or your seminar
 * Schedule office hours with Milena, Daniel, or Yuanmo
 
-**Questions about the upcoming assignment:**
+**Questions about the upcoming problem set:**
 * Post a question on the Moodle forum "Clarifying questions about assignments" (no code allowed!)
 
-**Questions about your marked assignment:**
+**Questions about your marked problem set:**
 * See the example answers to help you understand the comments
 * Schedule office hours with Milena, Daniel, or Yuanmo
 
-**Personal emergencies (e.g. cannot access assignment, cannot meet a deadline):**
+**Personal emergencies (e.g. cannot access the problem set, cannot meet a deadline):**
 * E-mail Milena
 
 
@@ -125,7 +125,7 @@ In the first week, we will introduce the basic concepts in computer programming:
 * [*Lab*](wk1/MY470_wk1_class.ipynb)
   * Installing Python with Anaconda
   * Introduction to Jupyter notebooks and Visual Studio Code
-  * Submitting assignments on GitHub
+  * Submitting problem sets on GitHub
 
 ---
 ### Week 2. Data Types in Python
