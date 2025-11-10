@@ -1,6 +1,7 @@
 .DS_Store
 .ipynb_checkpoints/
-answers-to-assignments/
+.virtual_documents/
+.jupyter/
 __pycache__/
 .Rproj.user
 lectures.Rproj
