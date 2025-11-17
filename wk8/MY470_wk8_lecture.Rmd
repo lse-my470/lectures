@@ -194,17 +194,18 @@ print(my_object - my_other_object)
 
 - A way to think about mutable vs immutable object is whether they are copied to a new address in memory when modified or kept in their old one
 
-- Unlike in Python, most objects in R are copied when modified (with some important exceptions), so can be called immutable in that sense
+- Unlike in Python, most objects in R are copy-on-modify (with some important exceptions), so can be called immutable in that sense
 
-- An exception would for example be a vector that has only been assigned to a single name, it can be modified in place
+- It can pay off to study these topics for performance of code regardless of the language. 
 
-- It can pay off to study these topics for performance of code regardless of the language. A very good summary for R, which is also the basis of this slide and the next two, can be found here: https://adv-r.hadley.nz/names-values.html
+- A very good summary for R, which is also the basis of this slide and the next two, can be found here: https://adv-r.hadley.nz/names-values.html
 
 ## Mutable/Immutable Objects
 
 ```{r, message = FALSE}
 x <- c(3, 6, 9)
-x
+x[2] <- 4
+pryr::address(x)   # check memory address of x
 y <- x
 identical(pryr::address(x), pryr::address(y))
 ```
