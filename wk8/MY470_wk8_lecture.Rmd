@@ -34,6 +34,15 @@ library(magrittr)
 5. Reading data and plotting
 6. Resources
 
+## Outline
+
+1. **Introduction**
+2. Fundamentals and data structures
+3. Control flow
+4. Functions
+5. Reading data and plotting
+6. Resources
+
 ## To Begin With
 
 ```{r, out.width = "50%", fig.align="center", echo = FALSE}
@@ -55,15 +64,17 @@ knitr::include_graphics("figs/superiority.png")
 [GPL]: https://www.gnu.org/licenses/gpl.html
 [CRAN]: https://cran.r-project.org/
 
-## Installing R and RStudio
+## Installing R
 
 - R 4.X.X – Install from https://www.r-project.org/
-- RStudio – Install afterwards from https://www.rstudio.com/products/rstudio/download/
-
+- Install any IDE (Integrated Development Environment) you prefer afterwards:
+  - RStudio
+  - VS Code
+  - Positron
 
 ## Running R Interactively: RStudio 
 
-- The classic IDE (Integrated Development Environment) for R, makes everything easier
+- The classic IDE for R, makes everything easier
 - [R Markdown](https://rmarkdown.rstudio.com/) and [Quarto](https://quarto.org/) are the R equivalents to Jupyter Notebooks (Quarto is multi-language -- can use both R and Python in the same document)
 
 ```{r, out.width = "70%", fig.align="center", echo = FALSE}
@@ -82,7 +93,7 @@ knitr::include_graphics("figs/vscode_r.png")
 ## Running R Interactively: Positron 
 
 - A new multi-language IDE forked from VS Code by the team behind RStudio
-- Still in beta-testing, so use with caution!
+- Combines the flexibility of VS Code with the R-specific features of RStudio
 
 ```{r, out.width = "70%", fig.align="center", echo = FALSE}
 knitr::include_graphics("figs/positron_r.png")
@@ -100,6 +111,16 @@ knitr::include_graphics("figs/positron_r.png")
 - To load a package in a specific workspace, include `library("packagename")` at the beginning of your script (similar to `import`)
 
 - Packages are the best thing about R, and also one of the more annoying things about R. Wise to invest in package management solutions early, e.g.  [renv](https://rstudio.github.io/renv/articles/renv.html) or [groundhog](https://groundhogr.com/).
+
+## Outline
+
+1. Introduction
+2. **Fundamentals and data structures**
+3. Control flow
+4. Functions
+5. Reading in data and plotting
+6. Data science workflows with R today
+
 
 ## Fundamentals and Data Structures
 
@@ -527,7 +548,7 @@ as.numeric(factor_vec) # how it is processed in the background
 as.character(factor_vec) # how it is displayed
 ```
 
-- Note: Statistical models can require categorical variables to be stored as factors
+- Note: Statistical models can require variables be stored as factors
 
 ## Lists
 
@@ -738,6 +759,15 @@ z <- x%*%y
 - For an in-depth discussion of measuring and improving performance in R: https://adv-r.hadley.nz/perf-measure.html and https://adv-r.hadley.nz/perf-improve.html
 
 
+## Outline
+
+1. Introduction
+2. Fundamentals and data structures
+3. Control flow
+4. **Functions**
+5. Reading in data and plotting
+6. Data science workflows with R today
+
 ## Calling Functions {.smaller}
 
 ```{r, eval = FALSE}
@@ -850,6 +880,33 @@ apply(X = x, MARGIN = 2, FUN = max)
   - `sapply` to apply function to every element of a vector
   - `lapply` to apply function to every element of list
 
+## The Procedural Programming Paradigm
+
+A "programming paradigm" refers to a standard practice or perspective on programming (how you **think about** or **approach a problem**).
+
+Python at its core follows the procedural programming paradigm:
+
+- Think of programming like a recipe
+- You give specific instructions on what to do and how to do it
+- You have a **global state** that you are modifying
+
+You think about how things are changing over time rather that what methods you are calling to get the result you want.
+
+
+## The Functional Programming Paradigm
+
+R is at its core a functional programming language:
+
+- Functions are **first-class objects** and can be:
+  - Passed to other functions as parameters
+  - Returned by other functions as output
+  - Stored in data structures (functions are **first class* objects)
+- Functions are (should be) **pure**:
+  - Functions are deterministic and always produce the same output for the same input (set the random seed for stochastic process)
+  - Functions have no side effects (e.g. modify arguments, modify global variables, print)
+  - Variables and data are immutable
+
+Source: https://adv-r.hadley.nz/fp.html
 
 ## Object Oriented Programming in R
 
@@ -857,33 +914,30 @@ apply(X = x, MARGIN = 2, FUN = max)
 
 - However, **object oriented programming (OOP)** is much less important in the daily use of R than functional programming
 
-- Functional programming treats computation as the evaluation of mathematical functions avoiding mutable data 
-
 - OOP is more challenging in R as there are multiple OOP systems called S3, R6, S4, etc.
 
 - If you would like to learn about object oriented programming in R (e.g. to write packages), see [here](https://adv-r.hadley.nz/oo.html)
 
+## Functional Programming: Pros and Cons
 
-## Functional Programming and R
+- Advantages
+  - Code is easier to understand
+  - Code is easier to test and debug
+  - FP is needed to implement concurrency/parallelism
+    
+- Disadvantages
+  - Pure functions and recursion can be difficult to understand
+  - Immutable values and recursion can decrease performance
+  - Immutable values require large memory space
 
-- R has plenty of object orientation and classes, but at its core it is more of a functional programming language
+## Functional Programming: Pros and Cons
 
-Two stylised features of functional programming:
-
-1. First-class functions, i.e. functions that behave like any other object. In R, this means that you can do many of the things with a function that you can do with a vector: You can assign them to variables, store them in lists, pass them as arguments to other functions, create them inside functions, and even return them as the result of a function.
-
-2. "Pure" functions: The output only depends on the inputs, i.e. if you call it again with the same inputs, you get the same outputs. The function also has no side-effects, like changing the value of a global variable, writing to disk, or displaying to the screen. So, e.g., `y <- 4; my_function <- function(x) {return(y + x)}` is not a pure function.
-
-Source: https://adv-r.hadley.nz/fp.html
+```{r, out.width = "35%", fig.align="center", echo = FALSE}
+knitr::include_graphics("figs/functional_programming.png")
+```
 
 
-## Functional Programming and R
-
-- Of course not all functions in R always return the same output with the same inputs, e.g., `runif()` depends on the pseudo-random number seed, and `write.csv()` writes output to disk
-
-- Furthermore, Python also has features of both object oriented and functional programming
-
-- Yet, the number of pure functions is arguably higher in R than in some other programming languages
+Source: https://xkcd.com/1790/
 
 
 ## R vs. Python
@@ -898,6 +952,16 @@ Source: https://adv-r.hadley.nz/fp.html
 
 - `apply(X = df, MARGIN = 2, FUN = max)` vs. `df.apply(func=max, axis=0)`
 
+- Python also tends to be more procedural (modifying the global state or mutable objects)
+
+## Outline
+
+1. Introduction
+2. Fundamentals and data structures
+3. Control flow
+4. Functions
+5. **Reading in data and plotting**
+6. Data science workflows with R today
 
 ## Reading and Writing .csv Files
 
@@ -978,29 +1042,57 @@ plot(x = my_data$x, y = my_data$y,
 knitr::include_graphics("figs/base_r_plot_formatted.png")
 ```
 
-# Resources #
+## Visualisation with R: `ggplot2` {.smaller}
+
+- `ggplot2` is a flexible tool for visualisation
+
+```{r, eval = FALSE}
+ggplot2::ggplot(my_data, aes(x = x, y = y, color = as.factor(g))) +
+  geom_point(size = 0.5) +
+  labs(
+    x = "X variable",
+    y = "Y variable",
+    title = "Some scatter plot",
+    color = "g"
+  ) +
+  theme_minimal() 
+```
+<br>
+
+```{r, out.width = "40%", fig.align="center", echo = FALSE}
+knitr::include_graphics("figs/ggplot2_plot_formatted.png")
+```
+
+## Grammar of Graphics $\leftrightarrow$ `{ggplot2}` {.smaller}
+
+- A visualisation is a **mapping** of **data** to **aesthetics** via visual **geometries** to produce meaning. 
+
+- Formally this can be represented as a "**grammar of graphics**" (Wilkinson, 2005). 
+
+- In `{ggplot2}`, three key pieces:
+  - **Data**: The information
+  - **Mapping**: Correspondence between data and aesthetics  (`aes()`)
+  - **Layers**: Geometry and transformation (e.g. `geom_point()`, `geom_smooth()`)
+
+- Book by Hadley Wickham, Danielle Navarro, and Thomas Lin Pedersen: https://ggplot2-book.org
+
+- Great website with `ggplot2` sample code for many different types of plots: https://www.r-graph-gallery.com/ggplot2-package.html
+
+
+## Outline
+
+1. Introduction
+2. Fundamentals and data structures
+3. Control flow
+4. Functions
+5. Reading in data and plotting
+6. **Data science workflows with R today**
 
 ## Data Science with R
 
-- MY470 is a course about programming, so we covered fundamentals of the R language in this lecture
+- MY470 is a course about programming, so we only covered fundamentals of the R language in this lecture
 - This provided the necessary knowledge for you to use a range of tools in subsequent work
 - The following gives an outlook and many links to resources that you can use
-
-## Excellent Books on the R Language
-
-- Programming in R programming
-
-  - _An Introduction to R_ by Douglas et al: https://intro2r.com/
-  - _Advanced R_ by Hadley Wickham: https://adv-r.hadley.nz/
-
-- Applied data science in R
-
-  - _R for Data Science_ by Hadley Wickham and Garrett Grolemund: https://r4ds.had.co.nz/
-
-- Reproducible data science in R
-
-  - _Building Reproducible Analytical Pipelines with R_ by Bruno Rodrigues: https://raps-with-r.dev/
-
 
 ## Data Processing with R
 
@@ -1009,18 +1101,6 @@ knitr::include_graphics("figs/base_r_plot_formatted.png")
   - "The tidyverse is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures."
   - Summary of how to use the `tidyverse` packages in _R for Data Science_: https://r4ds.had.co.nz/
 - `data.table`: Particularly fast package to process very large datasets
-
-## Visualisation with R: `ggplot2` {.smaller}
-
-- `ggplot2` is a flexible tool for visualisation
-
-- Book by Hadley Wickham, Danielle Navarro, and Thomas Lin Pedersen: https://ggplot2-book.org
-
-- Great website with `ggplot2` sample code for many different types of plots: https://www.r-graph-gallery.com/ggplot2-package.html
-
-```{r, out.width = "30%", fig.align="center", echo = FALSE}
-knitr::include_graphics(c("figs/ggridges.png", "figs/spark_plot_new_trans.png"))
-```
 
 ## Regression with R
 
@@ -1067,6 +1147,21 @@ knitr::include_graphics("figs/isl_cover.jpg")
 - Instrumental variables:
   - `ivreg`: https://cran.r-project.org/web/packages/ivreg/vignettes/ivreg.html
 - LSE course **MY457 Causal Inference in Experimental and Observational Settings**
+
+## Excellent Books on the R Language
+
+- Programming in R programming
+
+  - _An Introduction to R_ by Douglas et al: https://intro2r.com/
+  - _Advanced R_ by Hadley Wickham: https://adv-r.hadley.nz/
+
+- Applied data science in R
+
+  - _R for Data Science_ by Hadley Wickham and Garrett Grolemund: https://r4ds.had.co.nz/
+
+- Reproducible data science in R
+
+  - _Building Reproducible Analytical Pipelines with R_ by Bruno Rodrigues: https://raps-with-r.dev/
 
 
 
