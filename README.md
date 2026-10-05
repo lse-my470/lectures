@@ -1,5 +1,3 @@
-# MY470 Computer Programming
-
 > [!CAUTION]
 > **Autumn Term 2025**
 >
